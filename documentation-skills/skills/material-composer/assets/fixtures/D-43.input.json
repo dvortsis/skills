@@ -1,0 +1,112 @@
+{
+  "meta": {
+    "title": "Clinic Admissions Dashboard User Guide",
+    "subtitle": "How to find, filter, read and export admissions data",
+    "doc_type": "policy",
+    "audience": "Facility administrators and regional operations leaders",
+    "purpose": "Help leaders answer their own admissions questions without ad hoc report requests",
+    "owner": "Report owner",
+    "version": "1.0",
+    "date": "October 2026",
+    "classification": "Internal use only",
+    "sources": [
+      "Synthetic example content for the document-builder skill; replace with the request, attachments and the sources the user names"
+    ]
+  },
+  "sections": [
+    {
+      "title": "Getting Started",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Before you start, confirm your access request was approved. Approval usually takes one business day."
+        }
+      ],
+      "sections": [
+        {
+          "title": "Open the Dashboard",
+          "blocks": [
+            {
+              "type": "procedure",
+              "title": "To open the dashboard:",
+              "steps": [
+                {
+                  "text": "Open the analytics portal from the **Tools** menu on the intranet home page."
+                },
+                {
+                  "text": "Select **Clinic Operations**, then select **Admissions Dashboard**.",
+                  "result": "The dashboard opens on the Overview tab with last week's data.",
+                  "image": "screenshots/dashboard_overview.png",
+                  "caption": "The Overview tab after the dashboard opens",
+                  "alt": "Admissions dashboard overview tab with filters across the top"
+                },
+                {
+                  "text": "Bookmark the page so you can return to it in one click."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Set Your Filters",
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "Filters apply to every tab. The dashboard remembers them until you select **Reset**."
+            },
+            {
+              "type": "table",
+              "caption": "Filters and what they change",
+              "columns": [
+                "Filter",
+                "What it changes",
+                "Default"
+              ],
+              "rows": [
+                [
+                  "Date range",
+                  "The period every chart and number covers",
+                  "Last 7 days"
+                ],
+                [
+                  "Region",
+                  "Which regions appear",
+                  "All you can access"
+                ],
+                [
+                  "Facility",
+                  "One or more clinics within the region",
+                  "All"
+                ],
+                [
+                  "Patient group",
+                  "Modality group, such as in-center or home",
+                  "All"
+                ]
+              ]
+            },
+            {
+              "type": "callout",
+              "kind": "tip",
+              "text": "Select **Save View** to keep your filters and open the dashboard ready next time."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "glossary": [
+    {
+      "term": "Census",
+      "definition": "Patients actively treated at a facility on a given day"
+    },
+    {
+      "term": "Net change",
+      "definition": "Admissions minus discharges for the period"
+    },
+    {
+      "term": "Rolling average",
+      "definition": "The average of the previous 30 days, recalculated each day"
+    }
+  ]
+}

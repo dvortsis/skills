@@ -1,0 +1,313 @@
+{
+  "meta": {
+    "title": "Clinic Admissions Dashboard User Guide",
+    "subtitle": "How to find, filter, read and export admissions data",
+    "doc_type": "user-guide",
+    "profile": "lean",
+    "audience": "Facility administrators and regional operations leaders",
+    "purpose": "Help leaders answer their own admissions questions without ad hoc report requests",
+    "owner": "Clinic Operations Analytics",
+    "version": "1.0",
+    "date": "October 2026",
+    "classification": "Internal use only",
+    "owner_role": "Dashboard owner, Clinic Operations Analytics",
+    "last_reviewed": "October 2026",
+    "next_review": "October 2027",
+    "sources": [
+      "Synthetic example content for the document-builder skill; replace with the request, attachments and the sources the user names"
+    ]
+  },
+  "sections": [
+    {
+      "title": "Introduction",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "The admissions dashboard shows daily admissions, discharges and census for every clinic you can access. This guide explains how to open it, read each view and export the numbers you need."
+        },
+        {
+          "type": "callout",
+          "kind": "note",
+          "text": "All numbers in this guide are synthetic examples. Your dashboard shows only the facilities your access request covers."
+        }
+      ],
+      "sections": [
+        {
+          "title": "Who This Guide Is For",
+          "blocks": [
+            {
+              "type": "bullets",
+              "items": [
+                "Facility administrators who track weekly admissions",
+                "Regional leaders who compare clinics",
+                "Analysts who export data for reviews"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "What This Guide Covers",
+          "blocks": [
+            {
+              "type": "numbered",
+              "items": [
+                "Open the dashboard and set your filters",
+                "Read the KPI ribbon and trend chart",
+                "Export a filtered report",
+                "Fix the most common problems"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Getting Started",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Before you start, confirm your access request was approved. Approval usually takes one business day."
+        }
+      ],
+      "sections": [
+        {
+          "title": "Open the Dashboard",
+          "blocks": [
+            {
+              "type": "procedure",
+              "title": "To open the dashboard:",
+              "steps": [
+                {
+                  "text": "Open the analytics portal from the **Tools** menu on the intranet home page."
+                },
+                {
+                  "text": "Select **Clinic Operations**, then select **Admissions Dashboard**.",
+                  "result": "The dashboard opens on the Overview tab with last week's data.",
+                  "image": "screenshots/dashboard_overview.png",
+                  "caption": "The Overview tab after the dashboard opens",
+                  "alt": "Admissions dashboard overview tab with filters across the top"
+                },
+                {
+                  "text": "Bookmark the page so you can return to it in one click."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Set Your Filters",
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "Filters apply to every tab. The dashboard remembers them until you select **Reset**."
+            },
+            {
+              "type": "table",
+              "caption": "Filters and what they change",
+              "columns": [
+                "Filter",
+                "What it changes",
+                "Default"
+              ],
+              "rows": [
+                [
+                  "Date range",
+                  "The period every chart and number covers",
+                  "Last 7 days"
+                ],
+                [
+                  "Region",
+                  "Which regions appear",
+                  "All you can access"
+                ],
+                [
+                  "Facility",
+                  "One or more clinics within the region",
+                  "All"
+                ],
+                [
+                  "Patient group",
+                  "Modality group, such as in-center or home",
+                  "All"
+                ]
+              ]
+            },
+            {
+              "type": "callout",
+              "kind": "tip",
+              "text": "Select **Save View** to keep your filters and open the dashboard ready next time."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Reading the Dashboard",
+      "sections": [
+        {
+          "title": "KPI Ribbon",
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "The ribbon shows four headline numbers for the filtered period: admissions, discharges, net change and census. Each compares with the previous period."
+            }
+          ]
+        },
+        {
+          "title": "Trend Chart",
+          "blocks": [
+            {
+              "type": "figure",
+              "image": "screenshots/admissions_widget.png",
+              "caption": "Admissions versus discharges trend chart",
+              "alt": "Line chart of daily admissions and discharges with a 30-day rolling average",
+              "width_in": 5.5
+            },
+            {
+              "type": "paragraph",
+              "text": "The solid line is the 30-day rolling average. Select any point to see that day's detail."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Exporting Data",
+      "blocks": [
+        {
+          "type": "procedure",
+          "title": "To export a filtered report:",
+          "steps": [
+            {
+              "text": "Set the filters you want in the report."
+            },
+            {
+              "text": "Select **Export** in the top-right corner, then choose **CSV** or **PDF**."
+            },
+            {
+              "text": "Save the file to your secure network folder.",
+              "result": "The file keeps the filters you applied."
+            }
+          ]
+        },
+        {
+          "type": "callout",
+          "kind": "warning",
+          "text": "Never send exported files by external email. Keep patient-level data on the secure network."
+        },
+        {
+          "type": "code",
+          "code": "File name pattern: Admissions_<Region>_<YYYY-MM-DD>.csv\nExample:           Admissions_West_2026-10-05.csv"
+        }
+      ]
+    },
+    {
+      "title": "Troubleshooting",
+      "blocks": [
+        {
+          "type": "table",
+          "caption": "Common problems and fixes",
+          "columns": [
+            "Problem",
+            "Likely cause",
+            "Fix"
+          ],
+          "rows": [
+            [
+              "A facility is missing",
+              "Your access doesn't cover it",
+              "Request access through the service portal"
+            ],
+            [
+              "Numbers look a day behind",
+              "Data refreshes at 6 a.m.",
+              "Check the refresh time under the title"
+            ],
+            [
+              "Export button is gray",
+              "No filters applied yet",
+              "Set at least a date range"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Reference",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Look up a headline number here without reading the whole guide. Every number covers the period in your date range filter."
+        },
+        {
+          "type": "table",
+          "caption": "Headline numbers and how each is counted",
+          "columns": [
+            "Number",
+            "What it counts",
+            "Compared with"
+          ],
+          "rows": [
+            [
+              "Admissions",
+              "New patients who started treatment in the period",
+              "The previous period"
+            ],
+            [
+              "Discharges",
+              "Patients who stopped treatment at the facility",
+              "The previous period"
+            ],
+            [
+              "Net change",
+              "Admissions minus discharges",
+              "The previous period"
+            ],
+            [
+              "Census",
+              "Patients actively treated on the last day of the period",
+              "The same day last period"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Support",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "For questions about the numbers, contact the Clinic Operations Analytics team mailbox. For access problems, open a ticket in the service portal."
+        },
+        {
+          "type": "callout",
+          "kind": "example",
+          "title": "Example request",
+          "text": "\"The West region census on Oct. 5 shows 412, but our clinic count shows 409. Can you check the source?\""
+        }
+      ]
+    }
+  ],
+  "glossary": [
+    {
+      "term": "Census",
+      "definition": "Patients actively treated at a facility on a given day"
+    },
+    {
+      "term": "Net change",
+      "definition": "Admissions minus discharges for the period"
+    },
+    {
+      "term": "Rolling average",
+      "definition": "The average of the previous 30 days, recalculated each day"
+    }
+  ],
+  "revisions": [
+    {
+      "version": "1.0",
+      "date": "October 2026",
+      "author": "Clinic Operations Analytics",
+      "change": "First release"
+    }
+  ]
+}

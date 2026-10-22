@@ -1,0 +1,78 @@
+{
+  "meta": {
+    "title": "Report Access Policy",
+    "subtitle": "Who may view, share and export clinic operations reports",
+    "doc_type": "policy",
+    "audience": "Report owners, facility administrators and regional operations leaders",
+    "purpose": "Set one rule for granting, reviewing and removing access to clinic operations reports",
+    "owner": "Report owner",
+    "version": "1.0",
+    "date": "October 2026",
+    "origination_date": "October 2026",
+    "classification": "Internal use only",
+    "owner_role": "Policy owner, Clinic Operations Analytics",
+    "last_reviewed": "October 2026",
+    "next_review": "October 2027",
+    "sources": [
+      "Synthetic example content for the document-builder skill; replace with the request, attachments and the sources the user names"
+    ]
+  },
+  "sections": [
+    {
+      "title": "Purpose",
+      "blocks": [
+        {"type": "paragraph", "text": "This policy sets one rule for who may view, share and export clinic operations reports, so patient-level numbers reach only the people who need them for their work."}
+      ]
+    },
+    {
+      "title": "Scope",
+      "blocks": [
+        {"type": "paragraph", "text": "This policy covers every clinic operations report published on the analytics portal, including saved views and scheduled exports."},
+        {"type": "bullets", "items": ["It applies to report owners, facility administrators and regional operations leaders.", "It doesn't cover finance or payroll reports, which follow their own access rules."]}
+      ]
+    },
+    {
+      "title": "Policy Statement",
+      "blocks": [
+        {"type": "paragraph", "text": "Access follows the minimum a role needs. A manager approves each request, and the report owner reviews every access list each quarter."},
+        {"type": "numbered", "items": ["Request access through the portal; email requests aren't accepted.", "Share reports by link only; don't attach exports to email.", "Remove access within five business days when a role changes."]},
+        {"type": "callout", "kind": "important", "text": "Exports that contain patient-level rows stay on approved network drives. Don't save them to personal devices."}
+      ]
+    },
+    {
+      "title": "Roles and Responsibilities",
+      "blocks": [
+        {"type": "table", "caption": "Who does what under this policy", "columns": ["Role", "Responsibility"], "rows": [
+          ["Report owner", "Approves the access list for each report and reviews it every quarter"],
+          ["Manager", "Approves or declines each access request within two business days"],
+          ["Report user", "Uses reports only for their work and shares them by link"]
+        ]}
+      ]
+    },
+    {
+      "title": "Definitions",
+      "blocks": [
+        {"type": "table", "caption": "Terms used in this policy", "columns": ["Term", "Meaning"], "rows": [
+          ["Access list", "The people and groups who can open a report"],
+          ["Patient-level row", "A row that describes one patient rather than a total"],
+          ["Quarterly review", "The report owner's check that every person on the list still needs access"]
+        ]}
+      ]
+    },
+    {
+      "title": "Exceptions",
+      "blocks": [
+        {"type": "paragraph", "text": "The report owner may approve an exception for up to 90 days. Record the reason, the end date and the approver on the access request."}
+      ]
+    },
+    {
+      "title": "Related Documents",
+      "blocks": [
+        {"type": "bullets", "items": ["Clinic Admissions Dashboard User Guide", "Data Classification Standard"]}
+      ]
+    }
+  ],
+  "revisions": [
+    {"version": "1.0", "date": "October 2026", "author": "Report owner", "change": "First release"}
+  ]
+}

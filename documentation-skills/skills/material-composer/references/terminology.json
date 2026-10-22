@@ -1,0 +1,13 @@
+{
+  "format": "terminology",
+  "version": "2.0.0",
+  "source": "General AP-style rules shared by every project. A project adds its own house terms in a file of the same format named by its brand profile (\"terminology\": \"house-terms.json\"); its sets merge into these and its audience sets load only with that audience profile.",
+  "note": "Every finding is a WARN [TERM_BRAND] with the preferred term. Rule kinds: case (exact capitalization of a word, e.g. a product name), regex (pattern + suggest, or suggest_template), midsentence (lowercase unless it starts a sentence), apdate (AP month abbreviations). A project file may also add \"jargon\" {term: plain alternative} and \"acronyms\" {ACRONYM: spelled out}.",
+  "sets": {
+    "internal": [
+      {"id": "more-than", "kind": "regex", "pattern": "\\b([Oo])ver (\\d)", "suggest_template": "{More} than {2}", "why": "use more than for quantities"},
+      {"id": "ap-date", "kind": "apdate", "why": "AP dates: abbreviate Jan., Feb., Aug., Sept., Oct., Nov., Dec.; no ordinals"}
+    ]
+  },
+  "months_ap": {"january": "Jan.", "february": "Feb.", "march": "March", "april": "April", "may": "May", "june": "June", "july": "July", "august": "Aug.", "september": "Sept.", "october": "Oct.", "november": "Nov.", "december": "Dec.", "jan": "Jan.", "feb": "Feb.", "mar": "March", "apr": "April", "jun": "June", "jul": "July", "aug": "Aug.", "sep": "Sept.", "sept": "Sept.", "oct": "Oct.", "nov": "Nov.", "dec": "Dec."}
+}

@@ -1,0 +1,296 @@
+{
+  "meta": {
+    "title": "Denial Prevention: Fewer Write-offs, Clear Next Steps",
+    "subtitle": "Q3 Results and the 2027 Plan",
+    "presenter": "Revenue Operations Analytics",
+    "date": "October 2026",
+    "year": 2026,
+    "audience": "Revenue cycle leadership",
+    "decision": "Fund the second prevention wave starting in Q1 2027",
+    "big_idea": "Fixing three upstream causes cut denials by a third, and a second wave can repeat that in 2027.",
+    "notes": "Synthetic example data for the skill self-test. Not real results.",
+    "title_accent": "Clear Next Steps"
+  },
+  "slides": [
+    {
+      "layout": "summary",
+      "title": "Prevention Cut Denials by a Third, and a Second Wave Is Ready",
+      "points": [
+        "Denial rate fell from 9.1% to 6.0%",
+        "Three upstream causes drove most of the gain",
+        "Wave two starts in Q1 if funded"
+      ],
+      "notes": "Lead with the answer and the ask; the rest of the deck is evidence and plan."
+    },
+    {
+      "layout": "kpi",
+      "message": "numbers",
+      "style": "minimal",
+      "title": "Q3 Beat the Goal on All Three Measures",
+      "kpis": [
+        {
+          "value": "6.0%",
+          "label": "Denial Rate",
+          "delta": "Goal 7.0%"
+        },
+        {
+          "value": "$2.4M",
+          "label": "Write-offs Avoided",
+          "delta": "Jul-Sep"
+        },
+        {
+          "value": "11d",
+          "label": "Days to Resolve",
+          "delta": "Was 19d"
+        }
+      ],
+      "source": "Denials data mart, Q3 2026 (synthetic example)",
+      "notes": "Each measure beat its goal. Write-offs avoided is the number finance asked about."
+    },
+    {
+      "layout": "steps",
+      "message": "ideas",
+      "title": "Three Upstream Fixes Did Most of the Work",
+      "steps": [
+        {
+          "label": "Verify Coverage Earlier",
+          "detail": "Eligibility runs at scheduling, not at billing"
+        },
+        {
+          "label": "Check Authorizations Daily",
+          "detail": "A daily list flags visits without an authorization"
+        },
+        {
+          "label": "Fix Coding at the Source",
+          "detail": "Top coding errors go back to the clinic weekly"
+        }
+      ],
+      "notes": "Coverage verification drove about half of the improvement; the other two shared the rest."
+    },
+    {
+      "layout": "shift",
+      "message": "change",
+      "title": "The Denial Rate Fell by a Third in One Quarter",
+      "metric": "Denial Rate",
+      "from": {
+        "value": "9.1%",
+        "label": "June"
+      },
+      "to": {
+        "value": "6.0%",
+        "label": "September"
+      },
+      "change": "-34%",
+      "takeaway": "At this rate, prevention pays for wave two within two quarters.",
+      "source": "Denials data mart, Jun-Sep 2026 (synthetic example)",
+      "notes": "Show the shift, then the payback point. The trend is in the appendix if asked."
+    },
+    {
+      "layout": "hero",
+      "message": "point",
+      "title": "Prevention Beats Rework Every Time",
+      "accent": "Every Time",
+      "text": "Every denial we prevent is a claim nobody has to touch twice.",
+      "notes": "Breather: the principle behind the plan that follows."
+    },
+    {
+      "layout": "diagram",
+      "message": "plan",
+      "title": "Wave Two Runs January Through June",
+      "diagram": {
+        "kind": "roadmap",
+        "periods": [
+          "Jan",
+          "Feb",
+          "Mar",
+          "Apr",
+          "May",
+          "Jun"
+        ],
+        "highlight": {
+          "lane": 0,
+          "item": 0
+        },
+        "lanes": [
+          {
+            "label": "Prior Auth",
+            "items": [
+              {
+                "label": "Auto Checks",
+                "start": "Jan",
+                "end": "Mar"
+              },
+              {
+                "label": "Payer Rules",
+                "start": "Apr",
+                "end": "Jun"
+              }
+            ]
+          },
+          {
+            "label": "Coding",
+            "items": [
+              {
+                "label": "Top 20 Edits",
+                "start": "Feb",
+                "end": "Apr"
+              }
+            ]
+          },
+          {
+            "label": "Training",
+            "items": [
+              {
+                "label": "Clinic Leads",
+                "start": "Jan",
+                "end": "Feb"
+              },
+              {
+                "label": "All Billers",
+                "start": "Mar",
+                "end": "May"
+              }
+            ]
+          }
+        ]
+      },
+      "alt": "Roadmap from January to June with prior authorization, coding and training lanes; automated authorization checks highlighted.",
+      "notes": "Automated authorization checks come first because they are the largest remaining denial cause."
+    },
+    {
+      "layout": "cards",
+      "message": "ideas",
+      "tint": true,
+      "title": "Wave Two Targets the Causes Wave One Missed",
+      "cards": [
+        {
+          "label": "Prior Authorization",
+          "detail": "Still 38% of remaining denials",
+          "icon": "shield-check"
+        },
+        {
+          "label": "Coding Edits",
+          "detail": "Twenty edits cause most coding denials",
+          "icon": "file-check"
+        },
+        {
+          "label": "Biller Training",
+          "detail": "New billers repeat old errors",
+          "icon": "school"
+        }
+      ],
+      "notes": "These three causes account for most of what is left after wave one."
+    },
+    {
+      "layout": "chart",
+      "message": "comparison",
+      "title": "Prior Authorization Is Now the Largest Denial Cause",
+      "chart": {
+        "type": "bar",
+        "categories": [
+          "Prior auth",
+          "Coding",
+          "Eligibility",
+          "Timely filing",
+          "Other"
+        ],
+        "series": [
+          {
+            "name": "Share of denials",
+            "values": [
+              0.38,
+              0.24,
+              0.16,
+              0.12,
+              0.1
+            ]
+          }
+        ],
+        "highlight": {
+          "category": "Prior auth"
+        },
+        "number_format": "0%"
+      },
+      "takeaway": "Automating authorization checks addresses more than a third of what remains.",
+      "source": "Denials data mart, Q3 2026 (synthetic example)",
+      "alt": "Bar chart of denial causes; prior authorization is the largest at 38 percent.",
+      "notes": "Eligibility dropped from first to third after wave one."
+    },
+    {
+      "layout": "split",
+      "message": "walkthrough",
+      "panel": "dark",
+      "title": "Billers Will See Missing Authorizations Before Billing",
+      "points": [
+        "Flags appear on the daily work list",
+        "One click opens the payer portal"
+      ],
+      "visual": {
+        "kind": "screenshot",
+        "image": "screenshots/referral_queue.png",
+        "alt": "Daily work list with missing authorization flags on three visits."
+      },
+      "notes": "This is the planned work list view; the flag replaces a manual spreadsheet."
+    },
+    {
+      "layout": "diagram",
+      "message": "tradeoff",
+      "title": "Authorization Automation Is the Clear First Move",
+      "diagram": {
+        "kind": "matrix",
+        "highlight": 1,
+        "axes": {
+          "x": "effort",
+          "y": "impact"
+        },
+        "nodes": [
+          {
+            "label": "Coding Edits",
+            "detail": "High impact, high effort"
+          },
+          {
+            "label": "Auth Automation",
+            "detail": "High impact, moderate effort"
+          },
+          {
+            "label": "Timely Filing",
+            "detail": "Low impact, high effort"
+          },
+          {
+            "label": "Biller Training",
+            "detail": "Low impact, low effort"
+          }
+        ]
+      },
+      "alt": "Two by two matrix of impact versus effort with authorization automation highlighted.",
+      "notes": "Authorization automation sits in the high-impact quadrant with less effort than the coding work."
+    },
+    {
+      "layout": "hero",
+      "message": "number",
+      "title": "Wave Two Could Avoid Write-offs Next Year",
+      "accent": "Next Year",
+      "value": "$4.1M",
+      "label": "Write-offs Avoided, Estimate",
+      "source": "Finance model v3 (synthetic example)",
+      "notes": "This estimate assumes wave two matches half of wave one's rate of improvement."
+    },
+    {
+      "layout": "closing",
+      "title": "Decision Needed: Fund Wave Two for Q1 2027",
+      "asks": [
+        {
+          "action": "Approve wave two funding",
+          "owner": "Revenue cycle VP",
+          "date": "Nov 14"
+        },
+        {
+          "action": "Assign a payer rules lead",
+          "owner": "Billing director",
+          "date": "Dec 1"
+        }
+      ],
+      "notes": "Ask for the funding decision, then the owner for payer rules."
+    }
+  ]
+}

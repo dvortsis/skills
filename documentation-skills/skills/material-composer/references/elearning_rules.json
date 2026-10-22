@@ -1,0 +1,14 @@
+{
+ "version": "1.0.0",
+ "row": "D-14",
+ "note": "Data lists for scripts/build_module.py. Add terms here, never in code (CONVENTIONS: Adding a check).",
+ "screen_types": ["intro", "content", "scenario", "question", "practice", "summary"],
+ "max_screens_without_interaction": 4,
+ "non_observable_verbs": ["understand", "know", "learn", "be aware", "be aware of", "appreciate", "comprehend", "grasp", "be familiar", "be familiar with", "realize", "believe", "be exposed to", "gain an understanding", "gain knowledge", "become familiar", "internalize"],
+ "objective_prefixes": ["learners will be able to", "learners will", "you will be able to", "you will", "participants will be able to", "participants will", "be able to", "able to"],
+ "observable_verbs": ["identify", "list", "name", "describe", "explain", "define", "state", "recall", "recognize", "select", "choose", "classify", "compare", "contrast", "match", "locate", "find", "apply", "use", "demonstrate", "perform", "complete", "enter", "submit", "calculate", "compute", "convert", "prepare", "create", "build", "draft", "write", "document", "record", "update", "resolve", "correct", "fix", "troubleshoot", "verify", "check", "confirm", "validate", "review", "evaluate", "assess", "prioritize", "decide", "determine", "route", "escalate", "report", "summarize", "sort", "filter", "navigate", "open", "run", "export", "distinguish", "interpret", "follow", "sequence", "organize", "plan", "schedule", "respond", "handle", "reconcile", "post", "process", "flag", "audit"],
+ "placeholders": ["TBD", "TODO", "First Last", "lorem", "lorem ipsum", "XXX", "[insert", "{{", "<placeholder>"],
+ "scorm_resume_needs": ["cmi.core.lesson_location", "cmi.suspend_data", "cmi.core.exit", "LMSCommit"],
+ "scorm_suspend_limit": 4096,
+ "image_types": {"png": "image/png", "jpg": "image/jpeg", "jpeg": "image/jpeg", "gif": "image/gif", "svg": "image/svg+xml", "webp": "image/webp"}
+}

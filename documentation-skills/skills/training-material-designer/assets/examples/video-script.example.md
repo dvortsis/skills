@@ -1,0 +1,28 @@
+---
+format: video-script
+title: Find Your Top Denial Reasons in Three Clicks
+audience: New billing specialists
+objective: Find the payer and denial reason to work first using the denials report
+path: foundation
+duration_min: 3
+sources:
+  - Denials report guide (synthetic example)
+  - Team onboarding checklist (synthetic example)
+---
+
+## Objective
+By the end of this video you can open the denials report, filter it to your region and pick the denial reason to work first.
+
+## Script
+| Time | On Screen | Narration |
+|---|---|---|
+| 0:00-0:20 | Report home page with the headline numbers | Every morning you need one answer: which denials do I work first? This report gives you that answer in three clicks. |
+| 0:20-0:50 | Callout 1 on the region filter | First, set the region filter to your region. Every number on the page now shows only your work. |
+| 0:50-1:20 | Callout 2 on the payer chart | Next, look at the payer chart. The longest bar is the payer with the most denied dollars this month. |
+| 1:20-1:45 | Pause card with the question | Check: you clicked a payer bar and the reasons chart changed. How do you get back to all payers? Pause and decide. Answer: click the same bar again to clear the filter. |
+| 1:45-2:20 | Callout 3 on the reasons chart | Now read the reasons chart. The top reason is where one fix helps the most claims. |
+| 2:20-2:40 | Pause card with the question | Check: two reasons have the same count. Which do you work first? Answer: the one with more denied dollars. |
+| 2:40-3:00 | Save view button | Save your filters as a custom view so the report opens ready tomorrow. |
+
+## Wrap-up and Next Steps
+Open the report now, save your custom view, and bring your top reason to tomorrow's huddle. Questions go to the team channel.

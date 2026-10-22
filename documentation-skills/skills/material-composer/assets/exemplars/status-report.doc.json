@@ -1,0 +1,158 @@
+{
+ "meta": {
+  "title": "Example: UAT Cycle 1 Status",
+  "doc_type": "status-report",
+  "layout": "sheet",
+  "audience": "Partner team leads and BI facilitators",
+  "purpose": "Use this to see where cycle 1 of user acceptance testing stands and what each role does next",
+  "owner": "BI / Analytics",
+  "version": "1.1",
+  "date": "October 2026",
+  "classification": "Internal use only",
+  "sheet": {
+   "pages_per_section": 1,
+   "min_body_pt": 9,
+   "min_table_pt": 8,
+   "min_figure_pt": 8,
+   "text_scale": 1.0
+  },
+  "sources": [
+   "UAT process reference (synthetic example content); example dates and figures"
+  ]
+ },
+ "sections": [
+  {
+   "title": "Cycle 1 Status",
+   "sections": [
+    {
+     "title": "Overall Status",
+     "blocks": [
+      {
+       "type": "paragraph",
+       "text": "**At Risk** (example). Two scenarios are blocked until a historical period is loaded; every other scenario is on schedule."
+      }
+     ],
+     "width": "half"
+    },
+    {
+     "title": "Summary",
+     "blocks": [
+      {
+       "type": "paragraph",
+       "text": "**All dates, counts and names are examples.** 18 of 24 scenarios passed, 6 more than last report. No dashboard is signed off yet."
+      }
+     ],
+     "width": "half"
+    },
+    {
+     "title": "Progress",
+     "blocks": [
+      {
+       "type": "table",
+       "caption": "Example Results by Dashboard",
+       "columns": [
+        "Dashboard",
+        "Scenarios",
+        "Passed",
+        "Failed",
+        "Blocked",
+        "Signed Off"
+       ],
+       "rows": [
+        [
+         "Example Dashboard A",
+         "14",
+         "12",
+         "2",
+         "0",
+         "No"
+        ],
+        [
+         "Example Dashboard B",
+         "10",
+         "6",
+         "2",
+         "2",
+         "No"
+        ],
+        [
+         "Total",
+         "24",
+         "18",
+         "4",
+         "2",
+         "0 of 2"
+        ]
+       ]
+      }
+     ]
+    },
+    {
+     "title": "Milestones",
+     "blocks": [
+      {
+       "type": "bullets",
+       "items": [
+        "Cycle 1 testing ends Oct. 23: At Risk",
+        "Fixes released Oct. 30: On Track",
+        "Sign-off Nov. 6: On Track"
+       ]
+      }
+     ]
+    },
+    {
+     "title": "Risks, Issues and Asks",
+     "blocks": [
+      {
+       "type": "table",
+       "caption": "Example Issues and Decisions",
+       "columns": [
+        "Issue",
+        "Decision",
+        "Owner Role",
+        "Due (Example)"
+       ],
+       "rows": [
+        [
+         "Example issue 1 (A)",
+         "FIX REQUIRED",
+         "BI facilitator",
+         "Oct. 27"
+        ],
+        [
+         "Example issue 3 (B)",
+         "FIX REQUIRED",
+         "BI facilitator",
+         "Oct. 27"
+        ]
+       ]
+      }
+     ]
+    },
+    {
+     "title": "Decisions Needed",
+     "blocks": [
+      {
+       "type": "paragraph",
+       "text": "Partner team leads: confirm by Oct. 23 (example date) that testers can bring the legacy extract."
+      }
+     ],
+     "width": "half"
+    },
+    {
+     "title": "Next Steps",
+     "blocks": [
+      {
+       "type": "bullets",
+       "items": [
+        "EDW team: load the period the blocked scenarios need.",
+        "Partners: retest failed scenarios in cycle 2, then sign off."
+       ]
+      }
+     ],
+     "width": "half"
+    }
+   ]
+  }
+ ]
+}

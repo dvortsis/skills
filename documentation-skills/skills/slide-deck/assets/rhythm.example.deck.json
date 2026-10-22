@@ -1,0 +1,262 @@
+{
+  "meta": {
+    "title": "Scheduling Intake Rollout: Results After 60 Days",
+    "subtitle": "Faster Intake, Fewer Handoffs, One Decision Left",
+    "presenter": "Clinic Operations Analytics",
+    "date": "October 2026",
+    "year": 2026,
+    "audience": "Clinic operations leadership",
+    "decision": "Extend the new intake form to the two remaining regions by Dec 1",
+    "big_idea": "The new intake form cut wait time by a third in pilot regions, so we should extend it to the last two regions.",
+    "notes": "Synthetic example data for the skill self-test. Not real results.",
+    "title_accent": "60 Days"
+  },
+  "slides": [
+    {
+      "layout": "summary",
+      "title": "The New Intake Form Works, so Every Region Should Use It",
+      "points": [
+        "Wait time fell by a third in pilot regions",
+        "Handoffs dropped from four to two",
+        "Two regions remain; both can switch by Dec 1"
+      ],
+      "notes": "Lead with the answer: the pilot met every goal, and the only open item is the timing for the last two regions."
+    },
+    {
+      "layout": "kpi",
+      "message": "numbers",
+      "title": "Pilot Regions Beat Every Intake Goal",
+      "kpis": [
+        {
+          "value": "2.1d",
+          "label": "Days to First Visit",
+          "delta": "Goal 3.0d"
+        },
+        {
+          "value": "2",
+          "label": "Handoffs per Referral",
+          "delta": "Was 4"
+        },
+        {
+          "value": "94%",
+          "label": "Complete on First Try",
+          "delta": "Goal 85%"
+        }
+      ],
+      "takeaway": "Patients reach their first treatment almost a day sooner than our goal.",
+      "source": "Intake tracker, pilot regions, Aug-Sep (synthetic example)",
+      "notes": "All three goals are met. The first-try rate matters most because every incomplete form adds a callback."
+    },
+    {
+      "layout": "diagram",
+      "message": "sequence",
+      "title": "Two Handoffs Disappeared From the Referral Path",
+      "diagram": {
+        "kind": "process",
+        "highlight": 1,
+        "nodes": [
+          {
+            "label": "Referral In",
+            "detail": "Form arrives from the office"
+          },
+          {
+            "label": "Auto-route",
+            "detail": "Rules pick the right team"
+          },
+          {
+            "label": "Schedule",
+            "detail": "One scheduler books the visit"
+          },
+          {
+            "label": "Confirm",
+            "detail": "Patient gets a text"
+          }
+        ]
+      },
+      "takeaway": "Auto-routing replaced two manual triage steps, so booking starts the same day.",
+      "alt": "Four-step referral process with the auto-route step highlighted.",
+      "notes": "Before the pilot, a coordinator and a lead both triaged each referral. Auto-routing removed both steps."
+    },
+    {
+      "layout": "hero",
+      "message": "number",
+      "title": "Hours Back for Schedulers Every Week",
+      "accent": "Every Week",
+      "value": "120",
+      "label": "Scheduler Hours Saved Weekly",
+      "text": "Across the three pilot regions, measured over eight weeks.",
+      "source": "Scheduling time study, pilot regions (synthetic example)",
+      "notes": "Pause here. This is the number leadership will remember: the time goes back into patient calls."
+    },
+    {
+      "layout": "chart",
+      "message": "comparison",
+      "title": "Wait Time Fell Steadily Once the Form Went Live",
+      "chart": {
+        "type": "line",
+        "categories": [
+          "Jun",
+          "Jul",
+          "Aug",
+          "Sep"
+        ],
+        "series": [
+          {
+            "name": "Pilot regions",
+            "values": [
+              3.2,
+              3.1,
+              2.4,
+              2.1
+            ]
+          },
+          {
+            "name": "Other regions",
+            "values": [
+              3.3,
+              3.2,
+              3.2,
+              3.1
+            ]
+          }
+        ],
+        "highlight": {
+          "series": "Pilot regions"
+        },
+        "number_format": "0.0"
+      },
+      "source": "Intake tracker, Jun-Sep (synthetic example)",
+      "alt": "Line chart of days to first visit, pilot regions falling from 3.2 to 2.1 while other regions stay near 3.2.",
+      "notes": "The other regions are the control group. Their flat line shows the drop is not seasonal."
+    },
+    {
+      "layout": "screenshot",
+      "message": "walkthrough",
+      "series": "form walkthrough",
+      "title": "Step One: The Form Checks Insurance Before It Is Sent",
+      "image": "screenshots/intake_form_step1.png",
+      "callouts": [
+        {
+          "x": 0.25,
+          "y": 0.2,
+          "text": "Insurance check runs on entry"
+        },
+        {
+          "x": 0.7,
+          "y": 0.6,
+          "text": "Missing fields are flagged in place"
+        }
+      ],
+      "alt": "Intake form with the insurance check result and a flagged missing field.",
+      "notes": "Walk through the form as a referring office sees it. The check happens before submission, which is why first-try completion rose."
+    },
+    {
+      "layout": "screenshot",
+      "message": "walkthrough",
+      "series": "form walkthrough",
+      "title": "Step Two: Schedulers See a Ready-to-book Referral",
+      "image": "screenshots/intake_form_step2.png",
+      "callouts": [
+        {
+          "x": 0.3,
+          "y": 0.3,
+          "text": "Routing reason shown at the top"
+        }
+      ],
+      "alt": "Scheduler queue showing one referral marked ready to book with its routing reason.",
+      "notes": "On the scheduler side, the referral arrives complete and already routed, so booking takes one touch.",
+      "takeaway": "Referrals arrive complete and routed, so schedulers book them in one touch."
+    },
+    {
+      "layout": "bullets",
+      "message": "context",
+      "title": "Two Regions Still Use the Old Paper Process",
+      "points": [
+        "North and Mountain regions start in November",
+        "Both have trained super users ready",
+        "Form setup takes two weeks per region"
+      ],
+      "notes": "These are the only regions left. The timing in the ask fits two-week setups back to back."
+    },
+    {
+      "layout": "hero",
+      "message": "point",
+      "title": "Every Region Moves to One Intake Path by Dec 1",
+      "accent": "One Intake",
+      "text": "That is the decision we are asking for today.",
+      "notes": "Second breather: restate the decision in plain words before the detail on options."
+    },
+    {
+      "layout": "diagram",
+      "message": "options",
+      "title": "Extending Now Costs Less Than Waiting Until Spring",
+      "diagram": {
+        "kind": "comparison",
+        "left": {
+          "label": "Wait Until Spring",
+          "points": [
+            "Two more months of paper forms",
+            "Setup competes with peak season"
+          ]
+        },
+        "right": {
+          "label": "Extend by Dec 1",
+          "points": [
+            "Same trained team does both setups",
+            "Results visible by January"
+          ]
+        }
+      },
+      "alt": "Comparison of waiting until spring versus extending by December 1, with the December option highlighted.",
+      "notes": "Spring is peak season for referrals, which makes setup harder. December uses the team while it is still in practice."
+    },
+    {
+      "layout": "table",
+      "message": "plan",
+      "title": "Each Region Needs Two Weeks of Setup",
+      "table": {
+        "columns": [
+          "Region",
+          "Setup Starts",
+          "Live By",
+          "Super Users"
+        ],
+        "rows": [
+          [
+            "North",
+            "Nov 3",
+            "Nov 17",
+            "4"
+          ],
+          [
+            "Mountain",
+            "Nov 17",
+            "Dec 1",
+            "3"
+          ]
+        ],
+        "highlight_row": 1
+      },
+      "takeaway": "Mountain is the critical path; any slip there moves the Dec 1 date.",
+      "source": "Rollout plan v2 (synthetic example)",
+      "notes": "Mountain starts second because its super users finish training Nov 14."
+    },
+    {
+      "layout": "closing",
+      "title": "Decision Needed: Extend the Form by Dec 1",
+      "asks": [
+        {
+          "action": "Approve the North and Mountain rollout",
+          "owner": "Operations VP",
+          "date": "Oct 24"
+        },
+        {
+          "action": "Confirm super user release time",
+          "owner": "Regional directors",
+          "date": "Oct 31"
+        }
+      ],
+      "notes": "Ask for the decision, then confirm owners and dates for each region."
+    }
+  ]
+}

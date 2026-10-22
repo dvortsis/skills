@@ -1,0 +1,148 @@
+{
+ "meta": {
+  "title": "Synthetic Claim Denial Basics",
+  "audience": "New revenue operations team members (synthetic example)",
+  "objectives": [
+   "Identify the three most common denial reasons in the synthetic claim set",
+   "Choose the right next step for a denied claim",
+   "Complete the corrected claim checklist before resubmitting"
+  ],
+  "duration_min": 12,
+  "version": "1.0",
+  "date": "2026-10-11",
+  "sources": [
+   "Synthetic example: claims denial job aid outline, 2026-10-11",
+   "Synthetic example: team denial log summary (no patient data)"
+  ]
+ },
+ "screens": [
+  {
+   "id": "S1",
+   "type": "intro",
+   "title": "Why Denials Matter",
+   "body": "A denied claim delays payment. Most denials can be fixed in one pass when you read the code first.\n\nThis module takes about 12 minutes.",
+   "bullets": [
+    "Read the denial code",
+    "Pick the next step",
+    "Use the checklist"
+   ]
+  },
+  {
+   "id": "S2",
+   "type": "content",
+   "title": "The Three Common Reasons",
+   "body": "In the synthetic claim set, three reasons cause most denials.",
+   "bullets": [
+    "Missing or invalid authorization",
+    "Eligibility not confirmed for the date of service",
+    "Coding mismatch between the claim and the order"
+   ]
+  },
+  {
+   "id": "S3",
+   "type": "content",
+   "title": "Four Steps for Every Denial",
+   "body": "Follow the same four steps for every denial, in order.",
+   "image": "synthetic_denial_steps.png.b64",
+   "alt": "Four steps in a row: 1 read the denial code, 2 check the claim data, 3 correct or appeal, 4 resubmit and track."
+  },
+  {
+   "id": "S4",
+   "type": "question",
+   "title": "Check Your Understanding",
+   "body": "Choose one answer.",
+   "question": {
+    "stem": "Which of these is one of the three common denial reasons?",
+    "multi": false,
+    "options": [
+     {
+      "text": "Missing or invalid authorization",
+      "correct": true,
+      "feedback": "Yes. Authorization problems are one of the three common reasons."
+     },
+     {
+      "text": "The claim was printed in color",
+      "correct": false,
+      "feedback": "Print color does not affect claims. Look at authorization, eligibility and coding."
+     },
+     {
+      "text": "The payer portal was slow",
+      "correct": false,
+      "feedback": "A slow portal delays your work but does not cause a denial."
+     }
+    ]
+   }
+  },
+  {
+   "id": "S5",
+   "type": "content",
+   "title": "Correct or Appeal",
+   "body": "Correct the claim when the data was wrong. Appeal when the claim was right and the payer applied a rule in error.",
+   "bullets": [
+    "Correct: fix the field and resubmit",
+    "Appeal: attach the supporting documents and file within the payer window"
+   ]
+  },
+  {
+   "id": "S6",
+   "type": "scenario",
+   "title": "A Denial Lands in Your Queue",
+   "body": "A claim comes back with an eligibility denial. The coverage check in the synthetic record shows active coverage on the date of service.",
+   "choices": [
+    {
+     "text": "Resubmit the same claim right away",
+     "correct": false,
+     "feedback": "Resubmitting without a change usually gets the same denial. Check why the payer saw no coverage first."
+    },
+    {
+     "text": "Confirm coverage with the payer, then correct the member details and resubmit",
+     "correct": true,
+     "feedback": "Right. Confirm, correct the details that caused the mismatch, then resubmit and track it."
+    },
+    {
+     "text": "Write off the balance",
+     "correct": false,
+     "feedback": "A write-off is the last step, not the first. Coverage was active, so the claim can be fixed."
+    }
+   ]
+  },
+  {
+   "id": "S7",
+   "type": "practice",
+   "title": "Practice the Checklist",
+   "body": "Choose every item that belongs on the corrected claim checklist.",
+   "question": {
+    "stem": "Which items do you check before resubmitting?",
+    "multi": true,
+    "options": [
+     {
+      "text": "The denial code is resolved",
+      "correct": true,
+      "feedback": "Yes. Confirm the reason for the denial is fixed."
+     },
+     {
+      "text": "The corrected claim indicator is set",
+      "correct": true,
+      "feedback": "Yes. The payer needs to know this replaces the first claim."
+     },
+     {
+      "text": "The claim is printed and filed",
+      "correct": false,
+      "feedback": "Not needed. Claims are tracked in the system, not on paper."
+     },
+     {
+      "text": "The follow-up date is set",
+      "correct": true,
+      "feedback": "Yes. Set a follow-up so the claim does not stall."
+     }
+    ]
+   }
+  },
+  {
+   "id": "S8",
+   "type": "summary",
+   "title": "Summary",
+   "body": "Read the code, pick the step, use the checklist, and track the claim until it pays."
+  }
+ ]
+}

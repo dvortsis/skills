@@ -1,0 +1,96 @@
+{
+  "meta": {
+    "title": "Sample Dashboard User's Guide",
+    "subtitle": "How to Read, Filter and Share the Sample Dashboard",
+    "doc_type": "user-guide",
+    "profile": "textbook",
+    "doc_label": "Revenue Analytics · User's Guide",
+    "audience": "Team leads and analysts who use the Sample Dashboard each week",
+    "purpose": "Teach readers to find, read and share the numbers they need from the Sample Dashboard",
+    "owner": "Report Owner, Revenue Analytics",
+    "version": "Version 2.0",
+    "date": "2026-10-10",
+    "classification": "Proprietary and Confidential – Internal Use Only",
+    "design": "branded",
+    "page_break_level": 1,
+    "toc_levels": 3,
+    "appendix_icons": true,
+    "sources": ["Sample Dashboard page standard and on-screen labels, reviewed 2026-10-10"]
+  },
+  "sections": [
+    {"title": "Introduction", "icon": "book-2", "blocks": [
+      {"type": "paragraph", "text": "This chapter explains how the guide is organized, who it is for and what changed in this version."}],
+     "sections": [
+      {"title": "How to Use This Guide", "blocks": [
+        {"type": "table", "caption": "Where to find each task in this guide", "columns": ["If You Want To", "Go To"],
+         "rows": [["Open the dashboard for the first time", "Chapter 2"], ["Follow the rules every view uses", "Chapter 3"], ["Fix a problem or ask for help", "Chapter 5"]]},
+        {"type": "paragraph", "text": "**Reading paths.** Team leads read Chapters 2 and 3. Analysts read the whole guide, then keep Chapter 5 close."}]},
+      {"title": "Who This Guide Is For", "blocks": [
+        {"type": "paragraph", "text": "This guide is for team leads and analysts who review results each week. You don't need reporting tool experience."}]},
+      {"title": "What's New in Version 2.0", "blocks": [
+        {"type": "bullets", "items": ["A new chapter on the ground rules every view follows.", "Answers to the Check Your Understanding questions in Appendix A."]}]},
+      {"title": "About the Figures", "blocks": [
+        {"type": "callout", "kind": "note", "title": "About the Figures", "text": "Figures marked Illustration (Not a Live Screenshot) are drawn from the dashboard's real labels. Live screenshots replace them when they are supplied."}]}
+     ]},
+    {"title": "Getting Started", "icon": "player-play",
+     "objectives": ["Find the dashboard link and choose your team.", "Read the headline numbers at the top.", "Check whether a goal was met this month."],
+     "blocks": [{"type": "paragraph", "text": "This chapter walks you through your first visit, from opening the dashboard to checking a goal."}],
+     "sections": [
+      {"title": "Open the Dashboard", "blocks": [
+        {"type": "procedure", "title": "To open the dashboard:", "steps": [
+          {"text": "Open the link your manager shared.", "result": "The dashboard opens on the **Overview** tab."},
+          {"text": "Select your team in the **Team** filter.", "result": "Every number updates to your team."}]},
+        {"type": "figure", "image": "figures/overview_illustration.png", "caption": "The Overview tab with the Team filter at the top. Illustration (Not a Live Screenshot).", "alt": "Overview tab showing the Team filter and three headline numbers"},
+        {"type": "paragraph", "text": "The headline numbers sit in one row under the filters, so you can compare them at a glance."}]},
+      {"title": "Check a Goal", "blocks": [
+        {"type": "paragraph", "text": "Each headline number shows this month's result next to its goal. Blue marks a result that met the goal."},
+        {"type": "callout", "kind": "example", "title": "Worked Example", "text": "In a monthly review with leaders, you're asked whether the team met its goal. Open **Overview**, select your team and read the first headline number against its goal."}]}
+     ],
+     "takeaways": ["Pick your team first; every number follows the filter.", "Headline numbers compare this month with the goal.", "Blue means the goal was met."]},
+    {"title": "The Ground Rules", "icon": "list-check",
+     "objectives": ["Name the rules every view follows.", "Explain a change to a manager.", "Compare this month with last month."],
+     "blocks": [{"type": "paragraph", "text": "This chapter lists the rules every view follows, so the numbers mean the same thing everywhere."},
+      {"type": "numbered", "items": ["**One number, one definition.** Every view uses the same definitions as the glossary.", "**Blue is the focus.** Gray shows context, and orange marks a missed goal.", "**Months are complete.** The current month shows results through yesterday."]},
+      {"type": "callout", "kind": "example", "title": "Worked Example", "text": "To explain a change to a manager, compare this month with last month in the trend view and name the largest change."}],
+     "takeaways": ["Every view uses the glossary definitions.", "Colors carry the same meaning on every view.", "The current month runs through yesterday."]},
+    {"title": "Optimal Use", "icon": "compass",
+     "objectives": ["Build three habits that save time.", "Avoid the most common mistakes.", "Test yourself with two quick questions."],
+     "blocks": [{"type": "paragraph", "text": "This chapter collects the habits of people who get the most from the dashboard."}],
+     "sections": [
+      {"title": "Habits and Common Mistakes", "blocks": [
+        {"type": "table", "caption": "Common mistakes and how to avoid them", "columns": ["Mistake", "Better Habit"],
+         "rows": [["Reading numbers before picking a team", "Select your team first"], ["Comparing a partial month with a full month", "Compare complete months, or the same days in each month"]]}]},
+      {"title": "Check Your Understanding", "blocks": [
+        {"type": "numbered", "items": ["Which filter should you set before reading any number?", "What does an orange number mean?"]}]}
+     ],
+     "takeaways": ["Set the filter before you read.", "Compare like with like.", "Check your answers in Appendix A."]},
+    {"title": "Troubleshooting and Support", "icon": "lifebuoy",
+     "blocks": [{"type": "paragraph", "text": "This chapter lists common problems with their fixes, then explains how to get help."},
+      {"type": "table", "caption": "Problems, likely causes and fixes", "columns": ["Problem", "Likely Cause", "Fix"],
+       "rows": [["Numbers look too low", "A filter is still set from your last visit", "Select **Reset Filters**"], ["The page is blank", "Your access is still being set up", "Ask your manager to confirm your access"]]},
+      {"type": "paragraph", "text": "For anything else, contact the report owner named on the cover. Include the tab name, the filters you set and what you expected to see."}]}
+  ],
+  "appendices": [
+    {"title": "Answers to Check Your Understanding", "icon": "checklist", "blocks": [
+      {"type": "numbered", "items": ["The **Team** filter. Every number follows it.", "A missed goal or an unfavorable change."]}]}
+  ],
+  "glossary": [
+    {"term": "Goal", "definition": "The result the team agreed to reach each month."},
+    {"term": "Headline number", "definition": "One of the large numbers at the top of a tab that summarizes the month."},
+    {"term": "Filter", "definition": "A control that limits every number on the page to the team or dates you pick."}
+  ],
+  "revisions": [
+    {"version": "2.0", "date": "2026-10-10", "author": "Report Owner", "change": "Added The Ground Rules and the answers appendix."},
+    {"version": "1.0", "date": "2026-07-01", "author": "Report Owner", "change": "First release."}
+  ],
+  "index": [
+    {"term": "Filters", "section": "2.1"},
+    {"term": "Goals", "section": "2.2"},
+    {"term": "Ground rules", "section": "3"},
+    {"term": "Habits", "section": "4.1"},
+    {"term": "Headline numbers", "section": "2.2"},
+    {"term": "Help", "section": "5"},
+    {"term": "Reading paths", "section": "1.1"},
+    {"term": "Worked examples", "section": "2.2"}
+  ]
+}

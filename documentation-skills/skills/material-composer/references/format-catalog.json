@@ -1,0 +1,1151 @@
+{
+ "version": "1.0.0",
+ "renderers": {
+  "doc-sheet": {
+   "skill": "document-builder",
+   "build": "scripts/build_doc.py <doc.json> --out <Name>.docx --pdf",
+   "gate": "scripts/lint_doc.py <doc.json> --docx <Name>.docx --pdf <Name>.pdf",
+   "note": "meta.layout sheet; meta.doc_type from the format"
+  },
+  "doc-long": {
+   "skill": "document-builder",
+   "build": "scripts/build_doc.py <doc.json> --out <Name>.docx --pdf",
+   "gate": "scripts/lint_doc.py <doc.json> --docx <Name>.docx --pdf <Name>.pdf"
+  },
+  "deck": {
+   "skill": "slide-deck",
+   "build": "scripts/build_deck.py <deck.json> --out <Name>.pptx",
+   "gate": "scripts/lint_deck.py <deck.json> --pptx <Name>.pptx"
+  },
+  "page": {
+   "skill": "confluence-page-builder",
+   "build": "scripts/build_page.py <page.json>",
+   "gate": "scripts/lint_page.py <page.json>"
+  },
+  "training-md": {
+   "skill": "training-material-designer",
+   "build": "(Markdown is the deliverable; output: pdf converts with scripts/md_to_sheet.py)",
+   "gate": "scripts/lint_training.py <file>.md"
+  },
+  "md": {
+   "skill": "material-composer",
+   "build": "(Markdown is the deliverable; send as .email or .message when asked)",
+   "gate": "scripts/lint_material.py <file>.md --plan <plan.json>"
+  },
+  "form": {
+   "skill": "material-composer",
+   "build": "scripts/build_form.py <form.json> --out <Name>",
+   "gate": "scripts/build_form.py <form.json> --check"
+  },
+  "module": {
+   "skill": "material-composer",
+   "build": "scripts/build_module.py <module.json> --out <Name>",
+   "gate": "(runs before build)"
+  },
+  "xlsx": {
+   "skill": "material-composer",
+   "build": "scripts/build_sheet.py <sheet.json> --out <Name>",
+   "gate": "scripts/build_sheet.py <Name>.xlsx --check"
+  }
+ },
+ "families": {
+  "reference-sheet": {
+   "label": "Reference Sheet",
+   "renderer": "doc-sheet",
+   "purpose": "Use at the moment of work; scannable in under a minute",
+   "pages": 1,
+   "words": 450,
+   "tone": "imperative, second person",
+   "visuals": "step diagram, one card, table only for lookups",
+   "keywords": [
+    "card",
+    "sheet",
+    "cheat",
+    "reference",
+    "aid",
+    "checklist",
+    "tip",
+    "poster",
+    "flyer",
+    "badge",
+    "placemat",
+    "one page",
+    "one-page",
+    "handout",
+    "decision tree",
+    "flowchart"
+   ]
+  },
+  "long-form": {
+   "label": "Long-Form Document",
+   "renderer": "doc-long",
+   "purpose": "Read, search and keep; complete and versioned",
+   "pages": null,
+   "words": null,
+   "tone": "task-based, plain",
+   "visuals": "screenshots, tables, callouts",
+   "keywords": [
+    "guide",
+    "manual",
+    "sop",
+    "procedure",
+    "policy",
+    "report",
+    "assessment",
+    "review",
+    "playbook",
+    "plan",
+    "charter",
+    "whitepaper",
+    "reference",
+    "handbook",
+    "workbook",
+    "analysis"
+   ]
+  },
+  "presentation": {
+   "label": "Presentation",
+   "renderer": "deck",
+   "purpose": "Presented live or sent as a readout",
+   "pages": null,
+   "words": null,
+   "tone": "one message per slide",
+   "visuals": "per slide-deck visual selection",
+   "keywords": [
+    "deck",
+    "slides",
+    "presentation",
+    "powerpoint",
+    "readout",
+    "town hall",
+    "briefing",
+    "pitch",
+    "kickoff",
+    "webinar"
+   ]
+  },
+  "facilitation": {
+   "label": "Facilitation",
+   "renderer": "training-md",
+   "purpose": "Lets someone else run a session the same way every time",
+   "pages": null,
+   "words": null,
+   "tone": "directive for the facilitator",
+   "visuals": "agenda table, timing",
+   "keywords": [
+    "facilitator",
+    "instructor",
+    "lesson plan",
+    "session plan",
+    "train the trainer",
+    "workshop",
+    "run sheet",
+    "agenda",
+    "participant"
+   ]
+  },
+  "communication": {
+   "label": "Communication",
+   "renderer": "md",
+   "purpose": "Tells people what is changing, why, what it means for them and what to do",
+   "pages": null,
+   "words": 300,
+   "tone": "direct, warm, no hype",
+   "visuals": "none or one link",
+   "keywords": [
+    "email",
+    "announcement",
+    "message",
+    "post",
+    "newsletter",
+    "talking points",
+    "memo",
+    "reminder",
+    "teams",
+    "slack",
+    "comms",
+    "communication",
+    "change kit",
+    "toolkit",
+    "kit",
+    "faq",
+    "script for managers",
+    "invite",
+    "bulletin"
+   ]
+  },
+  "elearning": {
+   "label": "E-Learning",
+   "renderer": "module",
+   "purpose": "Self-paced practice with feedback",
+   "pages": null,
+   "words": null,
+   "tone": "conversational, scenario-led",
+   "visuals": "screens with one idea each",
+   "keywords": [
+    "e-learning",
+    "elearning",
+    "module",
+    "course",
+    "microlearning",
+    "interactive",
+    "scenario",
+    "simulation",
+    "self-paced",
+    "storyboard",
+    "video"
+   ]
+  },
+  "data-collection": {
+   "label": "Data Collection",
+   "renderer": "form",
+   "purpose": "Collects answers that can be acted on",
+   "pages": null,
+   "words": null,
+   "tone": "neutral, one question at a time",
+   "visuals": "labelled fields, consistent scales",
+   "keywords": [
+    "survey",
+    "form",
+    "questionnaire",
+    "intake",
+    "sign-off",
+    "signoff",
+    "feedback",
+    "evaluation",
+    "poll",
+    "request form",
+    "attestation",
+    "pulse",
+    "registration",
+    "tracker"
+   ]
+  },
+  "assessment": {
+   "label": "Assessment",
+   "renderer": "training-md",
+   "purpose": "Checks decisions, not trivia",
+   "pages": null,
+   "words": null,
+   "tone": "neutral",
+   "visuals": "none",
+   "keywords": [
+    "quiz",
+    "knowledge check",
+    "test",
+    "exam",
+    "assessment",
+    "certification"
+   ]
+  }
+ },
+ "formats": {
+  "quick-start": {
+   "family": "reference-sheet",
+   "label": "Quick Start",
+   "aliases": [
+    "quick start guide",
+    "getting started sheet"
+   ],
+   "anatomy": [
+    {
+     "title": "Who It's For",
+     "required": true,
+     "width": "half"
+    },
+    {
+     "title": "What You Can Do",
+     "required": true,
+     "width": "half"
+    },
+    {
+     "title": "Steps",
+     "required": true,
+     "limits": {
+      "steps": [
+       3,
+       5
+      ]
+     }
+    },
+    {
+     "title": "Worked Example",
+     "required": true
+    },
+    {
+     "title": "Common Mistakes",
+     "required": true,
+     "width": "half",
+     "limits": {
+      "items": [
+       1,
+       2
+      ]
+     }
+    },
+    {
+     "title": "Get Help",
+     "required": true,
+     "width": "half"
+    }
+   ],
+   "words": 250,
+   "source": "training-md",
+   "gate_code": "QS_STRUCTURE",
+   "doc_type": "quick-start",
+   "exemplar": "training-material-designer/assets/examples/quick-start.example.md"
+  },
+  "job-aid": {
+   "family": "reference-sheet",
+   "label": "Job Aid",
+   "aliases": [
+    "work instruction",
+    "how-to sheet",
+    "task card"
+   ],
+   "anatomy": [
+    {
+     "title": "When to Use",
+     "required": true
+    },
+    {
+     "title": "Steps",
+     "required": true,
+     "limits": {
+      "steps": [
+       2,
+       8
+      ]
+     }
+    },
+    {
+     "title": "Check Your Work",
+     "required": true
+    },
+    {
+     "title": "Get Help",
+     "required": true
+    }
+   ],
+   "words": 250,
+   "source": "training-md",
+   "doc_type": "job-aid",
+   "exemplar": "training-material-designer/assets/examples/job-aid.example.md"
+  },
+  "quick-reference-card": {
+   "family": "reference-sheet",
+   "label": "Quick Reference Card",
+   "aliases": [
+    "qrc",
+    "qrg",
+    "quick reference guide",
+    "cheat sheet",
+    "reference card"
+   ],
+   "anatomy": [
+    {
+     "title": "At a Glance",
+     "required": true
+    },
+    {
+     "title": "Key Terms",
+     "required": false
+    },
+    {
+     "title": "Common Tasks",
+     "required": true,
+     "limits": {
+      "items": [
+       2,
+       8
+      ]
+     }
+    },
+    {
+     "title": "Tips",
+     "required": false,
+     "width": "half"
+    },
+    {
+     "title": "Get Help",
+     "required": true,
+     "width": "half"
+    }
+   ],
+   "words": 350,
+   "doc_type": "quick-reference-card",
+   "exemplar": "assets/exemplars/quick-reference-card.doc.json"
+  },
+  "checklist": {
+   "family": "reference-sheet",
+   "label": "Checklist",
+   "aliases": [
+    "readiness checklist",
+    "go-live checklist"
+   ],
+   "anatomy": [
+    {
+     "title": "Before You Start",
+     "required": true
+    },
+    {
+     "title": "Checklist",
+     "required": true,
+     "limits": {
+      "items": [
+       3,
+       15
+      ]
+     }
+    },
+    {
+     "title": "Get Help",
+     "required": true
+    }
+   ],
+   "words": 300,
+   "doc_type": "checklist"
+  },
+  "decision-tree": {
+   "family": "reference-sheet",
+   "label": "Decision Guide",
+   "aliases": [
+    "decision tree",
+    "flowchart sheet",
+    "triage guide"
+   ],
+   "anatomy": [
+    {
+     "title": "When to Use",
+     "required": true
+    },
+    {
+     "title": "Decide",
+     "required": true,
+     "limits": {
+      "items": [
+       2,
+       8
+      ]
+     }
+    },
+    {
+     "title": "When to Escalate",
+     "required": true
+    },
+    {
+     "title": "Get Help",
+     "required": true
+    }
+   ],
+   "words": 300,
+   "doc_type": "decision-guide"
+  },
+  "one-pager": {
+   "family": "reference-sheet",
+   "label": "One-Pager",
+   "aliases": [
+    "fact sheet",
+    "overview sheet",
+    "flyer",
+    "info sheet"
+   ],
+   "anatomy": [
+    {
+     "title": "Summary",
+     "required": true
+    },
+    {
+     "title": "Key Points",
+     "required": true,
+     "limits": {
+      "items": [
+       2,
+       6
+      ]
+     }
+    },
+    {
+     "title": "What It Means for You",
+     "required": true
+    },
+    {
+     "title": "Next Steps",
+     "required": true
+    },
+    {
+     "title": "Get Help",
+     "required": true
+    }
+   ],
+   "words": 350,
+   "doc_type": "one-pager"
+  },
+  "status-report": {
+   "family": "reference-sheet",
+   "label": "Status Report",
+   "aliases": [
+    "status update",
+    "weekly status",
+    "project status"
+   ],
+   "anatomy": [
+    {
+     "title": "Summary",
+     "required": true
+    },
+    {
+     "title": "Progress",
+     "required": true
+    },
+    {
+     "title": "Risks and Issues",
+     "required": true
+    },
+    {
+     "title": "Decisions Needed",
+     "required": false
+    },
+    {
+     "title": "Next Steps",
+     "required": true
+    }
+   ],
+   "words": 400,
+   "doc_type": "status-report",
+   "exemplar": "assets/exemplars/status-report.doc.json"
+  },
+  "faq-sheet": {
+   "family": "reference-sheet",
+   "label": "FAQ",
+   "aliases": [
+    "faq",
+    "frequently asked questions",
+    "q and a"
+   ],
+   "anatomy": [
+    {
+     "title": "Questions",
+     "required": true,
+     "limits": {
+      "questions": [
+       3,
+       12
+      ]
+     }
+    },
+    {
+     "title": "Get Help",
+     "required": true
+    }
+   ],
+   "words": 450,
+   "doc_type": "faq-sheet",
+   "exemplar": "assets/exemplars/faq.md"
+  },
+  "participant-handout": {
+   "family": "reference-sheet",
+   "label": "Participant Handout",
+   "aliases": [
+    "handout",
+    "learner handout"
+   ],
+   "anatomy": [
+    {
+     "title": "Session Goals",
+     "required": true
+    },
+    {
+     "title": "Key Points",
+     "required": true
+    },
+    {
+     "title": "Practice",
+     "required": true
+    },
+    {
+     "title": "After the Session",
+     "required": true
+    },
+    {
+     "title": "Get Help",
+     "required": true
+    }
+   ],
+   "words": 400,
+   "doc_type": "participant-handout"
+  },
+  "user-guide": {
+   "family": "long-form",
+   "label": "User Guide",
+   "aliases": [],
+   "anatomy": [],
+   "doc_type": "user-guide",
+   "profile": "textbook"
+  },
+  "manual": {
+   "family": "long-form",
+   "label": "Manual",
+   "aliases": [],
+   "anatomy": [],
+   "doc_type": "manual",
+   "profile": "textbook"
+  },
+  "technical-reference": {
+   "family": "long-form",
+   "label": "Technical Reference",
+   "aliases": [],
+   "anatomy": [],
+   "doc_type": "technical-reference",
+   "profile": "textbook"
+  },
+  "sop": {
+   "family": "long-form",
+   "label": "Standard Operating Procedure",
+   "aliases": [
+    "sop document",
+    "procedure document"
+   ],
+   "anatomy": [
+    {
+     "title": "Purpose",
+     "required": true
+    },
+    {
+     "title": "Scope",
+     "required": true
+    },
+    {
+     "title": "Roles and Responsibilities",
+     "required": true
+    },
+    {
+     "title": "Procedure",
+     "required": true
+    },
+    {
+     "title": "References",
+     "required": true
+    }
+   ],
+   "doc_type": "sop"
+  },
+  "policy": {
+   "family": "long-form",
+   "label": "Policy",
+   "aliases": [
+    "policy document",
+    "company policy"
+   ],
+   "anatomy": [
+    {
+     "title": "Purpose",
+     "required": true
+    },
+    {
+     "title": "Scope",
+     "required": true
+    },
+    {
+     "title": "Policy Statement",
+     "required": true
+    },
+    {
+     "title": "Roles and Responsibilities",
+     "required": true
+    },
+    {
+     "title": "Definitions",
+     "required": true
+    },
+    {
+     "title": "Exceptions",
+     "required": true
+    },
+    {
+     "title": "Related Documents",
+     "required": true
+    }
+   ],
+   "doc_type": "policy"
+  },
+  "tracker": {
+   "family": "data-collection",
+   "label": "Tracker",
+   "aliases": ["tracker", "action tracker", "issue log", "status tracker", "action log", "task tracker"],
+   "renderer": "xlsx",
+   "anatomy": [{"title": "Tracker", "required": true}, {"title": "Lists", "required": true}, {"title": "Definitions", "required": true}],
+   "kind": "sheet",
+   "exemplar": "assets/examples/synthetic_tracker.json"
+  },
+  "report": {
+   "family": "long-form",
+   "label": "Report",
+   "aliases": [
+    "analysis report",
+    "findings report"
+   ],
+   "anatomy": [
+    {
+     "title": "Executive Summary",
+     "required": true
+    },
+    {
+     "title": "Findings",
+     "required": true
+    },
+    {
+     "title": "Recommendations",
+     "required": true
+    }
+   ],
+   "doc_type": "report"
+  },
+  "post-implementation-review": {
+   "family": "long-form",
+   "label": "Post-Implementation Review",
+   "aliases": [
+    "lessons learned",
+    "retrospective report",
+    "pir"
+   ],
+   "anatomy": [
+    {
+     "title": "Executive Summary",
+     "required": true
+    },
+    {
+     "title": "Background",
+     "required": true
+    },
+    {
+     "title": "Findings",
+     "required": true
+    },
+    {
+     "title": "Recommendations",
+     "required": true
+    },
+    {
+     "title": "Next Steps",
+     "required": true
+    }
+   ],
+   "doc_type": "report"
+  },
+  "change-impact-assessment": {
+   "family": "long-form",
+   "label": "Change Impact Assessment",
+   "aliases": [
+    "impact assessment",
+    "impact analysis"
+   ],
+   "anatomy": [
+    {
+     "title": "Executive Summary",
+     "required": true
+    },
+    {
+     "title": "Change Overview",
+     "required": true
+    },
+    {
+     "title": "Findings",
+     "required": true
+    },
+    {
+     "title": "Recommendations",
+     "required": true
+    }
+   ],
+   "doc_type": "report"
+  },
+  "training-deck": {
+   "family": "presentation",
+   "label": "Instructor-Led Deck",
+   "aliases": [
+    "ilt deck",
+    "training deck",
+    "class slides",
+    "instructor-led training deck"
+   ],
+   "anatomy": [],
+   "deck_type": "train",
+   "pair": "facilitator-guide"
+  },
+  "exec-readout": {
+   "family": "presentation",
+   "label": "Executive Readout",
+   "aliases": [
+    "readout",
+    "exec summary deck",
+    "leadership update"
+   ],
+   "anatomy": [],
+   "deck_type": "persuade"
+  },
+  "town-hall": {
+   "family": "presentation",
+   "label": "Town Hall Deck",
+   "aliases": [
+    "all-hands deck",
+    "town hall"
+   ],
+   "anatomy": [],
+   "deck_type": "inform"
+  },
+  "facilitator-guide": {
+   "family": "facilitation",
+   "label": "Facilitator Guide",
+   "aliases": [
+    "instructor guide",
+    "leader guide",
+    "lesson plan",
+    "session plan"
+   ],
+   "anatomy": [
+    {
+     "title": "Session Overview",
+     "required": true
+    },
+    {
+     "title": "Learning Objectives",
+     "required": true
+    },
+    {
+     "title": "Agenda",
+     "required": true
+    },
+    {
+     "title": "Modules",
+     "required": true
+    },
+    {
+     "title": "Practice Scenario",
+     "required": true
+    },
+    {
+     "title": "Transfer Scenario",
+     "required": true
+    },
+    {
+     "title": "Materials",
+     "required": true
+    },
+    {
+     "title": "Follow-up",
+     "required": true
+    }
+   ],
+   "source": "training-md",
+   "pair": "training-deck",
+   "exemplar": "training-material-designer/assets/examples/facilitator-guide.example.md"
+  },
+  "announcement-email": {
+   "family": "communication",
+   "label": "Announcement Email",
+   "aliases": [
+    "launch email",
+    "rollout email",
+    "change announcement",
+    "system change email"
+   ],
+   "anatomy": [
+    {
+     "title": "Why This Is Changing",
+     "required": true
+    },
+    {
+     "title": "What Changes for You",
+     "required": true
+    },
+    {
+     "title": "What to Do",
+     "required": true
+    },
+    {
+     "title": "Key Dates",
+     "required": false
+    },
+    {
+     "title": "Get Help",
+     "required": true
+    }
+   ],
+   "words": 250,
+   "fields": [
+    "subject"
+   ],
+   "subject_max": 60,
+   "exemplar": "assets/exemplars/announcement-email.md"
+  },
+  "manager-talking-points": {
+   "family": "communication",
+   "label": "Manager Talking Points",
+   "aliases": [
+    "talking points",
+    "leader talking points",
+    "huddle script"
+   ],
+   "anatomy": [
+    {
+     "title": "Key Message",
+     "required": true
+    },
+    {
+     "title": "Why This Is Changing",
+     "required": true
+    },
+    {
+     "title": "What Changes for Your Team",
+     "required": true
+    },
+    {
+     "title": "Anticipated Questions",
+     "required": true,
+     "limits": {
+      "questions": [
+       2,
+       8
+      ]
+     }
+    },
+    {
+     "title": "What to Ask Your Team to Do",
+     "required": true
+    }
+   ],
+   "words": 450,
+   "exemplar": "assets/exemplars/manager-talking-points.md"
+  },
+  "chat-post": {
+   "family": "communication",
+   "label": "Chat Post",
+   "aliases": [
+    "teams post",
+    "slack post",
+    "channel post"
+   ],
+   "anatomy": [
+    {
+     "title": "What Changes for You",
+     "required": true
+    },
+    {
+     "title": "What to Do",
+     "required": true
+    }
+   ],
+   "words": 120
+  },
+  "reminder-email": {
+   "family": "communication",
+   "label": "Reminder Email",
+   "aliases": [
+    "reminder",
+    "nudge email"
+   ],
+   "anatomy": [
+    {
+     "title": "What to Do",
+     "required": true
+    },
+    {
+     "title": "Key Dates",
+     "required": true
+    },
+    {
+     "title": "Get Help",
+     "required": true
+    }
+   ],
+   "words": 150,
+   "fields": [
+    "subject"
+   ],
+   "subject_max": 60
+  },
+  "newsletter-article": {
+   "family": "communication",
+   "label": "Newsletter Article",
+   "aliases": [
+    "newsletter",
+    "bulletin article"
+   ],
+   "anatomy": [
+    {
+     "title": "What Changed",
+     "required": true
+    },
+    {
+     "title": "What It Means for You",
+     "required": true
+    },
+    {
+     "title": "Get Help",
+     "required": true
+    }
+   ],
+   "words": 400
+  },
+  "change-kit": {
+   "family": "communication",
+   "label": "Change Kit",
+   "aliases": [
+    "communication kit",
+    "change management kit",
+    "rollout kit",
+    "comms toolkit",
+    "leader launch toolkit"
+   ],
+   "anatomy": [],
+   "manifest": "kit.json",
+   "exemplar": "assets/exemplars/change-kit.kit.json"
+  },
+  "elearning-module": {
+   "family": "elearning",
+   "label": "E-Learning Module",
+   "aliases": [
+    "e-learning",
+    "elearning course",
+    "online module",
+    "self-paced module",
+    "microlearning"
+   ],
+   "anatomy": [],
+   "limits": {
+    "screens": [
+     5,
+     25
+    ]
+   },
+   "exemplar": "assets/examples"
+  },
+  "video-script": {
+   "family": "elearning",
+   "label": "Video Script",
+   "aliases": [
+    "video",
+    "tutorial video script"
+   ],
+   "anatomy": [
+    {
+     "title": "Objective",
+     "required": true
+    },
+    {
+     "title": "Script",
+     "required": true
+    },
+    {
+     "title": "Wrap-up and Next Steps",
+     "required": true
+    }
+   ],
+   "source": "training-md",
+   "exemplar": "training-material-designer/assets/examples/video-script.example.md"
+  },
+  "survey": {
+   "family": "data-collection",
+   "label": "Survey",
+   "aliases": [
+    "questionnaire",
+    "pulse survey",
+    "poll"
+   ],
+   "anatomy": [],
+   "limits": {
+    "questions": [
+     3,
+     25
+    ]
+   },
+   "kind": "survey"
+  },
+  "training-evaluation": {
+   "family": "data-collection",
+   "label": "Training Evaluation",
+   "aliases": [
+    "course evaluation",
+    "session feedback form",
+    "level 1 evaluation"
+   ],
+   "anatomy": [],
+   "limits": {
+    "questions": [
+     4,
+     12
+    ]
+   },
+   "kind": "survey"
+  },
+  "readiness-survey": {
+   "family": "data-collection",
+   "label": "Readiness Survey",
+   "aliases": [
+    "adkar survey",
+    "change readiness pulse"
+   ],
+   "anatomy": [],
+   "limits": {
+    "questions": [
+     5,
+     10
+    ]
+   },
+   "kind": "survey"
+  },
+  "intake-form": {
+   "family": "data-collection",
+   "label": "Intake Form",
+   "aliases": [
+    "request form",
+    "registration form"
+   ],
+   "anatomy": [],
+   "kind": "form"
+  },
+  "sign-off-form": {
+   "family": "data-collection",
+   "label": "Sign-off Form",
+   "aliases": [
+    "signoff form",
+    "attestation form",
+    "approval form"
+   ],
+   "anatomy": [],
+   "kind": "form"
+  },
+  "knowledge-check": {
+   "family": "assessment",
+   "label": "Knowledge Check",
+   "aliases": [
+    "quiz",
+    "knowledge test",
+    "post-test"
+   ],
+   "anatomy": [
+    {
+     "title": "Instructions",
+     "required": true
+    },
+    {
+     "title": "Questions",
+     "required": true,
+     "limits": {
+      "questions": [
+       3,
+       10
+      ]
+     }
+    },
+    {
+     "title": "Scoring",
+     "required": true
+    }
+   ],
+   "source": "training-md",
+   "exemplar": "training-material-designer/assets/examples/knowledge-check.example.md"
+  }
+ }
+}

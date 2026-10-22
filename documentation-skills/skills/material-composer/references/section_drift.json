@@ -1,0 +1,23 @@
+{
+  "format": "section-drift",
+  "about": "D-42 SECTION_DRIFT (test_composer.py): catalog sections vs document builder doc types (assets/doc_theme.json) and Confluence page types (pagelib.py PAGE_TYPES, OPTIONAL_SECTIONS). A null target is skipped only when its note is present.",
+  "siblings": {"document": "document-builder", "page": "confluence-page-builder"},
+  "mapping": {
+    "sop": {"catalog": "sop", "doc_type": "sop", "page_type": "sop",
+            "reason": "one SOP structure in all three: catalog sop, document sop, page sop"},
+    "release-notes": {"catalog": "release-notes", "doc_type": null, "page_type": "release-notes",
+                      "doc_note": "release notes are a reference sheet (layout sheet): sheets accept any doc_type id and have no required section list in the document builder",
+                      "reason": "the page type is the long-lived copy; the PDF is a sheet"},
+    "user-guide": {"catalog": "user-guide", "doc_type": "user-guide", "page_type": null,
+                   "page_note": "user guides publish with doc_to_page.py from the same doc.json (page_type general, PAGE_TEXTBOOK_PARITY), so page sections match the document by construction; page type guide is the native Confluence guide, a different format",
+                   "reason": "the catalog user guide is the document builder user-guide type"},
+    "how-to": {"catalog": null, "doc_type": null, "page_type": "how-to",
+               "catalog_note": "no catalog format by design: how-to page requests go to confluence-page-builder, whose how-to page type is the single source",
+               "reason": "how-to is a page-only format"}
+  },
+  "empty_anatomy": "an empty catalog anatomy means the plan takes the document builder type's required sections, so it matches the document by construction",
+  "equivalences": [
+    {"section": "Revision History", "side": "page", "doc_type_flag": "revisions",
+     "reason": "satisfied by the document builder's automatic revisions appendix when the mapped doc type has revisions: true"}
+  ]
+}

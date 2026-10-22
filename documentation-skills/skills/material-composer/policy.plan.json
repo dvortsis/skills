@@ -1,0 +1,84 @@
+{
+ "request": "policy",
+ "format": "policy",
+ "label": "Policy",
+ "family": "long-form",
+ "how": "derived",
+ "derived_from": "sop",
+ "match": "derived family",
+ "match_score": 0.0,
+ "nearest": null,
+ "renderer": {
+  "skill": "document-builder",
+  "build": "scripts/build_doc.py <doc.json> --out <Name>.docx --pdf",
+  "gate": "scripts/lint_doc.py <doc.json> --docx <Name>.docx --pdf <Name>.pdf",
+  "id": "doc-long"
+ },
+ "outputs": [
+  "pdf",
+  "docx"
+ ],
+ "audience": null,
+ "subject": "report access",
+ "anatomy": [
+  {
+   "title": "Purpose",
+   "required": true
+  },
+  {
+   "title": "Scope",
+   "required": true
+  },
+  {
+   "title": "Roles and Responsibilities",
+   "required": true
+  },
+  {
+   "title": "Procedure",
+   "required": true
+  },
+  {
+   "title": "Exceptions",
+   "required": true
+  },
+  {
+   "title": "References",
+   "required": true
+  }
+ ],
+ "words": null,
+ "pages": null,
+ "tone": "task-based, plain; default audience: non-technical internal business users (plain words, terms defined, no system or tool names); adapt when the request names another audience",
+ "purpose": "Read, search and keep; complete and versioned",
+ "visuals": "screenshots, tables, callouts",
+ "doc_type": "policy",
+ "deck_type": null,
+ "kind": null,
+ "subject_max": null,
+ "pair": null,
+ "limits": {},
+ "exemplar": null,
+ "profile": null,
+ "gates": [
+  "required sections (lint_doc)",
+  "textbook profile for guides and manuals",
+  "plain language (JARGON_UNDEFINED, TELEGRAPHIC)",
+  "Proper Case titles and the hyphen rule",
+  "no PHI, placeholders or filler",
+  "sources listed",
+  "one name per set (RENAMED_TERM)",
+  "visual review for anything rendered"
+ ],
+ "house": "references/house-conventions.md",
+ "style_tokens": "assets/style_tokens.json",
+ "renamed_terms": [],
+ "title_words": null,
+ "audience_profile": "business",
+ "profile_tone": "plain, answer first, every term defined",
+ "jargon": "define every term at first use; no system or tool names",
+ "terminology_sets": [
+  "internal"
+ ],
+ "limits_source": null,
+ "overrides": []
+}

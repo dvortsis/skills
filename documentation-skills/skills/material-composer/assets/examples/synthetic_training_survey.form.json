@@ -1,0 +1,35 @@
+{
+ "meta": {"title": "Synthetic Claims Training Feedback Survey", "kind": "survey", "audience": "Revenue operations team members who attended the synthetic claims training",
+  "purpose": "Tell us how the claims training worked for you so we can improve the next session. Your answers shape the next version of the course.",
+  "owner": "Revenue Operations Training Team (synthetic)", "version": "1.0", "date": "2026-10-11",
+  "sources": ["Synthetic example: training feedback request, 2026-10-11", "Synthetic example: 2026 claims training course outline"],
+  "anonymous": true, "phi_approved": false, "est_minutes": 5},
+ "sections": [
+  {"title": "About the Session", "intro": "Choose the answer that fits best.",
+   "items": [
+    {"id": "Q1", "type": "single", "label": "Which best describes your role?", "required": true,
+     "options": ["Claims specialist", "Collections specialist", "Billing analyst", "Team lead", "Payment poster", "Credentialing specialist", "Customer service", "Other role"]},
+    {"id": "Q2", "type": "dropdown", "label": "Which session did you attend?", "required": true,
+     "options": ["Week 1 morning", "Week 1 afternoon", "Week 2 morning", "Week 2 afternoon"]},
+    {"id": "Q3", "type": "scale", "label": "The training content was relevant to my daily work.", "required": true,
+     "scale": {"min": 1, "max": 5, "low": "Strongly disagree", "high": "Strongly agree"}},
+    {"id": "Q4", "type": "scale", "label": "The trainer explained each step clearly.", "required": true,
+     "scale": {"min": 1, "max": 5, "low": "Strongly disagree", "high": "Strongly agree"}},
+    {"id": "Q5", "type": "scale", "label": "The practice exercises prepared me for real claims.", "required": true,
+     "scale": {"min": 1, "max": 5, "low": "Strongly disagree", "high": "Strongly agree"}},
+    {"id": "Q6", "type": "scale", "label": "I can apply what I learned this week.", "required": false,
+     "help": "Think about the claims you will work in the next five days.", "opt_out": "Not applicable",
+     "scale": {"min": 1, "max": 5, "low": "Strongly disagree", "high": "Strongly agree"}}
+   ]},
+  {"title": "What to Improve",
+   "items": [
+    {"id": "Q7", "type": "multi", "label": "Which topics need more practice time?", "required": false, "help": "Select all that apply.",
+     "options": ["Claim status lookup", "Denial reason codes", "Appeals workflow", "Payer portals", "Corrected claims"]},
+    {"id": "Q8", "type": "single", "label": "How long should the next session be?", "required": false,
+     "options": ["30 minutes", "60 minutes", "90 minutes"]},
+    {"id": "Q9", "type": "longtext", "label": "What one change would most improve this training?", "required": false, "rows": 5},
+    {"id": "Q10", "type": "longtext", "label": "What worked well that we should keep?", "required": false, "rows": 4},
+    {"id": "Q11", "type": "checkbox", "label": "I would like a follow-up practice session.", "required": false}
+   ]}
+ ]
+}

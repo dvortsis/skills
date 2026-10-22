@@ -1,0 +1,222 @@
+{
+  "meta": {
+    "title": "Report Review Quick Start",
+    "doc_type": "quick-start",
+    "layout": "sheet",
+    "audience": "Report testers and review leads",
+    "purpose": "Give each role one page with the steps to review a report and record results",
+    "owner": "Report Review Team",
+    "version": "1.0",
+    "date": "October 2026",
+    "classification": "Internal use only",
+    "owner_role": "Review lead",
+    "last_reviewed": "October 2026",
+    "next_review": "April 2027",
+    "sheet": {
+      "pages_per_section": 1,
+      "min_body_pt": 9,
+      "min_table_pt": 8,
+      "min_figure_pt": 8,
+      "text_scale": 1.0
+    },
+    "sources": [
+      "Synthetic example content for the document-builder skill; replace with the request and cited sources"
+    ]
+  },
+  "sections": [
+    {
+      "title": "Report Tester",
+      "sections": [
+        {
+          "title": "Who It's For",
+          "width": "half",
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "Anyone asked to check a report before it is released. You need access to the test queue, the report under review and the expected results for each test."
+            }
+          ]
+        },
+        {
+          "title": "What You Can Do",
+          "width": "half",
+          "blocks": [
+            {
+              "type": "bullets",
+              "items": [
+                "Open an assigned test.",
+                "Record a result for each step.",
+                "Attach a screenshot when a step fails."
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Steps",
+          "blocks": [
+            {
+              "type": "step_diagram",
+              "steps": [
+                {
+                  "label": "Open the Test",
+                  "icon": "clipboard-check"
+                },
+                {
+                  "label": "Read Each Step",
+                  "icon": "eye"
+                },
+                {
+                  "label": "Record a Result",
+                  "icon": "pencil"
+                },
+                {
+                  "label": "Submit the Test",
+                  "icon": "file-check"
+                }
+              ]
+            },
+            {
+              "type": "numbered",
+              "items": [
+                "Open the test from your queue and read the expected result.",
+                "Follow each step on the report exactly as written, one step at a time.",
+                "Record **Pass** or **Fail** for the step and add a note on a failure.",
+                "Select **Submit** when every step has a result."
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Worked Example",
+          "blocks": [
+            {
+              "type": "card",
+              "title": "A Failed Step",
+              "text": "The total on the summary page does not match the total on the detail page. Record **Fail** for the step, note both numbers in the comment, attach a screenshot of each page and move on to the next step."
+            }
+          ]
+        },
+        {
+          "title": "Common Mistakes",
+          "width": "half",
+          "blocks": [
+            {
+              "type": "bullets",
+              "items": [
+                "Submitting before every step has a result.",
+                "Recording a failure without a note."
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Get Help",
+          "width": "half",
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "Ask your review lead when a step is unclear, the expected result looks wrong or the report does not open. Include the test name and the step number."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Review Lead",
+      "sections": [
+        {
+          "title": "Who It's For",
+          "width": "half",
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "The person who assigns tests to testers, answers their questions during the review and decides when a report is ready to release."
+            }
+          ]
+        },
+        {
+          "title": "What You Can Do",
+          "width": "half",
+          "blocks": [
+            {
+              "type": "bullets",
+              "items": [
+                "Assign tests to testers.",
+                "Review every submitted result.",
+                "Send failures back for a fix and a retest."
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Steps",
+          "blocks": [
+            {
+              "type": "step_diagram",
+              "steps": [
+                {
+                  "label": "Assign the Tests",
+                  "icon": "users"
+                },
+                {
+                  "label": "Review Results",
+                  "icon": "list-check"
+                },
+                {
+                  "label": "Log Failures",
+                  "icon": "file-alert"
+                },
+                {
+                  "label": "Approve the Report",
+                  "icon": "circle-check"
+                }
+              ]
+            },
+            {
+              "type": "numbered",
+              "items": [
+                "Assign each test to one tester and set a due date in the queue.",
+                "Open each submitted test and read every result and note.",
+                "Log each failure with the tester's note and screenshot.",
+                "Approve the report when every failure is fixed and retested."
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Worked Example",
+          "blocks": [
+            {
+              "type": "card",
+              "title": "A Retest",
+              "text": "A tester records a failure on the summary total. Log the failure with the tester's note, wait for the fix, then assign the same test again and review the new result before you approve the report."
+            }
+          ]
+        },
+        {
+          "title": "Common Mistakes",
+          "width": "half",
+          "blocks": [
+            {
+              "type": "bullets",
+              "items": [
+                "Approving the report while a failure is still open.",
+                "Assigning one test to two testers at the same time."
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Get Help",
+          "width": "half",
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "Contact the report owner when a failure needs a decision on scope, or when two testers record different results for the same step."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "title": "UAT Page Launch Kit",
+  "change": "Partners check dashboard numbers against their own reports on the UAT page, using three tabs: 1 · Parameters, 2 · Testing and 3 · Sign-off.",
+  "audience": "Partner UAT testers and partner team leads",
+  "names": {
+    "UAT page": ["UAT portal", "UAT tool", "UAT site", "testing portal"],
+    "Record result": ["Submit result", "Log result"],
+    "Issues found": ["Defect log", "Bug list"]
+  },
+  "sources": ["UAT process reference (synthetic example content); example dates"],
+  "pieces": [
+    {"label": "Manager Talking Points", "file": "manager-talking-points.md", "piece": "manager-talking-points", "audience": "Partner team leads", "channel": "Team lead briefing", "adkar": "desire", "send_date": "2026-10-19 (example date)", "owner": "BI / Analytics"},
+    {"label": "Announcement Email", "file": "announcement-email.md", "piece": "announcement-email", "audience": "Partner UAT testers", "channel": "Email", "adkar": "awareness", "send_date": "2026-10-21 (example date)", "owner": "BI / Analytics"},
+    {"label": "FAQ", "file": "faq.md", "piece": "faq-sheet", "audience": "Partner UAT testers", "channel": "Email attachment", "adkar": "knowledge", "send_date": "2026-10-21 (example date)", "owner": "BI / Analytics"},
+    {"label": "Chat Post", "file": "chat-post.md", "piece": "chat-post", "audience": "Partner UAT testers", "channel": "Team chat channel", "adkar": "ability", "send_date": "2026-10-26 (example date)", "owner": "BI / Analytics"},
+    {"label": "Adoption Measures", "file": "adoption-measures.json", "piece": "adoption-measures", "audience": "Partner team leads", "channel": "UAT status review", "adkar": "reinforcement", "send_date": "2026-11-06 (example date)", "owner": "BI / Analytics"}
+  ]
+}

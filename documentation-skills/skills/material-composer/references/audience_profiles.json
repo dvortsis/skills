@@ -1,0 +1,13 @@
+{
+ "format": "audience-profiles",
+ "note": "All materials are internal. plan_material.py --audience-profile picks one (default business); lint_material.py reads the plan's terminology sets for TERM_BRAND. internal is the shared AP set (references/terminology.json) plus the project's house terms; any other set (clinical-partners) is optional and loads only when the project's terminology file (brand profile \"terminology\") defines it. Unknown profile names fail AUDIENCE_PROFILE.",
+ "default": "business",
+ "profiles": {
+  "business": {"label": "Non-technical business users", "aliases": ["business users", "non-technical business users"], "tone": "plain, answer first, every term defined", "words_multiplier": 1.0, "jargon": "define every term at first use; no system or tool names", "terminology_sets": ["internal"], "answer_first": "strong"},
+  "leaders": {"label": "Leaders and executives", "aliases": ["leaders", "leadership", "executives"], "tone": "bottom line first, decisions and asks up front", "words_multiplier": 0.8, "jargon": "define every term; no system or tool names", "terminology_sets": ["internal"], "answer_first": "strongest"},
+  "technical": {"label": "Technical teams", "aliases": ["technical teams", "engineering", "developers"], "tone": "precise and complete; exact names of systems, fields and steps", "words_multiplier": 1.2, "jargon": "glossary allowed; system and tool names allowed", "terminology_sets": ["internal"], "answer_first": "normal"},
+  "clinical-partners": {"label": "Clinical partners", "aliases": ["clinical partners", "clinicians", "clinical"], "tone": "respectful, concise, clinically accurate", "words_multiplier": 1.0, "jargon": "define business terms; clinical terms allowed", "terminology_sets": ["internal", "clinical-partners"], "answer_first": "strong"},
+  "physicians": {"label": "Physicians", "aliases": ["physician", "doctors"], "tone": "brief and direct; the ask in the first line", "words_multiplier": 1.0, "jargon": "define business terms; clinical terms allowed", "terminology_sets": ["internal", "clinical-partners"], "answer_first": "strongest", "source": "common physician communication practice", "format_limits": {"chat-post": {"title_words": 10, "words": 100}}},
+  "frontline": {"label": "Frontline operations", "aliases": ["frontline operations", "frontline", "operations"], "tone": "short steps, one action per line, what to do now", "words_multiplier": 0.8, "jargon": "define every term; screen labels exactly as shown", "terminology_sets": ["internal"], "answer_first": "strong"}
+ }
+}

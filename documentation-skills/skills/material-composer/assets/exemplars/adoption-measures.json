@@ -1,0 +1,18 @@
+{
+  "title": "UAT Page Adoption Measures",
+  "audience": "Partner team leads",
+  "sources": ["UAT process reference (synthetic example content); example dates and numbers"],
+  "measures": [
+    {"measure": "Assigned partner testers who used Record result on the UAT page at least once",
+     "source": "UAT page 2 · Testing tab result counts by tester (example)",
+     "review_date": "2026-11-06 (example date)",
+     "target": "Every assigned tester (example)",
+     "target_source": "UAT plan sign-off criteria: every assigned tester records a result (synthetic example content)"},
+    {"measure": "Scenarios with a recorded result by the end of cycle 1",
+     "source": "UAT page 2 · Testing tab scenario totals (example)",
+     "review_date": "2026-10-23 (example date)"},
+    {"measure": "Questions in the team chat channel about where to record results",
+     "source": "Team chat channel, count of questions tagged UAT page (example)",
+     "review_date": "2026-11-06 (example date)"}
+  ]
+}

@@ -1,0 +1,189 @@
+{
+  "meta": {
+    "title": "Billing Effectiveness & Oversight: UAT Readout",
+    "subtitle": "Ready to Release on Nov 4 With Two Fixes",
+    "presenter": "Revenue Operations Analytics",
+    "date": "October 2026",
+    "year": 2026,
+    "audience": "Billing ops leadership",
+    "decision": "Approve the Nov 4 release with two fixes in flight",
+    "big_idea": "UAT passed on every scenario that matters, so we can release on Nov 4 while two small fixes finish.",
+    "notes": "Synthetic example data for the skill self-test. Not real results.",
+    "title_accent": "UAT readout"
+  },
+  "slides": [
+    {
+      "layout": "summary",
+      "title": "UAT Passed, and We Recommend Releasing on Nov 4",
+      "points": [
+        "46 of 48 scenarios passed in the first cycle",
+        "Two fixes are small and finish by Oct 28",
+        "Testers rated the new layout easier to read"
+      ],
+      "notes": "Lead with the answer. The two open defects are cosmetic and a filter default; neither blocks release."
+    },
+    {
+      "layout": "kpi",
+      "message": "numbers",
+      "title": "First-cycle UAT Results Clear the Release Bar",
+      "kpis": [
+        {
+          "value": "96%",
+          "label": "Scenarios Passed",
+          "delta": "Goal 90%"
+        },
+        {
+          "value": "2",
+          "label": "Open Defects",
+          "delta": "Both minor"
+        },
+        {
+          "value": "4.6",
+          "label": "Ease-of-use Score",
+          "delta": "Out of 5"
+        }
+      ],
+      "source": "UAT tracker, cycle 1 (synthetic example)",
+      "notes": "All three release criteria are met. The ease-of-use score comes from the guided UX test survey."
+    },
+    {
+      "layout": "chart",
+      "message": "comparison",
+      "title": "Held Revenue Review Time Dropped Most for Cash Posting",
+      "chart": {
+        "type": "bar",
+        "categories": [
+          "Cash Posting",
+          "Claims Edit",
+          "Payer Follow-up",
+          "Credit Balance"
+        ],
+        "series": [
+          {
+            "name": "Minutes saved per review",
+            "values": [
+              14,
+              8,
+              6,
+              3
+            ]
+          }
+        ],
+        "highlight": {
+          "category": "Cash Posting"
+        },
+        "number_format": "0"
+      },
+      "takeaway": "Cash Posting teams save about 14 minutes on every held-revenue review.",
+      "source": "Guided UX test timings, 12 testers (synthetic example)",
+      "alt": "Bar chart of minutes saved per review by team; Cash Posting saves the most at 14 minutes.",
+      "notes": "Timings compare the legacy report path with the new dashboard for the same task."
+    },
+    {
+      "layout": "screenshot",
+      "message": "walkthrough",
+      "title": "One Click on a BAN Now Filters the Whole Page",
+      "image": "screenshots/billing_eo_overview.png",
+      "callouts": [
+        {
+          "x": 0.18,
+          "y": 0.16,
+          "text": "Click a headline number (BAN) to filter"
+        },
+        {
+          "x": 0.62,
+          "y": 0.55,
+          "text": "Orange marks only a missed goal"
+        },
+        {
+          "x": 0.9,
+          "y": 0.06,
+          "text": "Reset clears all filters"
+        }
+      ],
+      "alt": "Billing EO overview page with the BAN row, trend chart and reset button.",
+      "notes": "Walk the audience through the three interactions testers used most."
+    },
+    {
+      "layout": "diagram",
+      "message": "plan",
+      "title": "Two Fixes Finish Before the Nov 4 Release",
+      "diagram": {
+        "kind": "timeline",
+        "highlight": 3,
+        "nodes": [
+          {
+            "when": "Oct 21",
+            "label": "Fix Filter Default",
+            "detail": "Region filter opens on All"
+          },
+          {
+            "when": "Oct 24",
+            "label": "Fix Label Wrap",
+            "detail": "Payer names no longer truncate"
+          },
+          {
+            "when": "Oct 28",
+            "label": "Retest",
+            "detail": "The same testers rerun both scenarios"
+          },
+          {
+            "when": "Nov 4",
+            "label": "Release",
+            "detail": "Publish and announce"
+          }
+        ]
+      },
+      "alt": "Timeline from Oct 21 to Nov 4: two fixes, a retest, then release.",
+      "notes": "The retest covers only the two failed scenarios."
+    },
+    {
+      "layout": "closing",
+      "title": "Decision Needed: Approve the Nov 4 Release",
+      "asks": [
+        {
+          "action": "Approve release with two fixes in flight",
+          "owner": "Billing ops lead",
+          "date": "Oct 20"
+        },
+        {
+          "action": "Confirm retest testers",
+          "owner": "UAT coordinator",
+          "date": "Oct 24"
+        }
+      ],
+      "notes": "Ask for the decision explicitly, then confirm owners and dates."
+    }
+  ],
+  "appendix": [
+    {
+      "layout": "table",
+      "message": "comparison",
+      "title": "Both Open Defects Are Minor and Have Owners", "takeaway": "Neither defect blocks sign-off, and both fixes ship before the Nov 4 release.",
+      "table": {
+        "columns": [
+          "ID",
+          "Defect",
+          "Severity",
+          "Fix By"
+        ],
+        "rows": [
+          [
+            "D-07",
+            "Region filter defaults to East",
+            "Minor",
+            "Oct 21"
+          ],
+          [
+            "D-11",
+            "Long payer names truncate",
+            "Cosmetic",
+            "Oct 24"
+          ]
+        ]
+      },
+      "source": "UAT tracker, cycle 1 (synthetic example)",
+      "notes": "Backup detail for questions; we do not present this slide unless asked."
+    }
+  ]
+}

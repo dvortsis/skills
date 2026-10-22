@@ -1,0 +1,164 @@
+{
+  "_about": "Fallback theme. Every build and lint overlays the project brand (scripts/brand.py: logo, colors by role, fonts, footer); these colors are used only for roles the brand leaves unset, and they match brand.py's neutral defaults. No fonts are set here: the brand names them (the project's own, else the bundled fallback in assets/fonts). No logo ships with the skill.",
+  "colors": {
+    "primary": "1F5FAD",
+    "dark": "1D2A3F",
+    "secondary": "3D8FD9",
+    "alert": "D9480F",
+    "alert_text": "B13C0B",
+    "text": "3D3D3D",
+    "muted": "767676",
+    "muted_text": "6B6B6B",
+    "context": "8FAFD6",
+    "card": "CEE3F6",
+    "callout": "CEE3F6",
+    "card_line": "DFDFDF",
+    "track": "DFDFDF",
+    "white": "FFFFFF",
+    "black": "000000"
+  },
+  "sizes": {
+    "title": 30,
+    "subtitle": 14,
+    "h1": 18,
+    "h2": 14,
+    "h3": 12,
+    "body": 10.5,
+    "small": 9,
+    "caption": 9,
+    "table": 9.5,
+    "code": 9
+  },
+  "page": {
+    "width_in": 8.5,
+    "height_in": 11,
+    "margin_in": 1.0,
+    "text_width_in": 6.5
+  },
+  "doc_types": {
+    "user-guide": {
+      "required": [
+        "Introduction",
+        "Getting Started",
+        "Troubleshooting",
+        "Support"
+      ],
+      "revisions": true
+    },
+    "technical-reference": {
+      "required": [
+        "Overview",
+        "Definitions",
+        "Support"
+      ],
+      "revisions": true
+    },
+    "sop": {
+      "required": [
+        "Purpose",
+        "Scope",
+        "Roles and Responsibilities",
+        "Procedure",
+        "Exceptions",
+        "References"
+      ],
+      "revisions": true
+    },
+    "manual": {
+      "required": [
+        "Introduction",
+        "Support"
+      ],
+      "revisions": true
+    },
+    "report": {
+      "required": [
+        "Executive Summary",
+        "Findings",
+        "Recommendations"
+      ],
+      "revisions": false
+    },
+    "policy": {
+      "required": [
+        "Purpose",
+        "Scope",
+        "Policy Statement",
+        "Roles and Responsibilities",
+        "Definitions",
+        "Exceptions",
+        "Related Documents"
+      ],
+      "revisions": true,
+      "meta_required": [
+        "origination_date"
+      ]
+    }
+  },
+  "profiles": {
+    "_about": "Guide profiles (GUIDE_PROFILE, lint only; build_doc.py never reads them). meta.profile lean or textbook; unset: textbook when the doc uses any textbook_signals, else lean for default_types when meta.audience is not a developer audience, else not checked.",
+    "values": ["lean", "textbook"],
+    "default_types": ["user-guide"],
+    "textbook_signals": ["objectives", "takeaways", "index"],
+    "lean": {
+      "forbid_titles": ["What You Will Learn", "Key Takeaways", "Index"],
+      "reference_titles": ["Reference"],
+      "min_task_topics": 1
+    }
+  },
+  "review": {
+    "_about": "D-65 REVIEW_DATE: meta fields shown above the revisions (long documents) and in the sheet footer, with their labels; printed copies line on every sheet.",
+    "fields": [["owner_role", "Owner Role"], ["last_reviewed", "Last Reviewed"], ["next_review", "Next Review"]],
+    "printed": "Printed copies may be out of date.",
+    "latest_label": "Latest version: "
+  },
+  "a11y": {
+    "lang": "en-US",
+    "min_contrast": 4.5,
+    "text_pairs": [
+      ["text", "white"],
+      ["dark", "white"],
+      ["primary", "white"],
+      ["muted_text", "white"],
+      ["alert_text", "white"],
+      ["white", "dark"],
+      ["context", "dark"],
+      ["dark", "card"],
+      ["text", "card"],
+      ["alert_text", "card"],
+      ["text", "F4F4F4"]
+    ]
+  },
+  "callouts": {
+    "note": {
+      "icon": "info-circle",
+      "bar": "dark",
+      "fill": null,
+      "label": "NOTE"
+    },
+    "tip": {
+      "icon": "bulb",
+      "bar": "secondary",
+      "fill": null,
+      "label": "TIP"
+    },
+    "example": {
+      "icon": "book",
+      "bar": "primary",
+      "fill": null,
+      "label": "EXAMPLE"
+    },
+    "important": {
+      "icon": "alert-circle",
+      "bar": "primary",
+      "fill": null,
+      "label": "IMPORTANT"
+    },
+    "warning": {
+      "icon": "alert-triangle",
+      "bar": "alert",
+      "fill": null,
+      "label": "WARNING"
+    }
+  }
+}

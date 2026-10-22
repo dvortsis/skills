@@ -1,0 +1,24 @@
+{
+ "meta": {"title": "Synthetic System Access Request Form", "kind": "form", "audience": "Revenue operations team members and their managers",
+  "purpose": "Request access to revenue operations systems. Your manager signs before IT processes the request.",
+  "owner": "Revenue Operations Systems Support (synthetic)", "version": "1.2", "date": "2026-10-11",
+  "sources": ["Synthetic example: access request checklist, 2026-10-11"], "anonymous": false, "phi_approved": false},
+ "sections": [
+  {"title": "Requester", "items": [
+    {"id": "F1", "type": "text", "label": "Employee ID", "required": true, "help": "Your six-digit employee number from the HR portal."},
+    {"id": "F2", "type": "text", "label": "Department", "required": true},
+    {"id": "F3", "type": "dropdown", "label": "Work location", "required": true, "options": ["Remote", "Business office", "Hybrid"]},
+    {"id": "F4", "type": "date", "label": "Date access is needed", "required": true}
+  ]},
+  {"title": "Access Details", "intro": "Ask only for the systems your role needs.", "items": [
+    {"id": "F5", "type": "multi", "label": "Systems needed", "required": true, "options": ["Billing system", "Claims clearinghouse", "Payer portal set", "Reporting workbook", "Document imaging"]},
+    {"id": "F6", "type": "single", "label": "Request type", "required": true, "options": ["New access", "Change existing access", "Remove access"]},
+    {"id": "F7", "type": "longtext", "label": "Business reason", "required": true, "help": "Name the tasks that need this access.", "rows": 4}
+  ]},
+  {"title": "Sign-off", "items": [
+    {"id": "F8", "type": "checkbox", "label": "I confirm this request follows the minimum necessary access standard.", "required": true},
+    {"id": "F9", "type": "signature", "label": "Manager signature", "required": true, "help": "Type your full name to sign."},
+    {"id": "F10", "type": "date", "label": "Date signed", "required": true}
+  ]}
+ ]
+}

@@ -1,0 +1,149 @@
+{
+  "name": "Project brand, modern minimal (fallback values)",
+  "source": "Layouts are generated at build time by scripts/master.py; colors, fonts, logo and footer come from the project brand (scripts/brand.py, references/brand.md). Fonts are never set here: brand.py supplies the project's fonts, or the bundled Inter and JetBrains Mono when the project names none, and line spacing comes from the font files. The colors below are the neutral fallback used when a project has no brand; card, context and callout are the 25% and 50% tints derived from the brand colors.",
+  "layouts": {
+    "cover_white": [
+      0,
+      "Cover Light"
+    ],
+    "cover_primary": [
+      0,
+      "Cover Primary"
+    ],
+    "cover_dark": [
+      0,
+      "Cover Dark"
+    ],
+    "content": [
+      0,
+      "Content"
+    ],
+    "section": [
+      0,
+      "Section"
+    ],
+    "quote": [
+      0,
+      "Quote"
+    ],
+    "dark": [
+      0,
+      "Dark"
+    ],
+    "hero": [
+      0,
+      "Dark"
+    ]
+  },
+  "layout_bg": {
+    "cover_white": "white",
+    "cover_primary": "primary",
+    "cover_dark": "dark",
+    "content": "white",
+    "section": "primary",
+    "quote": "white",
+    "dark": "dark",
+    "hero": "dark"
+  },
+  "slide": {
+    "width_in": 13.333,
+    "height_in": 7.5,
+    "left_in": 0.68,
+    "right_in": 12.65,
+    "title_top_in": 0.6,
+    "body_top_in": 1.85,
+    "body_bottom_in": 6.45,
+    "footer_zone_in": 6.8
+  },
+  "fonts": {},
+  "sizes_pt": {
+    "cover_title": 60,
+    "cover_sub": 32,
+    "cover_meta": 14,
+    "section_title": 48,
+    "section_sub": 20,
+    "closing_title": 48,
+    "title": 32,
+    "panel_title": 32,
+    "subhead": 24,
+    "body": 20,
+    "body2": 18,
+    "body3": 16,
+    "detail": 14,
+    "label": 14,
+    "source": 10,
+    "kpi": 54,
+    "statement": 48,
+    "hero": 96,
+    "hero_title": 40,
+    "shift": 80,
+    "step_num": 28
+  },
+  "radius_in": {
+    "card": 0.14,
+    "callout": 0.08,
+    "image": 0.12
+  },
+  "colors": {
+    "primary": "1F5FAD",
+    "dark": "1D2A3F",
+    "secondary": "3D8FD9",
+    "alert": "D9480F",
+    "text": "3D3D3D",
+    "black": "000000",
+    "muted": "767676",
+    "white": "FFFFFF",
+    "context": "8FAFD6",
+    "card": "CEE3F6",
+    "card_line": "DFDFDF",
+    "track": "DFDFDF",
+    "callout": "CEE3F6"
+  },
+  "alert_reasons": [
+    "missed_goal",
+    "unfavorable_change",
+    "failed_save",
+    "risk_warning"
+  ],
+  "min_pt": {
+    "cover_title": 40,
+    "cover_sub": 24,
+    "section_title": 36,
+    "section_sub": 16,
+    "closing_title": 36,
+    "title": 24,
+    "panel_title": 22,
+    "body": 16,
+    "body2": 14,
+    "body3": 14,
+    "detail": 12,
+    "kpi": 32,
+    "statement": 32,
+    "hero": 60,
+    "hero_title": 28,
+    "shift": 48,
+    "step_num": 24
+  },
+  "contrast_note": "Text contrast pairs are guaranteed by scripts/brand.py (PAIRS) for every brand; primary on card and card on primary are used only for bold text 14pt and larger (WCAG large text, 3:1)",
+  "sib_names": [
+    "aside:text",
+    "ask:meta",
+    "bar:label",
+    "callout:kind",
+    "callout:text",
+    "check:status",
+    "check:text",
+    "contact:label",
+    "contact:value",
+    "diagram:axis",
+    "diagram:label",
+    "diagram:text",
+    "diagram:when",
+    "kpi:delta",
+    "kpi:label",
+    "kpi:value",
+    "qa:a",
+    "qa:q",
+    "step:num"
+  ]
+}

@@ -1,0 +1,75 @@
+{
+  "_about": "Sheet layout (meta.layout sheet) formats for build_doc.py and lint_doc.py. Add a format as data: label, section_noun, page_code, page_fail, page_pass, optional required (top-level titles), structure, pages (most pages_per_section, also its default) and sections (level-2 titles every top-level section needs, SECTION_REQUIRED). catalog_sheet_types: doc types the format catalog builds as sheets; each needs an entry (SHEET_FORMAT_KNOWN).",
+  "catalog_sheet_types": ["quick-start", "job-aid", "quick-reference-card", "checklist", "decision-guide", "one-pager", "status-report", "faq-sheet", "participant-handout", "release-notes", "dashboard-guide", "metric-definitions", "data-dictionary", "project-charter", "meeting-agenda", "raci", "process-map", "training-plan"],
+  "defaults": {
+    "pages_per_section": 1,
+    "min_body_pt": 9,
+    "min_table_pt": 8,
+    "min_figure_pt": 8,
+    "text_scale": 1.0
+  },
+  "floors": {
+    "min_body_pt": 9,
+    "min_table_pt": 8,
+    "min_figure_pt": 8
+  },
+  "text_scale_range": [0.8, 1.5],
+  "base_sizes": {
+    "body": 10,
+    "table": 9,
+    "small": 8.5,
+    "caption": 8.5,
+    "code": 8.5,
+    "h3": 10.5
+  },
+  "fixed_sizes": {
+    "h2": 11,
+    "band_title": 20,
+    "band_doc": 10,
+    "band_meta": 9.5, "band_sub": 11,
+    "footer": 8
+  },
+  "build_nonblocking": ["QS_STRUCTURE"],
+  "default_format": {
+    "section_noun": "section",
+    "page_code": "SHEET_PAGE_FIT",
+    "page_fail": "{k} pages (maximum {m})",
+    "page_pass": "{n} sections, {p} pages"
+  },
+  "formats": {
+    "quick-start": {
+      "label": "Quick Start",
+      "section_noun": "role",
+      "page_code": "QS_PAGE_COUNT",
+      "page_fail": "{k} pages",
+      "page_pass": "{n} roles, {p} pages",
+      "structure": {
+        "code": "QS_STRUCTURE",
+        "subsections": ["Who It's For", "What You Can Do", "Steps", "Worked Example", "Common Mistakes", "Get Help"],
+        "aliases": {"Who It's For": ["Who It Is For", "Who It\u2019s For"]},
+        "steps_title": "Steps",
+        "steps_min": 3,
+        "steps_max": 5,
+        "max_items": {"Common Mistakes": 2},
+        "max_words": 250
+      }
+    },
+    "job-aid": {"label": "Job Aid"},
+    "quick-reference-card": {"label": "Quick Reference Card"},
+    "checklist": {"label": "Checklist"},
+    "one-pager": {"label": "One-pager"},
+    "status-report": {"label": "Status Report"},
+    "faq-sheet": {"label": "FAQ Sheet", "pages": 2},
+    "decision-guide": {"label": "Decision Guide", "pages": 1, "sections": ["When to Use", "Decide", "When to Escalate", "Get Help"]},
+    "participant-handout": {"label": "Participant Handout", "pages": 1, "sections": ["Session Goals", "Key Points", "Practice", "After the Session", "Get Help"]},
+    "release-notes": {"label": "Release Notes", "pages": 1, "sections": ["Summary", "What Changed", "Who Is Affected", "Action Needed", "Get Help"]},
+    "dashboard-guide": {"label": "Dashboard Guide", "pages": 2, "sections": ["Purpose", "Access", "How It Is Organized", "Definitions", "How to Use It", "Data Sources and Refresh", "Known Limitations", "Get Help"]},
+    "metric-definitions": {"label": "Metric Definition Sheet", "pages": 2, "sections": ["Purpose", "Metric Definitions", "Change Log", "Get Help"]},
+    "data-dictionary": {"label": "Data Dictionary", "pages": 2, "sections": ["Purpose", "How to Read This Dictionary", "Fields", "Data Classification Notes", "Get Help"]},
+    "project-charter": {"label": "Project Charter", "pages": 2, "sections": ["Problem", "Goals and Measures", "Scope", "Milestones", "Risks", "Roles and Decision Rights", "Get Help"]},
+    "meeting-agenda": {"label": "Meeting Agenda", "pages": 1, "sections": ["Purpose", "Desired Outcomes", "Agenda"]},
+    "raci": {"label": "RACI Chart", "pages": 1, "sections": ["Purpose", "Roles", "RACI Matrix", "How to Use This Chart", "Get Help"]},
+    "process-map": {"label": "Process Map", "pages": 1, "sections": ["Purpose", "Roles", "Process Map", "Steps in Order", "Hand-offs", "Get Help"]},
+    "training-plan": {"label": "Training Plan", "pages": 2, "sections": ["Purpose", "Audiences", "Curriculum Map", "Schedule", "Prerequisites", "How We Will Measure Success", "Get Help"]}
+  }
+}

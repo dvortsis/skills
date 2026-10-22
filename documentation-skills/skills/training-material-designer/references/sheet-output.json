@@ -1,0 +1,16 @@
+{
+  "version": "1.2.0",
+  "note": "Training Markdown with output: pdf (D-05, contract 'Training Markdown with output: pdf'). Read by lint_training.py (QS_PDF_LIMITS) and md_to_sheet.py. Grow the lists here; never in code.",
+  "output_values": ["pdf"],
+  "limits": {
+    "quick-start": {"words": 250, "steps_min": 3, "steps_max": 5, "mistakes_max": 2},
+    "job-aid": {"words": 250, "steps_min": 1, "steps_max": 8}
+  },
+  "half_pairs": [["Who It's For", "What You Can Do"], ["Common Mistakes", "Get Help"]],
+  "card_sections": ["Worked Example"],
+  "steps_section": "Steps",
+  "mistakes_section": "Common Mistakes",
+  "diagram_steps": [3, 6],
+  "diagram_label_words": 4,
+  "builder": "document-builder/scripts/build_doc.py"
+}

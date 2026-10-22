@@ -1,0 +1,267 @@
+{
+  "meta": {
+    "title": "New Intake Platform: Go-live Readiness Review",
+    "subtitle": "Five of Six Criteria Met, One Fix Before Nov 17",
+    "presenter": "Clinic Operations Analytics",
+    "date": "October 2026",
+    "year": 2026,
+    "audience": "Go-live steering committee",
+    "decision": "Approve go-live on Nov 17 once interface testing passes",
+    "big_idea": "The platform is ready except interface testing, which finishes Nov 10, so we can go live on Nov 17.",
+    "notes": "Synthetic example data for the skill self-test. Not real results.",
+    "cover": "dark",
+    "title_accent": "Readiness Review"
+  },
+  "slides": [
+    {
+      "layout": "summary",
+      "title": "Once Interface Testing Passes, We Are Ready to Go Live on Nov 17",
+      "points": [
+        "Five of six go-live criteria are met",
+        "Interface testing finishes Nov 10",
+        "Pilot clinics book first visits three days sooner"
+      ],
+      "notes": "Lead with the answer: one open criterion, with a date, then the ask."
+    },
+    {
+      "layout": "checklist",
+      "message": "status",
+      "title": "Five of Six Go-live Criteria Are Met",
+      "items": [
+        {
+          "text": "Scheduler training complete",
+          "status": "done",
+          "owner": "Training lead",
+          "date": "Oct 20"
+        },
+        {
+          "text": "Routing rules signed off",
+          "status": "done",
+          "owner": "Ops director",
+          "date": "Oct 22"
+        },
+        {
+          "text": "Data migration verified",
+          "status": "done",
+          "owner": "Data team",
+          "date": "Oct 27"
+        },
+        {
+          "text": "Support desk staffed",
+          "status": "done",
+          "owner": "Service desk",
+          "date": "Oct 29"
+        },
+        {
+          "text": "Downtime plan approved",
+          "status": "done",
+          "owner": "Clinic ops",
+          "date": "Oct 30"
+        },
+        {
+          "text": "Interface testing passed",
+          "status": "at_risk",
+          "reason": "missed_goal",
+          "owner": "Integration team",
+          "date": "Nov 10"
+        }
+      ],
+      "notes": "Interface testing slipped one week because a vendor test window moved; the new date still leaves a week of buffer."
+    },
+    {
+      "layout": "kpi",
+      "message": "numbers",
+      "style": "minimal",
+      "title": "Pilot Clinics Already Beat the Launch Targets",
+      "kpis": [
+        {
+          "value": "2.1d",
+          "label": "Days to First Visit",
+          "delta": "Target 3.0d"
+        },
+        {
+          "value": "94%",
+          "label": "Complete on First Try",
+          "delta": "Target 85%"
+        },
+        {
+          "value": "0",
+          "label": "Sev 1 Defects",
+          "delta": "Target 0"
+        }
+      ],
+      "source": "Pilot tracker, Sep-Oct (synthetic example)",
+      "notes": "These are the launch targets the committee set in August. Pilot results clear every one, so the remaining risk sits in the interface, not the workflow."
+    },
+    {
+      "layout": "diagram",
+      "message": "structure",
+      "title": "The Platform Runs on Four Layers, and One Is Still in Test",
+      "diagram": {
+        "kind": "layers",
+        "highlight": 3,
+        "nodes": [
+          {
+            "label": "Referral Sources",
+            "detail": "Physician offices, hospitals and the patient portal send referrals"
+          },
+          {
+            "label": "Intake Form",
+            "detail": "Checks insurance and required fields"
+          },
+          {
+            "label": "Routing Rules",
+            "detail": "Send each referral to the right team"
+          },
+          {
+            "label": "Scheduling Interface",
+            "detail": "Books the visit and stays in testing until Nov 10"
+          }
+        ]
+      },
+      "alt": "Four stacked layers from referral sources to the scheduling interface, with the interface layer highlighted.",
+      "notes": "Only the bottom layer, the interface to the clinic scheduling system, is still in test."
+    },
+    {
+      "layout": "hero",
+      "message": "number",
+      "title": "Patients Start Treatment Sooner",
+      "accent": "Sooner",
+      "value": "3 days",
+      "label": "Faster to First Visit",
+      "text": "Pilot clinics, compared with the six months before the pilot.",
+      "source": "Pilot tracker (synthetic example)",
+      "notes": "Breather: this is why the date matters to patients."
+    },
+    {
+      "layout": "shift",
+      "message": "change",
+      "title": "Defects Fell From Twelve to Two in Three Test Cycles",
+      "metric": "Open Defects",
+      "from": {
+        "value": "12",
+        "label": "Cycle 1"
+      },
+      "to": {
+        "value": "2",
+        "label": "Cycle 3"
+      },
+      "change": "-83%",
+      "takeaway": "The two open defects are cosmetic; neither blocks scheduling.",
+      "source": "Test tracker, cycles 1-3 (synthetic example)",
+      "notes": "Both open defects are label wording issues, fixed in the Nov 7 build."
+    },
+    {
+      "layout": "split",
+      "message": "walkthrough",
+      "panel": "dark",
+      "title": "Schedulers Book From One Screen",
+      "points": [
+        "Referral, insurance and routing in one view",
+        "Booking writes straight to the clinic system"
+      ],
+      "visual": {
+        "kind": "screenshot",
+        "image": "screenshots/referral_queue.png",
+        "alt": "Scheduler screen with referral details, insurance status and a book button."
+      },
+      "notes": "This is the screen schedulers trained on; the interface work makes the book button write to the clinic system."
+    },
+    {
+      "layout": "steps",
+      "message": "sequence",
+      "tint": true,
+      "title": "Go-live Takes Four Steps, Starting With Interface Testing",
+      "highlight": 0,
+      "steps": [
+        {
+          "label": "Pass Interface Testing",
+          "detail": "Integration team finishes testing by Nov 10"
+        },
+        {
+          "label": "Freeze the Build",
+          "detail": "No changes after Nov 12"
+        },
+        {
+          "label": "Switch On by Region",
+          "detail": "West and Central switch on first, on Nov 17"
+        },
+        {
+          "label": "Hypercare for Two Weeks",
+          "detail": "Daily check-ins with clinic leads"
+        }
+      ],
+      "notes": "Step one is the only open dependency; the other three steps are scheduled and staffed."
+    },
+    {
+      "layout": "chart",
+      "message": "comparison",
+      "title": "Most Remaining Test Cases Cover the Interface",
+      "chart": {
+        "type": "bar",
+        "categories": [
+          "Interface",
+          "Routing",
+          "Form",
+          "Reports"
+        ],
+        "series": [
+          {
+            "name": "Open test cases",
+            "values": [
+              18,
+              4,
+              2,
+              1
+            ]
+          }
+        ],
+        "highlight": {
+          "category": "Interface"
+        },
+        "number_format": "0"
+      },
+      "takeaway": "Finishing the interface cases closes almost three quarters of the remaining test work.",
+      "source": "Test tracker, Oct 30 (synthetic example)",
+      "alt": "Bar chart of open test cases by area; interface has the most at 18.",
+      "notes": "Routing, form and report cases are low risk and scheduled this week."
+    },
+    {
+      "layout": "qa",
+      "message": "questions",
+      "title": "Three Questions the Committee Will Likely Ask",
+      "pairs": [
+        {
+          "q": "What if interface testing slips again?",
+          "a": "We keep the old booking path live and move go-live one week; no clinic is affected."
+        },
+        {
+          "q": "Who supports clinics on day one?",
+          "a": "The service desk plus two analysts on site in each first-wave region."
+        },
+        {
+          "q": "How will we know it is working?",
+          "a": "Daily dashboard of bookings, errors and time to first visit for two weeks."
+        }
+      ],
+      "notes": "Anticipate these so the decision is not delayed by follow-up questions."
+    },
+    {
+      "layout": "closing",
+      "title": "Decision Needed: Approve Go-live for Nov 17",
+      "asks": [
+        {
+          "action": "Approve go-live, conditional on Nov 10 testing",
+          "owner": "Steering committee",
+          "date": "Nov 3"
+        },
+        {
+          "action": "Confirm first-wave clinic leads",
+          "owner": "Regional directors",
+          "date": "Nov 7"
+        }
+      ],
+      "notes": "Ask for a conditional approval so the Nov 10 result triggers go-live without another meeting."
+    }
+  ]
+}

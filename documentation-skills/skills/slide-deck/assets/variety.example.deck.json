@@ -1,0 +1,286 @@
+{
+  "meta": {
+    "title": "Referral to First Treatment: What Changed and What Is Next",
+    "subtitle": "Half the Drop-off, Same Team, Two Asks",
+    "presenter": "Clinic Operations Analytics",
+    "date": "October 2026",
+    "year": 2026,
+    "audience": "Regional operations directors",
+    "decision": "Adopt the three intake changes in every region by Jan 15",
+    "big_idea": "Three small intake changes halved the referrals we lose before first treatment, and every region can adopt them by January.",
+    "notes": "Synthetic example data for the skill self-test. Not real results.",
+    "cover": "primary",
+    "title_accent": "What Is Next"
+  },
+  "slides": [
+    {
+      "layout": "summary",
+      "title": "Three Intake Changes Halved Referral Drop-off",
+      "points": [
+        "We now lose 1 in 10 referrals, down from 1 in 5",
+        "The fixes cost no new headcount",
+        "Every region can adopt them by Jan 15"
+      ],
+      "notes": "Lead with the answer, then show where referrals were lost and what fixed it."
+    },
+    {
+      "layout": "split",
+      "message": "number",
+      "panel": "tint",
+      "title": "One Quarter Later, We Lose Half as Many Referrals",
+      "points": [
+        "Biggest gain came at the first call",
+        "Results held in every pilot clinic",
+        "No added staff or overtime"
+      ],
+      "visual": {
+        "kind": "number",
+        "value": "48%",
+        "label": "Fewer Referrals Lost",
+        "delta": "Jul-Sep vs Apr-Jun"
+      },
+      "source": "Referral tracker, pilot clinics (synthetic example)",
+      "notes": "The headline result: drop-off fell by almost half in one quarter without adding people."
+    },
+    {
+      "layout": "diagram",
+      "message": "flow",
+      "title": "Most Referrals Were Lost Before Anyone Called",
+      "diagram": {
+        "kind": "funnel",
+        "highlight": 1,
+        "nodes": [
+          {
+            "label": "Referrals Received",
+            "value": "1,200"
+          },
+          {
+            "label": "Patient Contacted",
+            "value": "960"
+          },
+          {
+            "label": "Visit Scheduled",
+            "value": "720"
+          },
+          {
+            "label": "First Treatment",
+            "value": "610"
+          }
+        ]
+      },
+      "takeaway": "Calling within one day is where a single fix recovers the most patients.",
+      "source": "Referral tracker, Apr-Jun baseline (synthetic example)",
+      "alt": "Funnel from 1,200 referrals received to 610 first treatments, with the contact stage highlighted.",
+      "notes": "The largest loss was between receiving a referral and reaching the patient. That is where we focused first."
+    },
+    {
+      "layout": "cards",
+      "message": "ideas",
+      "tint": true,
+      "numbered": true,
+      "title": "Three Changes Closed the Biggest Gaps",
+      "cards": [
+        {
+          "label": "Call Within One Day",
+          "detail": "Schedulers make the first call by the next business day"
+        },
+        {
+          "label": "One Owner per Referral",
+          "detail": "A named scheduler follows it to the first visit"
+        },
+        {
+          "label": "Text Before Calling",
+          "detail": "Patients know who will call and why"
+        }
+      ],
+      "notes": "The first change drove most of the gain; the other two kept patients from dropping later."
+    },
+    {
+      "layout": "hero",
+      "message": "number",
+      "title": "More Patients Reached Their First Treatment",
+      "accent": "First Treatment",
+      "value": "+110",
+      "label": "Patients per Quarter",
+      "text": "Across the pilot clinics, at the same staffing level.",
+      "source": "Referral tracker, pilot clinics (synthetic example)",
+      "notes": "Pause here: this is the patient impact, not just a process metric."
+    },
+    {
+      "layout": "chart",
+      "message": "comparison",
+      "title": "Every Pilot Region Improved, and West Improved Most",
+      "chart": {
+        "type": "column",
+        "categories": [
+          "West",
+          "Central",
+          "South",
+          "East"
+        ],
+        "series": [
+          {
+            "name": "Drop-off reduction",
+            "values": [
+              0.56,
+              0.47,
+              0.44,
+              0.41
+            ]
+          }
+        ],
+        "highlight": {
+          "category": "West"
+        },
+        "number_format": "0%"
+      },
+      "takeaway": "West started first, so the gain grows with time on the new process.",
+      "source": "Referral tracker, Jul-Sep (synthetic example)",
+      "alt": "Column chart of drop-off reduction by region, West highest at 56 percent.",
+      "notes": "All four regions improved by at least 41 percent. West had the longest run time."
+    },
+    {
+      "layout": "diagram",
+      "message": "loop",
+      "title": "Each Change Was Tested in Two-week Cycles",
+      "diagram": {
+        "kind": "cycle",
+        "center": "PDSA",
+        "nodes": [
+          {
+            "label": "Plan",
+            "detail": "Pick one change and a measure"
+          },
+          {
+            "label": "Do",
+            "detail": "Run it in two clinics"
+          },
+          {
+            "label": "Study",
+            "detail": "Compare drop-off to baseline"
+          },
+          {
+            "label": "Act",
+            "detail": "Adopt, adjust or drop it"
+          }
+        ]
+      },
+      "alt": "Plan-Do-Study-Act cycle with four steps around a PDSA center label, Study highlighted.",
+      "notes": "We used the standard Plan-Do-Study-Act method so each change was proven before it spread."
+    },
+    {
+      "layout": "split",
+      "message": "walkthrough",
+      "panel": "dark",
+      "title": "Schedulers See Each Referral's Owner and Next Step",
+      "points": [
+        "Owner and due date on every row",
+        "Overdue first calls rise to the top"
+      ],
+      "visual": {
+        "kind": "screenshot",
+        "image": "screenshots/referral_queue.png",
+        "alt": "Referral queue with an owner column and overdue first calls at the top."
+      },
+      "notes": "This is the queue view that makes the one-owner rule work day to day."
+    },
+    {
+      "layout": "statement",
+      "message": "point",
+      "tint": true,
+      "text": "The fixes are habits, not headcount.",
+      "notes": "Breather before the rollout detail: this is why every region can adopt them quickly."
+    },
+    {
+      "layout": "screenshot",
+      "message": "walkthrough",
+      "series": "first call",
+      "title": "Step One: The Text Goes Out When the Referral Arrives",
+      "image": "screenshots/intake_form_step1.png",
+      "callouts": [
+        {
+          "x": 0.25,
+          "y": 0.2,
+          "text": "Text sends automatically"
+        },
+        {
+          "x": 0.7,
+          "y": 0.6,
+          "text": "Scheduler name included"
+        }
+      ],
+      "alt": "Referral detail page showing the automatic patient text with the scheduler's name.",
+      "notes": "Walk through the first-call flow as the scheduler sees it."
+    },
+    {
+      "layout": "screenshot",
+      "message": "walkthrough",
+      "series": "first call",
+      "title": "Step Two: The Call Is Logged in One Click",
+      "image": "screenshots/intake_form_step2.png",
+      "callouts": [
+        {
+          "x": 0.3,
+          "y": 0.3,
+          "text": "Outcome logged in one click"
+        }
+      ],
+      "alt": "Call log panel with one-click outcome buttons for the first patient call.",
+      "notes": "Logging the outcome takes one click, which is why adherence stayed high."
+    },
+    {
+      "layout": "closing",
+      "title": "Decision Needed: Adopt the Changes by Jan 15",
+      "asks": [
+        {
+          "action": "Approve the three-region rollout",
+          "owner": "Operations VP",
+          "date": "Nov 14"
+        },
+        {
+          "action": "Name a champion per clinic",
+          "owner": "Regional directors",
+          "date": "Nov 21"
+        }
+      ],
+      "notes": "Ask for the decision, then confirm champions so training can start Dec 1. Rollout dates are in the appendix."
+    }
+  ],
+  "appendix": [
+    {
+      "layout": "table",
+      "message": "comparison",
+      "title": "Each Region Can Adopt the Changes in Three Weeks", "takeaway": "Pacific starts last because its champions finish training on Dec 12.",
+      "table": {
+        "columns": [
+          "Region",
+          "Start",
+          "Fully Adopted",
+          "Champions"
+        ],
+        "rows": [
+          [
+            "North",
+            "Dec 1",
+            "Dec 22",
+            "3"
+          ],
+          [
+            "Mountain",
+            "Dec 8",
+            "Jan 5",
+            "2"
+          ],
+          [
+            "Pacific",
+            "Dec 15",
+            "Jan 15",
+            "3"
+          ]
+        ]
+      },
+      "source": "Rollout plan v1 (synthetic example)",
+      "notes": "Pacific starts last because its champions finish training Dec 12."
+    }
+  ]
+}

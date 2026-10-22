@@ -1,0 +1,15 @@
+services:
+  beacon:
+    image: ghcr.io/example/beacon:latest
+    container_name: beacon
+    restart: unless-stopped
+    ports:
+      - "8484:8484/tcp"
+      - "6990:6990/udp"
+    volumes:
+      - ./config:/config
+      - ./data:/data
+    environment:
+      PUID: "1000"
+      PGID: "1000"
+      BEACON_API_KEY: ""

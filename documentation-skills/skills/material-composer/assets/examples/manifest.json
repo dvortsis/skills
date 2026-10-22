@@ -1,0 +1,8 @@
+{
+ "note": "Synthetic exemplars for build_form.py and build_module.py (no PHI, no real names, neutral fallback colors).",
+ "files": {
+  "synthetic_denial_steps.png.b64": {
+   "sha256_decoded": "5a5304ed97790f15fbf28873f0b2c8efb2832ba1951a5c582c530d0cd77217b7"
+  }
+ }
+}

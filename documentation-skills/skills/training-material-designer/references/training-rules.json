@@ -1,0 +1,8 @@
+{
+  "caption": {"words_per_minute": 160, "line_chars": 42},
+  "follow_up_evaluation": {
+    "pattern": "follow-up evaluation",
+    "send_after_days": [30, 60],
+    "format": "material-composer follow-up-evaluation format"
+  }
+}

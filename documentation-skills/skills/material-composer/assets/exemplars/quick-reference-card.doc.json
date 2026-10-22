@@ -1,0 +1,127 @@
+{
+  "meta": {
+    "title": "The UAT Page at a Glance",
+    "doc_type": "quick-reference-card",
+    "layout": "sheet",
+    "audience": "Partner UAT testers",
+    "purpose": "Use this when you check dashboard numbers on the UAT page and need the tabs, terms and tasks on one page",
+    "owner": "BI / Analytics",
+    "version": "1.0",
+    "date": "October 2026",
+    "classification": "Internal use only",
+    "sheet": {
+      "pages_per_section": 1,
+      "min_body_pt": 9,
+      "min_table_pt": 8,
+      "min_figure_pt": 8,
+      "text_scale": 1.0
+    },
+    "sources": [
+      "UAT process reference (synthetic example content)"
+    ]
+  },
+  "sections": [
+    {
+      "title": "Partner UAT Testers",
+      "sections": [
+        {
+          "title": "At a Glance",
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "Use this when you check dashboard numbers during user acceptance testing (UAT), the last check before a dashboard goes live. Work through the three tabs in order."
+            },
+            {
+              "type": "step_diagram",
+              "steps": [
+                {
+                  "label": "1 · Parameters",
+                  "icon": "forms"
+                },
+                {
+                  "label": "2 · Testing",
+                  "icon": "list-check"
+                },
+                {
+                  "label": "3 · Sign-off",
+                  "icon": "circle-check"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Key Terms",
+          "blocks": [
+            {
+              "type": "table",
+              "caption": "Labels on the UAT Page",
+              "columns": [
+                "Label",
+                "Use It To"
+              ],
+              "widths_in": [
+                1.7,
+                4.8
+              ],
+              "rows": [
+                [
+                  "Record result",
+                  "Open the result form; it stays disabled until every value is entered."
+                ],
+                [
+                  "Issues found",
+                  "See each issue a Fail or Blocked result opens."
+                ],
+                [
+                  "Reopen to update",
+                  "Change a completed card; its history is kept."
+                ]
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Common Tasks",
+          "blocks": [
+            {
+              "type": "bullets",
+              "items": [
+                "Enter a value for every scenario on **1 · Parameters** in plain language.",
+                "Refresh live values, such as open ticket IDs, when the page flags them.",
+                "Bring your legacy report or extract instead of estimating from memory.",
+                "Click **Record result** on **2 · Testing**; say whether it matched and enter both values and the report used.",
+                "For Fail or Blocked, pick a severity (how much it matters) and add a note.",
+                "Check **Issues found** for each decision: FIX REQUIRED, NOT A DEFECT or DEFERRED TO PHASE 2, with the reason.",
+                "Sign each dashboard off on **3 · Sign-off**."
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Tips",
+          "width": "half",
+          "blocks": [
+            {
+              "type": "bullets",
+              "items": [
+                "Completed cards and passed tests turn gray, so anything not gray still needs you.",
+                "Sign-off warns you when tests have not passed or issues are still open."
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Get Help",
+          "width": "half",
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "Ask the business intelligence (BI) team member who runs your testing session."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

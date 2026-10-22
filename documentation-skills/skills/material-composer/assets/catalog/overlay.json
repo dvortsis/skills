@@ -1,0 +1,1266 @@
+{
+ "format": "catalog-overlay",
+ "families": {
+  "reference-sheet": {
+   "tone": "imperative, second person; default audience: non-technical internal business users (plain words, terms defined, no system or tool names); adapt when the request names another audience",
+   "keywords": [
+    "card",
+    "sheet",
+    "cheat",
+    "reference",
+    "aid",
+    "checklist",
+    "tip",
+    "poster",
+    "flyer",
+    "badge",
+    "placemat",
+    "one page",
+    "one-page",
+    "handout",
+    "decision tree",
+    "flowchart",
+    "release notes",
+    "dictionary",
+    "definitions",
+    "raci",
+    "swimlane",
+    "process map",
+    "charter",
+    "agenda",
+    "glossary"
+   ]
+  },
+  "long-form": {
+   "tone": "task-based, plain; default audience: non-technical internal business users (plain words, terms defined, no system or tool names); adapt when the request names another audience"
+  },
+  "presentation": {
+   "tone": "one message per slide; default audience: non-technical internal business users (plain words, terms defined, no system or tool names); adapt when the request names another audience"
+  },
+  "facilitation": {
+   "tone": "directive for the facilitator; default audience: non-technical internal business users (plain words, terms defined, no system or tool names); adapt when the request names another audience"
+  },
+  "communication": {
+   "tone": "direct, warm, no hype; default audience: non-technical internal business users (plain words, terms defined, no system or tool names); adapt when the request names another audience",
+   "keywords": [
+    "email",
+    "announcement",
+    "message",
+    "post",
+    "newsletter",
+    "talking points",
+    "memo",
+    "reminder",
+    "teams",
+    "slack",
+    "comms",
+    "communication",
+    "change kit",
+    "toolkit",
+    "kit",
+    "faq",
+    "script for managers",
+    "invite",
+    "bulletin",
+    "recap",
+    "minutes",
+    "proposal"
+   ]
+  },
+  "elearning": {
+   "tone": "conversational, scenario-led; default audience: non-technical internal business users (plain words, terms defined, no system or tool names); adapt when the request names another audience"
+  },
+  "data-collection": {
+   "tone": "neutral, one question at a time; default audience: non-technical internal business users (plain words, terms defined, no system or tool names); adapt when the request names another audience"
+  },
+  "assessment": {
+   "tone": "neutral; default audience: non-technical internal business users (plain words, terms defined, no system or tool names); adapt when the request names another audience"
+  }
+ },
+ "formats": {
+  "video-script": {
+   "anatomy": [
+    {
+     "title": "Objective",
+     "required": true
+    },
+    {
+     "title": "Script",
+     "required": true
+    },
+    {
+     "title": "Wrap-up and Next Steps",
+     "required": true
+    }
+   ],
+   "renderer": "training-md"
+  },
+  "faq-sheet": {
+   "anatomy": [
+    {
+     "title": "Questions",
+     "required": true,
+     "limits": {
+      "questions": [
+       3,
+       12
+      ]
+     }
+    },
+    {
+     "title": "Get Help",
+     "required": true
+    }
+   ],
+   "pages": 2,
+   "words": 900
+  },
+  "sop": {
+   "anatomy": [
+    {
+     "title": "Purpose",
+     "required": true
+    },
+    {
+     "title": "Scope",
+     "required": true
+    },
+    {
+     "title": "Roles and Responsibilities",
+     "required": true
+    },
+    {
+     "title": "Procedure",
+     "required": true
+    },
+    {
+     "title": "Exceptions",
+     "required": true
+    },
+    {
+     "title": "References",
+     "required": true
+    }
+   ]
+  },
+  "status-report": {
+   "anatomy": [
+    {
+     "title": "Overall Status",
+     "required": true
+    },
+    {
+     "title": "Changed Since Last Report",
+     "required": false
+    },
+    {
+     "title": "Summary",
+     "required": true
+    },
+    {
+     "title": "Progress",
+     "required": true
+    },
+    {
+     "title": "Milestones",
+     "required": true
+    },
+    {
+     "title": "Risks, Issues and Asks",
+     "required": true
+    },
+    {
+     "title": "Decisions Needed",
+     "required": false
+    },
+    {
+     "title": "Next Steps",
+     "required": true
+    }
+   ],
+   "words": 450
+  },
+  "memo": {
+   "anatomy": [
+    {
+     "title": "Bottom Line",
+     "required": true
+    },
+    {
+     "title": "Background",
+     "required": true
+    },
+    {
+     "title": "Details",
+     "required": true
+    },
+    {
+     "title": "Next Steps",
+     "required": true
+    }
+   ],
+   "family": "communication",
+   "label": "Memo",
+   "aliases": [
+    "business memo",
+    "internal memo"
+   ],
+   "_replace": true,
+   "words": 1000,
+   "owner": "executive-communications",
+   "source": "md"
+  },
+  "proposal": {
+   "anatomy": [
+    {
+     "title": "Recommendation",
+     "required": true,
+     "limits": {
+      "words": [
+       0,
+       150
+      ]
+     }
+    },
+    {
+     "title": "Why Now",
+     "required": true
+    },
+    {
+     "title": "Options Considered",
+     "required": true
+    },
+    {
+     "title": "Impact",
+     "required": true
+    },
+    {
+     "title": "Plan and Timeline",
+     "required": true
+    },
+    {
+     "title": "Risks",
+     "required": true
+    },
+    {
+     "title": "Decision Needed",
+     "required": true
+    }
+   ],
+   "family": "communication",
+   "label": "Proposal",
+   "aliases": [
+    "decision memo",
+    "decision paper",
+    "recommendation memo",
+    "business case"
+   ],
+   "_replace": true,
+   "words": 2500,
+   "owner": "executive-communications",
+   "source": "md"
+  },
+  "meeting-recap": {
+   "anatomy": [
+    {
+     "title": "Decisions",
+     "required": true
+    },
+    {
+     "title": "Action Items",
+     "required": true
+    },
+    {
+     "title": "Open Questions",
+     "required": false
+    },
+    {
+     "title": "Next Meeting",
+     "required": true
+    }
+   ],
+   "family": "communication",
+   "label": "Meeting Recap",
+   "aliases": [
+    "meeting minutes",
+    "minutes",
+    "meeting notes",
+    "meeting summary"
+   ],
+   "_replace": true,
+   "words": 400,
+   "owner": "executive-communications",
+   "source": "md",
+   "fields": "subject"
+  },
+  "release-notes": {
+   "anatomy": [
+    {
+     "title": "Summary",
+     "required": true
+    },
+    {
+     "title": "What Changed",
+     "required": true
+    },
+    {
+     "title": "Who Is Affected",
+     "required": true
+    },
+    {
+     "title": "Action Needed",
+     "required": true
+    },
+    {
+     "title": "Known Issues",
+     "required": false
+    },
+    {
+     "title": "Get Help",
+     "required": true
+    }
+   ],
+   "family": "reference-sheet",
+   "label": "Release Notes",
+   "aliases": [
+    "what's new",
+    "change log",
+    "changelog",
+    "release summary"
+   ],
+   "_replace": true,
+   "doc_type": "release-notes",
+   "words": 450,
+   "pages": 1
+  },
+  "dashboard-guide": {
+   "anatomy": [
+    {
+     "title": "Purpose",
+     "required": true
+    },
+    {
+     "title": "Access",
+     "required": true
+    },
+    {
+     "title": "How It Is Organized",
+     "required": true
+    },
+    {
+     "title": "Definitions",
+     "required": true
+    },
+    {
+     "title": "How to Use It",
+     "required": true
+    },
+    {
+     "title": "Data Sources and Refresh",
+     "required": true
+    },
+    {
+     "title": "Known Limitations",
+     "required": true
+    },
+    {
+     "title": "Get Help",
+     "required": true
+    }
+   ],
+   "family": "reference-sheet",
+   "label": "Dashboard Guide",
+   "aliases": [
+    "report guide",
+    "dashboard user guide",
+    "report user guide",
+    "dashboard documentation"
+   ],
+   "_replace": true,
+   "doc_type": "dashboard-guide",
+   "words": 900,
+   "pages": 2
+  },
+  "metric-definitions": {
+   "anatomy": [
+    {
+     "title": "Purpose",
+     "required": true
+    },
+    {
+     "title": "Metric Definitions",
+     "required": true
+    },
+    {
+     "title": "How the Metrics Relate",
+     "required": false
+    },
+    {
+     "title": "Change Log",
+     "required": true
+    },
+    {
+     "title": "Get Help",
+     "required": true
+    }
+   ],
+   "family": "reference-sheet",
+   "label": "Metric Definition Sheet",
+   "aliases": [
+    "kpi definitions",
+    "metric definitions",
+    "kpi glossary",
+    "metric definition card",
+    "measure definitions"
+   ],
+   "_replace": true,
+   "doc_type": "metric-definitions",
+   "words": 700,
+   "pages": 2
+  },
+  "data-dictionary": {
+   "anatomy": [
+    {
+     "title": "Purpose",
+     "required": true
+    },
+    {
+     "title": "How to Read This Dictionary",
+     "required": true
+    },
+    {
+     "title": "Fields",
+     "required": true
+    },
+    {
+     "title": "Data Classification Notes",
+     "required": true
+    },
+    {
+     "title": "Get Help",
+     "required": true
+    }
+   ],
+   "family": "reference-sheet",
+   "label": "Data Dictionary",
+   "aliases": [
+    "field definitions",
+    "field dictionary",
+    "data definitions"
+   ],
+   "_replace": true,
+   "doc_type": "data-dictionary",
+   "words": 900,
+   "pages": 2
+  },
+  "project-charter": {
+   "anatomy": [
+    {
+     "title": "Problem",
+     "required": true
+    },
+    {
+     "title": "Goals and Measures",
+     "required": true
+    },
+    {
+     "title": "Scope",
+     "required": true
+    },
+    {
+     "title": "Milestones",
+     "required": true
+    },
+    {
+     "title": "Risks",
+     "required": true
+    },
+    {
+     "title": "Roles and Decision Rights",
+     "required": true
+    },
+    {
+     "title": "Get Help",
+     "required": true
+    }
+   ],
+   "family": "reference-sheet",
+   "label": "Project Charter",
+   "aliases": [
+    "charter",
+    "project brief",
+    "project one-pager"
+   ],
+   "_replace": true,
+   "doc_type": "project-charter",
+   "words": 800,
+   "pages": 2
+  },
+  "meeting-agenda": {
+   "anatomy": [
+    {
+     "title": "Purpose",
+     "required": true
+    },
+    {
+     "title": "Desired Outcomes",
+     "required": true
+    },
+    {
+     "title": "Decisions Needed",
+     "required": false
+    },
+    {
+     "title": "Agenda",
+     "required": true
+    },
+    {
+     "title": "Pre-Reads",
+     "required": false
+    }
+   ],
+   "family": "reference-sheet",
+   "label": "Meeting Agenda",
+   "aliases": [
+    "agenda",
+    "meeting plan"
+   ],
+   "_replace": true,
+   "doc_type": "meeting-agenda",
+   "words": 300,
+   "pages": 1
+  },
+  "raci": {
+   "anatomy": [
+    {
+     "title": "Purpose",
+     "required": true
+    },
+    {
+     "title": "Roles",
+     "required": true
+    },
+    {
+     "title": "RACI Matrix",
+     "required": true
+    },
+    {
+     "title": "How to Use This Chart",
+     "required": true
+    },
+    {
+     "title": "Get Help",
+     "required": true
+    }
+   ],
+   "family": "reference-sheet",
+   "label": "RACI Chart",
+   "aliases": [
+    "raci matrix",
+    "roles matrix",
+    "responsibility matrix",
+    "daci"
+   ],
+   "_replace": true,
+   "doc_type": "raci",
+   "words": 400,
+   "pages": 1
+  },
+  "decision-tree": {
+   "anatomy": [
+    {
+     "title": "When to Use",
+     "required": true
+    },
+    {
+     "title": "Decide",
+     "required": true,
+     "limits": {
+      "items": [
+       2,
+       8
+      ]
+     }
+    },
+    {
+     "title": "When to Escalate",
+     "required": true
+    },
+    {
+     "title": "Get Help",
+     "required": true
+    }
+   ],
+   "aliases": [
+    "decision tree",
+    "triage guide"
+   ]
+  },
+  "process-map": {
+   "anatomy": [
+    {
+     "title": "Purpose",
+     "required": true
+    },
+    {
+     "title": "Roles",
+     "required": true
+    },
+    {
+     "title": "Process Map",
+     "required": true
+    },
+    {
+     "title": "Steps in Order",
+     "required": true
+    },
+    {
+     "title": "Hand-offs",
+     "required": true
+    },
+    {
+     "title": "Get Help",
+     "required": true
+    }
+   ],
+   "family": "reference-sheet",
+   "label": "Process Map",
+   "aliases": [
+    "swimlane",
+    "swimlane diagram",
+    "process flow",
+    "workflow diagram",
+    "flowchart sheet"
+   ],
+   "_replace": true,
+   "doc_type": "process-map",
+   "words": 450,
+   "pages": 1
+  },
+  "training-plan": {
+   "anatomy": [
+    {
+     "title": "Purpose",
+     "required": true
+    },
+    {
+     "title": "Audiences",
+     "required": true
+    },
+    {
+     "title": "Curriculum Map",
+     "required": true
+    },
+    {
+     "title": "Schedule",
+     "required": true
+    },
+    {
+     "title": "Prerequisites",
+     "required": true
+    },
+    {
+     "title": "How We Will Measure Success",
+     "required": true
+    },
+    {
+     "title": "Get Help",
+     "required": true
+    }
+   ],
+   "family": "reference-sheet",
+   "label": "Training Plan",
+   "aliases": [
+    "curriculum map",
+    "learning plan",
+    "training roadmap"
+   ],
+   "_replace": true,
+   "doc_type": "training-plan",
+   "words": 800,
+   "pages": 2
+  },
+  "skills-check-off": {
+   "anatomy": [],
+   "family": "data-collection",
+   "label": "Skills Check-off",
+   "aliases": [
+    "competency check-off",
+    "skills checklist",
+    "observation checklist",
+    "competency checklist"
+   ],
+   "_replace": true,
+   "kind": "form",
+   "limits": {
+    "questions": [
+     3,
+     20
+    ]
+   }
+  },
+  "follow-up-evaluation": {
+   "anatomy": [],
+   "family": "data-collection",
+   "label": "Follow-up Evaluation",
+   "aliases": [
+    "level 3 evaluation",
+    "30-day follow-up survey",
+    "post-training follow-up",
+    "training follow-up survey"
+   ],
+   "_replace": true,
+   "kind": "survey",
+   "limits": {
+    "questions": [
+     4,
+     10
+    ]
+   }
+  }
+ },
+ "retired": {},
+ "renamed": {},
+ "log": [
+  {
+   "date": "2026-10-12",
+   "change": "family reference-sheet: set tone=imperative, second person; default audience: non-technical internal business users (plain words, terms defined, no system or tool names); adapt when the request names another audience",
+   "command": "--overlay /home/user/work/overlay.json family reference-sheet set tone=imperative, second person; default audience: non-technical internal business users (plain words, terms defined, no system or tool names); adapt when the request names another audience"
+  },
+  {
+   "date": "2026-10-12",
+   "change": "family long-form: set tone=task-based, plain; default audience: non-technical internal business users (plain words, terms defined, no system or tool names); adapt when the request names another audience",
+   "command": "--overlay /home/user/work/overlay.json family long-form set tone=task-based, plain; default audience: non-technical internal business users (plain words, terms defined, no system or tool names); adapt when the request names another audience"
+  },
+  {
+   "date": "2026-10-12",
+   "change": "family presentation: set tone=one message per slide; default audience: non-technical internal business users (plain words, terms defined, no system or tool names); adapt when the request names another audience",
+   "command": "--overlay /home/user/work/overlay.json family presentation set tone=one message per slide; default audience: non-technical internal business users (plain words, terms defined, no system or tool names); adapt when the request names another audience"
+  },
+  {
+   "date": "2026-10-12",
+   "change": "family facilitation: set tone=directive for the facilitator; default audience: non-technical internal business users (plain words, terms defined, no system or tool names); adapt when the request names another audience",
+   "command": "--overlay /home/user/work/overlay.json family facilitation set tone=directive for the facilitator; default audience: non-technical internal business users (plain words, terms defined, no system or tool names); adapt when the request names another audience"
+  },
+  {
+   "date": "2026-10-12",
+   "change": "family communication: set tone=direct, warm, no hype; default audience: non-technical internal business users (plain words, terms defined, no system or tool names); adapt when the request names another audience",
+   "command": "--overlay /home/user/work/overlay.json family communication set tone=direct, warm, no hype; default audience: non-technical internal business users (plain words, terms defined, no system or tool names); adapt when the request names another audience"
+  },
+  {
+   "date": "2026-10-12",
+   "change": "family elearning: set tone=conversational, scenario-led; default audience: non-technical internal business users (plain words, terms defined, no system or tool names); adapt when the request names another audience",
+   "command": "--overlay /home/user/work/overlay.json family elearning set tone=conversational, scenario-led; default audience: non-technical internal business users (plain words, terms defined, no system or tool names); adapt when the request names another audience"
+  },
+  {
+   "date": "2026-10-12",
+   "change": "family data-collection: set tone=neutral, one question at a time; default audience: non-technical internal business users (plain words, terms defined, no system or tool names); adapt when the request names another audience",
+   "command": "--overlay /home/user/work/overlay.json family data-collection set tone=neutral, one question at a time; default audience: non-technical internal business users (plain words, terms defined, no system or tool names); adapt when the request names another audience"
+  },
+  {
+   "date": "2026-10-12",
+   "change": "family assessment: set tone=neutral; default audience: non-technical internal business users (plain words, terms defined, no system or tool names); adapt when the request names another audience",
+   "command": "--overlay /home/user/work/overlay.json family assessment set tone=neutral; default audience: non-technical internal business users (plain words, terms defined, no system or tool names); adapt when the request names another audience"
+  },
+  {
+   "date": "2026-10-12",
+   "change": "video-script: renderer=training-md",
+   "command": "--overlay /home/user/work/overlay.json set video-script renderer=training-md"
+  },
+  {
+   "date": "2026-10-12",
+   "change": "faq-sheet: pages=2, words=900",
+   "command": "--overlay /home/user/work/overlay.json set faq-sheet pages=2 words=900"
+  },
+  {
+   "date": "2026-10-12",
+   "change": "sop: section add 'Exceptions'",
+   "command": "--overlay /home/user/work/overlay.json section sop add Exceptions --after Procedure"
+  },
+  {
+   "date": "2026-10-12",
+   "change": "status-report: section add 'Overall Status'",
+   "command": "--overlay /home/user/work/overlay.json section status-report add Overall Status --first"
+  },
+  {
+   "date": "2026-10-12",
+   "change": "status-report: section add 'Changed Since Last Report'",
+   "command": "--overlay /home/user/work/overlay.json section status-report add Changed Since Last Report --after Overall Status --optional"
+  },
+  {
+   "date": "2026-10-12",
+   "change": "status-report: section add 'Milestones'",
+   "command": "--overlay /home/user/work/overlay.json section status-report add Milestones --after Progress"
+  },
+  {
+   "date": "2026-10-12",
+   "change": "status-report: section rename 'Risks and Issues' -> Risks, Issues and Asks",
+   "command": "--overlay /home/user/work/overlay.json section status-report rename Risks and Issues Risks, Issues and Asks"
+  },
+  {
+   "date": "2026-10-12",
+   "change": "status-report: words=450",
+   "command": "--overlay /home/user/work/overlay.json set status-report words=450"
+  },
+  {
+   "date": "2026-10-12",
+   "change": "added memo (Memo)",
+   "command": "--overlay /home/user/work/overlay.json add memo --family communication --label Memo --alias business memo --alias internal memo --set words=1000 --set owner=executive-communications --set source=md"
+  },
+  {
+   "date": "2026-10-12",
+   "change": "memo: section add 'Bottom Line'",
+   "command": "--overlay /home/user/work/overlay.json section memo add Bottom Line"
+  },
+  {
+   "date": "2026-10-12",
+   "change": "memo: section add 'Background'",
+   "command": "--overlay /home/user/work/overlay.json section memo add Background"
+  },
+  {
+   "date": "2026-10-12",
+   "change": "memo: section add 'Details'",
+   "command": "--overlay /home/user/work/overlay.json section memo add Details"
+  },
+  {
+   "date": "2026-10-12",
+   "change": "memo: section add 'Next Steps'",
+   "command": "--overlay /home/user/work/overlay.json section memo add Next Steps"
+  },
+  {
+   "date": "2026-10-12",
+   "change": "added proposal (Proposal)",
+   "command": "--overlay /home/user/work/overlay.json add proposal --family communication --label Proposal --alias decision memo --alias decision paper --alias recommendation memo --alias business case --set words=2500 --set owner=executive-communications --set source=md"
+  },
+  {
+   "date": "2026-10-12",
+   "change": "proposal: section add 'Recommendation'",
+   "command": "--overlay /home/user/work/overlay.json section proposal add Recommendation"
+  },
+  {
+   "date": "2026-10-12",
+   "change": "proposal: section add 'Why Now'",
+   "command": "--overlay /home/user/work/overlay.json section proposal add Why Now"
+  },
+  {
+   "date": "2026-10-12",
+   "change": "proposal: section add 'Options Considered'",
+   "command": "--overlay /home/user/work/overlay.json section proposal add Options Considered"
+  },
+  {
+   "date": "2026-10-12",
+   "change": "proposal: section add 'Impact'",
+   "command": "--overlay /home/user/work/overlay.json section proposal add Impact"
+  },
+  {
+   "date": "2026-10-12",
+   "change": "proposal: section add 'Plan and Timeline'",
+   "command": "--overlay /home/user/work/overlay.json section proposal add Plan and Timeline"
+  },
+  {
+   "date": "2026-10-12",
+   "change": "proposal: section add 'Risks'",
+   "command": "--overlay /home/user/work/overlay.json section proposal add Risks"
+  },
+  {
+   "date": "2026-10-12",
+   "change": "proposal: section add 'Decision Needed'",
+   "command": "--overlay /home/user/work/overlay.json section proposal add Decision Needed"
+  },
+  {
+   "date": "2026-10-12",
+   "change": "proposal: section limit 'Recommendation' -> words=0-150",
+   "command": "--overlay /home/user/work/overlay.json section proposal limit Recommendation words=0-150"
+  },
+  {
+   "date": "2026-10-12",
+   "change": "added meeting-recap (Meeting Recap)",
+   "command": "--overlay /home/user/work/overlay.json add meeting-recap --family communication --label Meeting Recap --alias meeting minutes --alias minutes --alias meeting notes --alias meeting summary --set words=400 --set owner=executive-communications --set source=md --set fields=subject"
+  },
+  {
+   "date": "2026-10-12",
+   "change": "meeting-recap: section add 'Decisions'",
+   "command": "--overlay /home/user/work/overlay.json section meeting-recap add Decisions"
+  },
+  {
+   "date": "2026-10-12",
+   "change": "meeting-recap: section add 'Action Items'",
+   "command": "--overlay /home/user/work/overlay.json section meeting-recap add Action Items"
+  },
+  {
+   "date": "2026-10-12",
+   "change": "meeting-recap: section add 'Open Questions'",
+   "command": "--overlay /home/user/work/overlay.json section meeting-recap add Open Questions"
+  },
+  {
+   "date": "2026-10-12",
+   "change": "meeting-recap: section add 'Next Meeting'",
+   "command": "--overlay /home/user/work/overlay.json section meeting-recap add Next Meeting"
+  },
+  {
+   "date": "2026-10-12",
+   "change": "meeting-recap: section optional 'Open Questions'",
+   "command": "--overlay /home/user/work/overlay.json section meeting-recap optional Open Questions"
+  },
+  {
+   "date": "2026-10-12",
+   "change": "added release-notes (Release Notes)",
+   "command": "--overlay /home/user/work/overlay.json add release-notes --family reference-sheet --label Release Notes --alias what's new --alias change log --alias changelog --alias release summary --set doc_type=release-notes --set words=450 --set pages=1"
+  },
+  {
+   "date": "2026-10-12",
+   "change": "release-notes: section add 'Summary'",
+   "command": "--overlay /home/user/work/overlay.json section release-notes add Summary"
+  },
+  {
+   "date": "2026-10-12",
+   "change": "release-notes: section add 'What Changed'",
+   "command": "--overlay /home/user/work/overlay.json section release-notes add What Changed"
+  },
+  {
+   "date": "2026-10-12",
+   "change": "release-notes: section add 'Who Is Affected'",
+   "command": "--overlay /home/user/work/overlay.json section release-notes add Who Is Affected"
+  },
+  {
+   "date": "2026-10-12",
+   "change": "release-notes: section add 'Action Needed'",
+   "command": "--overlay /home/user/work/overlay.json section release-notes add Action Needed"
+  },
+  {
+   "date": "2026-10-12",
+   "change": "release-notes: section add 'Known Issues'",
+   "command": "--overlay /home/user/work/overlay.json section release-notes add Known Issues"
+  },
+  {
+   "date": "2026-10-12",
+   "change": "release-notes: section add 'Get Help'",
+   "command": "--overlay /home/user/work/overlay.json section release-notes add Get Help"
+  },
+  {
+   "date": "2026-10-12",
+   "change": "release-notes: section optional 'Known Issues'",
+   "command": "--overlay /home/user/work/overlay.json section release-notes optional Known Issues"
+  },
+  {
+   "date": "2026-10-12",
+   "change": "added dashboard-guide (Dashboard Guide)",
+   "command": "--overlay /home/user/work/overlay.json add dashboard-guide --family reference-sheet --label Dashboard Guide --alias report guide --alias dashboard user guide --alias report user guide --alias dashboard documentation --set doc_type=dashboard-guide --set words=900 --set pages=2"
+  },
+  {
+   "date": "2026-10-12",
+   "change": "dashboard-guide: section add 'Purpose'",
+   "command": "--overlay /home/user/work/overlay.json section dashboard-guide add Purpose"
+  },
+  {
+   "date": "2026-10-12",
+   "change": "dashboard-guide: section add 'Access'",
+   "command": "--overlay /home/user/work/overlay.json section dashboard-guide add Access"
+  },
+  {
+   "date": "2026-10-12",
+   "change": "dashboard-guide: section add 'How It Is Organized'",
+   "command": "--overlay /home/user/work/overlay.json section dashboard-guide add How It Is Organized"
+  },
+  {
+   "date": "2026-10-12",
+   "change": "dashboard-guide: section add 'Definitions'",
+   "command": "--overlay /home/user/work/overlay.json section dashboard-guide add Definitions"
+  },
+  {
+   "date": "2026-10-12",
+   "change": "dashboard-guide: section add 'How to Use It'",
+   "command": "--overlay /home/user/work/overlay.json section dashboard-guide add How to Use It"
+  },
+  {
+   "date": "2026-10-12",
+   "change": "dashboard-guide: section add 'Data Sources and Refresh'",
+   "command": "--overlay /home/user/work/overlay.json section dashboard-guide add Data Sources and Refresh"
+  },
+  {
+   "date": "2026-10-12",
+   "change": "dashboard-guide: section add 'Known Limitations'",
+   "command": "--overlay /home/user/work/overlay.json section dashboard-guide add Known Limitations"
+  },
+  {
+   "date": "2026-10-12",
+   "change": "dashboard-guide: section add 'Get Help'",
+   "command": "--overlay /home/user/work/overlay.json section dashboard-guide add Get Help"
+  },
+  {
+   "date": "2026-10-12",
+   "change": "added metric-definitions (Metric Definition Sheet)",
+   "command": "--overlay /home/user/work/overlay.json add metric-definitions --family reference-sheet --label Metric Definition Sheet --alias kpi definitions --alias metric definitions --alias kpi glossary --alias metric definition card --alias measure definitions --set doc_type=metric-definitions --set words=700 --set pages=2"
+  },
+  {
+   "date": "2026-10-12",
+   "change": "metric-definitions: section add 'Purpose'",
+   "command": "--overlay /home/user/work/overlay.json section metric-definitions add Purpose"
+  },
+  {
+   "date": "2026-10-12",
+   "change": "metric-definitions: section add 'Metric Definitions'",
+   "command": "--overlay /home/user/work/overlay.json section metric-definitions add Metric Definitions"
+  },
+  {
+   "date": "2026-10-12",
+   "change": "metric-definitions: section add 'How the Metrics Relate'",
+   "command": "--overlay /home/user/work/overlay.json section metric-definitions add How the Metrics Relate"
+  },
+  {
+   "date": "2026-10-12",
+   "change": "metric-definitions: section add 'Change Log'",
+   "command": "--overlay /home/user/work/overlay.json section metric-definitions add Change Log"
+  },
+  {
+   "date": "2026-10-12",
+   "change": "metric-definitions: section add 'Get Help'",
+   "command": "--overlay /home/user/work/overlay.json section metric-definitions add Get Help"
+  },
+  {
+   "date": "2026-10-12",
+   "change": "metric-definitions: section optional 'How the Metrics Relate'",
+   "command": "--overlay /home/user/work/overlay.json section metric-definitions optional How the Metrics Relate"
+  },
+  {
+   "date": "2026-10-12",
+   "change": "added data-dictionary (Data Dictionary)",
+   "command": "--overlay /home/user/work/overlay.json add data-dictionary --family reference-sheet --label Data Dictionary --alias field definitions --alias field dictionary --alias data definitions --set doc_type=data-dictionary --set words=900 --set pages=2"
+  },
+  {
+   "date": "2026-10-12",
+   "change": "data-dictionary: section add 'Purpose'",
+   "command": "--overlay /home/user/work/overlay.json section data-dictionary add Purpose"
+  },
+  {
+   "date": "2026-10-12",
+   "change": "data-dictionary: section add 'How to Read This Dictionary'",
+   "command": "--overlay /home/user/work/overlay.json section data-dictionary add How to Read This Dictionary"
+  },
+  {
+   "date": "2026-10-12",
+   "change": "data-dictionary: section add 'Fields'",
+   "command": "--overlay /home/user/work/overlay.json section data-dictionary add Fields"
+  },
+  {
+   "date": "2026-10-12",
+   "change": "data-dictionary: section add 'Data Classification Notes'",
+   "command": "--overlay /home/user/work/overlay.json section data-dictionary add Data Classification Notes"
+  },
+  {
+   "date": "2026-10-12",
+   "change": "data-dictionary: section add 'Get Help'",
+   "command": "--overlay /home/user/work/overlay.json section data-dictionary add Get Help"
+  },
+  {
+   "date": "2026-10-12",
+   "change": "added project-charter (Project Charter)",
+   "command": "--overlay /home/user/work/overlay.json add project-charter --family reference-sheet --label Project Charter --alias charter --alias project brief --alias project one-pager --set doc_type=project-charter --set words=800 --set pages=2"
+  },
+  {
+   "date": "2026-10-12",
+   "change": "project-charter: section add 'Problem'",
+   "command": "--overlay /home/user/work/overlay.json section project-charter add Problem"
+  },
+  {
+   "date": "2026-10-12",
+   "change": "project-charter: section add 'Goals and Measures'",
+   "command": "--overlay /home/user/work/overlay.json section project-charter add Goals and Measures"
+  },
+  {
+   "date": "2026-10-12",
+   "change": "project-charter: section add 'Scope'",
+   "command": "--overlay /home/user/work/overlay.json section project-charter add Scope"
+  },
+  {
+   "date": "2026-10-12",
+   "change": "project-charter: section add 'Milestones'",
+   "command": "--overlay /home/user/work/overlay.json section project-charter add Milestones"
+  },
+  {
+   "date": "2026-10-12",
+   "change": "project-charter: section add 'Risks'",
+   "command": "--overlay /home/user/work/overlay.json section project-charter add Risks"
+  },
+  {
+   "date": "2026-10-12",
+   "change": "project-charter: section add 'Roles and Decision Rights'",
+   "command": "--overlay /home/user/work/overlay.json section project-charter add Roles and Decision Rights"
+  },
+  {
+   "date": "2026-10-12",
+   "change": "project-charter: section add 'Get Help'",
+   "command": "--overlay /home/user/work/overlay.json section project-charter add Get Help"
+  },
+  {
+   "date": "2026-10-12",
+   "change": "added meeting-agenda (Meeting Agenda)",
+   "command": "--overlay /home/user/work/overlay.json add meeting-agenda --family reference-sheet --label Meeting Agenda --alias agenda --alias meeting plan --set doc_type=meeting-agenda --set words=300 --set pages=1"
+  },
+  {
+   "date": "2026-10-12",
+   "change": "meeting-agenda: section add 'Purpose'",
+   "command": "--overlay /home/user/work/overlay.json section meeting-agenda add Purpose"
+  },
+  {
+   "date": "2026-10-12",
+   "change": "meeting-agenda: section add 'Desired Outcomes'",
+   "command": "--overlay /home/user/work/overlay.json section meeting-agenda add Desired Outcomes"
+  },
+  {
+   "date": "2026-10-12",
+   "change": "meeting-agenda: section add 'Decisions Needed'",
+   "command": "--overlay /home/user/work/overlay.json section meeting-agenda add Decisions Needed"
+  },
+  {
+   "date": "2026-10-12",
+   "change": "meeting-agenda: section add 'Agenda'",
+   "command": "--overlay /home/user/work/overlay.json section meeting-agenda add Agenda"
+  },
+  {
+   "date": "2026-10-12",
+   "change": "meeting-agenda: section add 'Pre-Reads'",
+   "command": "--overlay /home/user/work/overlay.json section meeting-agenda add Pre-Reads"
+  },
+  {
+   "date": "2026-10-12",
+   "change": "meeting-agenda: section optional 'Decisions Needed'",
+   "command": "--overlay /home/user/work/overlay.json section meeting-agenda optional Decisions Needed"
+  },
+  {
+   "date": "2026-10-12",
+   "change": "meeting-agenda: section optional 'Pre-Reads'",
+   "command": "--overlay /home/user/work/overlay.json section meeting-agenda optional Pre-Reads"
+  },
+  {
+   "date": "2026-10-12",
+   "change": "added raci (RACI Chart)",
+   "command": "--overlay /home/user/work/overlay.json add raci --family reference-sheet --label RACI Chart --alias raci matrix --alias roles matrix --alias responsibility matrix --alias daci --set doc_type=raci --set words=400 --set pages=1"
+  },
+  {
+   "date": "2026-10-12",
+   "change": "raci: section add 'Purpose'",
+   "command": "--overlay /home/user/work/overlay.json section raci add Purpose"
+  },
+  {
+   "date": "2026-10-12",
+   "change": "raci: section add 'Roles'",
+   "command": "--overlay /home/user/work/overlay.json section raci add Roles"
+  },
+  {
+   "date": "2026-10-12",
+   "change": "raci: section add 'RACI Matrix'",
+   "command": "--overlay /home/user/work/overlay.json section raci add RACI Matrix"
+  },
+  {
+   "date": "2026-10-12",
+   "change": "raci: section add 'How to Use This Chart'",
+   "command": "--overlay /home/user/work/overlay.json section raci add How to Use This Chart"
+  },
+  {
+   "date": "2026-10-12",
+   "change": "raci: section add 'Get Help'",
+   "command": "--overlay /home/user/work/overlay.json section raci add Get Help"
+  },
+  {
+   "date": "2026-10-12",
+   "change": "decision-tree: alias remove 'flowchart sheet'",
+   "command": "--overlay /home/user/work/overlay.json alias decision-tree remove flowchart sheet"
+  },
+  {
+   "date": "2026-10-12",
+   "change": "added process-map (Process Map)",
+   "command": "--overlay /home/user/work/overlay.json add process-map --family reference-sheet --label Process Map --alias swimlane --alias swimlane diagram --alias process flow --alias workflow diagram --alias flowchart sheet --set doc_type=process-map --set words=450 --set pages=1"
+  },
+  {
+   "date": "2026-10-12",
+   "change": "process-map: section add 'Purpose'",
+   "command": "--overlay /home/user/work/overlay.json section process-map add Purpose"
+  },
+  {
+   "date": "2026-10-12",
+   "change": "process-map: section add 'Roles'",
+   "command": "--overlay /home/user/work/overlay.json section process-map add Roles"
+  },
+  {
+   "date": "2026-10-12",
+   "change": "process-map: section add 'Process Map'",
+   "command": "--overlay /home/user/work/overlay.json section process-map add Process Map"
+  },
+  {
+   "date": "2026-10-12",
+   "change": "process-map: section add 'Steps in Order'",
+   "command": "--overlay /home/user/work/overlay.json section process-map add Steps in Order"
+  },
+  {
+   "date": "2026-10-12",
+   "change": "process-map: section add 'Hand-offs'",
+   "command": "--overlay /home/user/work/overlay.json section process-map add Hand-offs"
+  },
+  {
+   "date": "2026-10-12",
+   "change": "process-map: section add 'Get Help'",
+   "command": "--overlay /home/user/work/overlay.json section process-map add Get Help"
+  },
+  {
+   "date": "2026-10-12",
+   "change": "added training-plan (Training Plan)",
+   "command": "--overlay /home/user/work/overlay.json add training-plan --family reference-sheet --label Training Plan --alias curriculum map --alias learning plan --alias training roadmap --set doc_type=training-plan --set words=800 --set pages=2"
+  },
+  {
+   "date": "2026-10-12",
+   "change": "training-plan: section add 'Purpose'",
+   "command": "--overlay /home/user/work/overlay.json section training-plan add Purpose"
+  },
+  {
+   "date": "2026-10-12",
+   "change": "training-plan: section add 'Audiences'",
+   "command": "--overlay /home/user/work/overlay.json section training-plan add Audiences"
+  },
+  {
+   "date": "2026-10-12",
+   "change": "training-plan: section add 'Curriculum Map'",
+   "command": "--overlay /home/user/work/overlay.json section training-plan add Curriculum Map"
+  },
+  {
+   "date": "2026-10-12",
+   "change": "training-plan: section add 'Schedule'",
+   "command": "--overlay /home/user/work/overlay.json section training-plan add Schedule"
+  },
+  {
+   "date": "2026-10-12",
+   "change": "training-plan: section add 'Prerequisites'",
+   "command": "--overlay /home/user/work/overlay.json section training-plan add Prerequisites"
+  },
+  {
+   "date": "2026-10-12",
+   "change": "training-plan: section add 'How We Will Measure Success'",
+   "command": "--overlay /home/user/work/overlay.json section training-plan add How We Will Measure Success"
+  },
+  {
+   "date": "2026-10-12",
+   "change": "training-plan: section add 'Get Help'",
+   "command": "--overlay /home/user/work/overlay.json section training-plan add Get Help"
+  },
+  {
+   "date": "2026-10-12",
+   "change": "added skills-check-off (Skills Check-off)",
+   "command": "--overlay /home/user/work/overlay.json add skills-check-off --family data-collection --label Skills Check-off --alias competency check-off --alias skills checklist --alias observation checklist --alias competency checklist --set kind=form"
+  },
+  {
+   "date": "2026-10-12",
+   "change": "added follow-up-evaluation (Follow-up Evaluation)",
+   "command": "--overlay /home/user/work/overlay.json add follow-up-evaluation --family data-collection --label Follow-up Evaluation --alias level 3 evaluation --alias 30-day follow-up survey --alias post-training follow-up --alias training follow-up survey --set kind=survey"
+  },
+  {
+   "date": "2026-10-12",
+   "change": "family reference-sheet: set keywords=card,sheet,cheat,reference,aid,checklist,tip,poster,flyer,badge,placemat,one page,one-page,handout,decision tree,flowchart,release notes,dictionary,definitions,raci,swimlane,process map,charter,agenda,glossary",
+   "command": "--overlay /home/user/work/overlay.json family reference-sheet set keywords=card,sheet,cheat,reference,aid,checklist,tip,poster,flyer,badge,placemat,one page,one-page,handout,decision tree,flowchart,release notes,dictionary,definitions,raci,swimlane,process map,charter,agenda,glossary"
+  },
+  {
+   "date": "2026-10-12",
+   "change": "family communication: set keywords=email,announcement,message,post,newsletter,talking points,memo,reminder,teams,slack,comms,communication,change kit,toolkit,kit,faq,script for managers,invite,bulletin,recap,minutes,proposal",
+   "command": "--overlay /home/user/work/overlay.json family communication set keywords=email,announcement,message,post,newsletter,talking points,memo,reminder,teams,slack,comms,communication,change kit,toolkit,kit,faq,script for managers,invite,bulletin,recap,minutes,proposal"
+  }
+ ]
+}

@@ -1,0 +1,31 @@
+{
+ "meta": {"title": "Synthetic Denial Steps Follow-up Evaluation", "kind": "survey", "format": "follow-up-evaluation", "send_after_days": 45,
+  "audience": "Revenue operations team members who finished the synthetic denial follow-up training",
+  "purpose": "Tell us how the denial follow-up steps work in your daily queue six weeks after training. Your answers shape the next refresher.",
+  "owner": "Revenue Operations Training Team (synthetic)", "version": "1.0", "date": "2026-10-13",
+  "sources": ["Synthetic example: follow-up evaluation request, 2026-10-13", "Synthetic example: denial follow-up training outline"],
+  "anonymous": true, "phi_approved": false, "est_minutes": 4},
+ "sections": [
+  {"title": "Using the Steps", "intro": "Think about the last four weeks.",
+   "items": [
+    {"id": "Q1", "type": "single", "label": "Have you used the denial follow-up steps since the training?", "required": true,
+     "options": ["Yes", "No"]},
+    {"id": "Q2", "type": "single", "label": "How often do you use the denial follow-up steps?", "required": false,
+     "show_if": {"Q1": "Yes"}, "options": ["Every day", "A few times a week", "About once a week", "Less than once a week"]},
+    {"id": "Q3", "type": "scale", "label": "The steps fit the way I work my queue.", "required": false,
+     "show_if": {"Q1": "Yes"}, "opt_out": "Not applicable",
+     "scale": {"min": 1, "max": 5, "low": "Strongly disagree", "high": "Strongly agree"}}
+   ]},
+  {"title": "What Gets in the Way",
+   "items": [
+    {"id": "Q4", "type": "multi", "label": "What gets in the way of using the steps?", "required": false, "help": "Select all that apply.",
+     "options": ["Not enough time", "Payer rules changed", "Hard to find the job aid", "Few denials in my queue", "Nothing gets in the way"]}
+   ]},
+  {"title": "Results",
+   "items": [
+    {"id": "Q5", "type": "single", "label": "What result have you seen in your denial follow-up?", "required": false,
+     "options": ["Fewer repeat denials", "Faster follow-up", "No change yet"], "opt_out": "Prefer not to say"},
+    {"id": "Q6", "type": "longtext", "label": "What support would help you use the steps more?", "required": false, "rows": 4}
+   ]}
+ ]
+}

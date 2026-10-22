@@ -1,0 +1,185 @@
+{
+  "meta": {
+    "type": "inform",
+    "title": "Dashboard User Guide",
+    "title_accent": "User Guide",
+    "subtitle": "Clinic Admissions Dashboard",
+    "presenter": "Clinic Operations Analytics",
+    "date": "Updated October 2026",
+    "audience": "Facility leaders and schedulers",
+    "big_idea": "This guide shows facility leaders how to read the admissions dashboard, pull the right report and avoid common mistakes.",
+    "notes": "Synthetic example for the skill self-test. Not a real dashboard.",
+    "cover": "dark",
+    "cover_align": "center"
+  },
+  "slides": [
+    {
+      "layout": "contents",
+      "title": "What This Guide Covers",
+      "items": [
+        "Introduction and Objectives",
+        "Dashboard Anatomy",
+        "Step-by-step Workflow",
+        "Callouts and Best Practices",
+        "Detailed Visual View",
+        "Contact and Support"
+      ],
+      "notes": "Use this page to jump to the section you need; each section stands on its own."
+    },
+    {
+      "layout": "article",
+      "message": "context",
+      "title": "How to Use the Admissions Dashboard",
+      "heading": "Navigating the New Interface",
+      "paragraphs": [
+        "This guide gives a quick overview of the admissions dashboard and the steps to pull, read and act on your clinic's numbers.",
+        "The goal is to let facility leaders answer their own admissions questions without waiting for ad hoc reports.",
+        "Before you start, confirm your access request was approved so every filter shows your facilities."
+      ],
+      "takeaways": [
+        "Data refreshes every morning by 6 a.m.",
+        "Every page follows the same filters",
+        "Exports keep your current filters"
+      ],
+      "notes": "Set expectations first: what the dashboard is for and what access you need before the workflow section."
+    },
+    {
+      "layout": "anatomy",
+      "message": "structure",
+      "title": "The Main View Has Four Zones",
+      "intro": "The main view is split into four zones so you can find filters, numbers and exports quickly.",
+      "image": "screenshots/dashboard_overview.png",
+      "alt": "Admissions dashboard main view with navigation, KPI ribbon, chart canvas and export tools marked A to D.",
+      "zones": [
+        {
+          "label": "Global Navigation",
+          "detail": "Facility selector, date range and profile settings",
+          "x": 0.5,
+          "y": 0.08
+        },
+        {
+          "label": "KPI Ribbon",
+          "detail": "Headline numbers for the last 30 days against target",
+          "x": 0.3,
+          "y": 0.3
+        },
+        {
+          "label": "Chart Canvas",
+          "detail": "Admission trends and variance by week",
+          "x": 0.45,
+          "y": 0.65
+        },
+        {
+          "label": "Export Tools",
+          "detail": "PDF and CSV downloads in the top-right corner",
+          "x": 0.92,
+          "y": 0.08
+        }
+      ],
+      "notes": "Walk the four zones in order; the letters on the screenshot match the cards."
+    },
+    {
+      "layout": "diagram",
+      "message": "sequence",
+      "title": "Pull a Report in Four Steps",
+      "diagram": {
+        "kind": "milestones",
+        "nodes": [
+          {
+            "label": "Select Parameters",
+            "detail": "Set date range and facilities in the top bar",
+            "when": "Step 1",
+            "icon": "adjustments"
+          },
+          {
+            "label": "Apply Filters",
+            "detail": "Choose the patient group or clinic type",
+            "when": "Step 2",
+            "icon": "filter"
+          },
+          {
+            "label": "Preview Data",
+            "detail": "Check the on-screen table before exporting",
+            "when": "Step 3",
+            "icon": "eye"
+          },
+          {
+            "label": "Export Report",
+            "detail": "Download the CSV with your filters applied",
+            "when": "Step 4",
+            "icon": "download"
+          }
+        ]
+      },
+      "alt": "Four steps on a line from selecting parameters to exporting the report, alternating above and below.",
+      "notes": "Most mistakes happen at step one, so it is highlighted."
+    },
+    {
+      "layout": "callouts",
+      "message": "guidance",
+      "title": "Three Things to Know Before You Export",
+      "cards": [
+        {
+          "kind": "example",
+          "title": "Use Month-end Dates",
+          "text": "For the monthly admissions report, choose End of Month, not Current Date, so the warehouse has finished its 48-hour reconciliation."
+        },
+        {
+          "kind": "tip",
+          "title": "Save Your View",
+          "text": "Use Save View on any widget to keep your filters and open the dashboard ready next time."
+        },
+        {
+          "kind": "warning",
+          "title": "Keep Exports Internal",
+          "text": "Never send exported CSV files by external email; patient-level data must stay on the secure network."
+        }
+      ],
+      "notes": "The warning is a compliance requirement, not a preference; repeat it in training."
+    },
+    {
+      "layout": "annotated",
+      "message": "walkthrough",
+      "title": "Read the Admissions Versus Discharges Chart",
+      "heading": "Admissions vs. Discharges",
+      "intro": "This chart compares daily admissions and discharges so you can spot capacity pressure early.",
+      "image": "screenshots/admissions_widget.png",
+      "alt": "Admissions versus discharges chart with a rolling average line over daily bars.",
+      "annotations": [
+        {
+          "lead": "Trend Line",
+          "text": "The solid line is the 30-day rolling average, which smooths daily swings.",
+          "icon": "trending-up"
+        },
+        {
+          "lead": "Bar Drill-down",
+          "text": "Click any bar to open the detail for that date.",
+          "icon": "click"
+        },
+        {
+          "lead": "Data Delay",
+          "text": "Discharges run about 12 hours behind until physician sign-off.",
+          "icon": "clock"
+        }
+      ],
+      "notes": "Point out the 12-hour delay; it explains most questions about yesterday's numbers."
+    },
+    {
+      "layout": "contact",
+      "title": "Need Help With the Dashboard?",
+      "accent": "Need Help",
+      "text": "Reach out to the sponsoring team for dashboard support.",
+      "contacts": [
+        {
+          "label": "Email",
+          "value": "team.mailbox@example.com"
+        },
+        {
+          "label": "Channel",
+          "value": "Clinic Analytics Support"
+        }
+      ],
+      "notes": "Close with where to get help; there is no ask in a guide."
+    }
+  ]
+}

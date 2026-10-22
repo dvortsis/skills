@@ -1,0 +1,3 @@
+# Store and check out every file byte for byte: each skill's preflight checks file sizes and SHA-256 hashes,
+# so line-ending conversion would make an installed skill report CHANGED files.
+* -text

@@ -1,0 +1,44 @@
+{
+ "about": "Sizes and usage rules for every composed material. Colors, fonts, logo and footer come from the project brand at build time (scripts/brand.py via style_tokens.tokens()); fonts are never named here (no project font: brand.py's bundled fallback). fallback_colors are brand.py's neutral defaults, used when a project has no brand colors; STYLE_DRIFT checks that they match brand.py and the sibling themes (document-builder, slide-deck) by role.",
+ "fallback_colors": {
+  "primary": "1F5FAD",
+  "dark": "1D2A3F",
+  "secondary": "3D8FD9",
+  "alert": "D9480F",
+  "alert_text": "B13C0B",
+  "text": "3D3D3D",
+  "muted": "767676",
+  "muted_text": "6B6B6B",
+  "context": "8FAFD6",
+  "card": "CEE3F6",
+  "callout": "CEE3F6",
+  "card_line": "DFDFDF",
+  "track": "DFDFDF",
+  "white": "FFFFFF",
+  "black": "000000"
+ },
+ "print_pt": {
+  "title": 30,
+  "subtitle": 14,
+  "h1": 18,
+  "h2": 14,
+  "h3": 12,
+  "body": 10.5,
+  "small": 9,
+  "caption": 9,
+  "table": 9.5,
+  "code": 9
+ },
+ "sheet_min_pt": {
+  "body": 9,
+  "table": 8,
+  "figure_text": 8
+ },
+ "screen_px": {
+  "body": 16,
+  "small": 14,
+  "h1": 28,
+  "h2": 22
+ },
+ "alert_use": "missed goal, unfavorable change, failed save or warning only"
+}

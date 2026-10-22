@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>beacon</Name>
+  <Repository>ghcr.io/example/beacon:latest</Repository>
+  <Network>bridge</Network>
+  <Privileged>false</Privileged>
+  <Support>https://github.com/example/beacon/issues</Support>
+  <Project>https://github.com/example/beacon</Project>
+  <Overview>Beacon shares and syncs files between your devices. Synthetic example app for the github-docs skill.</Overview>
+  <WebUI>http://[IP]:[PORT:8484]/</WebUI>
+  <Config Name="Web UI port" Target="8484" Default="8484" Mode="tcp" Description="Port for the web interface." Type="Port" Display="always" Required="true" Mask="false">8484</Config>
+  <Config Name="Peer port" Target="6990" Default="6990" Mode="udp" Description="Port other Beacon devices use to reach this one." Type="Port" Display="always" Required="true" Mask="false">6990</Config>
+  <Config Name="Appdata path" Target="/config" Default="/mnt/user/appdata/beacon" Mode="rw" Description="Settings and database." Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/beacon</Config>
+  <Config Name="Shared files" Target="/data" Default="/mnt/user/beacon" Mode="rw" Description="Files Beacon shares." Type="Path" Display="always" Required="true" Mask="false">/mnt/user/beacon</Config>
+  <Config Name="PUID" Target="PUID" Default="99" Mode="" Description="User that owns the files." Type="Variable" Display="advanced" Required="false" Mask="false">99</Config>
+  <Config Name="PGID" Target="PGID" Default="100" Mode="" Description="Group that owns the files." Type="Variable" Display="advanced" Required="false" Mask="false">100</Config>
+  <Config Name="API key" Target="BEACON_API_KEY" Default="" Mode="" Description="Key for the Beacon API. Leave empty to create one on first start." Type="Variable" Display="advanced" Required="false" Mask="true"></Config>
+</Container>

@@ -1,0 +1,37 @@
+{
+ "version": "1.0.0",
+ "row": "D-13; D-46, D-48, D-49, D-50 (follow-up topics, scale point labels, PDF tags, Microsoft Forms export)",
+ "note": "Data lists for scripts/build_form.py. Add terms here, never in code (CONVENTIONS: Adding a check).",
+ "item_types": ["single", "multi", "scale", "text", "longtext", "date", "checkbox", "dropdown", "signature"],
+ "double_barrel_types": ["single", "multi", "scale"],
+ "double_barrel_joiners": ["and", "or"],
+ "compound_phrases_ok": ["and/or", "more or less", "pros and cons", "terms and conditions", "trial and error", "back and forth", "up and running", "first and last name", "health and safety", "research and development", "questions and answers", "q and a"],
+ "leading_phrases": ["don't you agree", "do you not agree", "wouldn't you", "wouldn't you agree", "won't you", "isn't it", "aren't you", "how great", "how excellent", "how amazing", "how helpful was the excellent", "most people agree", "everyone agrees", "obviously", "clearly the best", "how much did you enjoy", "how much did you love"],
+ "phi_terms": ["date of birth", "birth date", "birthdate", "DOB", "social security", "SSN", "medical record number", "medical record", "MRN", "patient name", "patient's name", "name of patient", "patient ID", "diagnosis", "diagnoses", "member ID", "insurance ID", "policy number", "health plan number"],
+ "identity_terms": ["your name", "full name", "first name", "last name", "email address", "employee ID", "staff ID", "phone number"],
+ "placeholders": ["TBD", "TODO", "First Last", "lorem", "lorem ipsum", "XXX", "[insert", "{{", "<placeholder>"],
+ "scale_max_points": 11,
+ "single_column_max_options": 6,
+ "followup_format": "follow-up-evaluation",
+ "followup_topics": {
+  "frequency of use": ["how often", "how frequently", "frequency", "how many times", "times a week", "times per week", "times a day", "times per day", "per week", "per month"],
+  "barriers": ["barrier", "barriers", "get in the way", "gets in the way", "got in the way", "obstacle", "obstacles", "keeps you from", "kept you from", "stops you", "prevents you", "hard to use", "difficult to use", "blocker", "blockers"],
+  "result": ["result", "results", "outcome", "outcomes", "impact", "difference", "time saved", "saved time", "fewer errors", "fewer denials", "productivity"]
+ },
+ "followup_send_after_days": [30, 60],
+ "scale_point_labels": [
+  ["Disagree", "Neutral", "Agree"],
+  ["Strongly disagree", "Disagree", "Agree", "Strongly agree"],
+  ["Strongly disagree", "Disagree", "Neutral", "Agree", "Strongly agree"],
+  ["Very dissatisfied", "Dissatisfied", "Neutral", "Satisfied", "Very satisfied"],
+  ["Very unlikely", "Unlikely", "Neutral", "Likely", "Very likely"],
+  ["Never", "Rarely", "Sometimes", "Often", "Always"],
+  ["Poor", "Fair", "Good", "Very good", "Excellent"],
+  ["Very poor", "Poor", "Fair", "Good", "Excellent"],
+  ["Not at all confident", "Slightly confident", "Somewhat confident", "Moderately confident", "Very confident"],
+  ["Not at all useful", "Slightly useful", "Somewhat useful", "Very useful", "Extremely useful"]
+ ],
+ "pdf_tags": {"lang": "en-US"},
+ "msforms_columns": ["Question", "Type", "Options", "Required", "Help", "Branching"],
+ "msforms_types": {"single": "Choice", "multi": "Choice (multiple answers)", "dropdown": "Choice (drop-down)", "scale": "Likert", "text": "Text", "longtext": "Text (long answer)", "date": "Date", "checkbox": "Choice (multiple answers)", "signature": "Text"}
+}

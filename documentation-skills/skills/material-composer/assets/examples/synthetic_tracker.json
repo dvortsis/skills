@@ -1,0 +1,26 @@
+{
+ "meta": {"title": "Synthetic Claim Follow-Up Tracker", "format": "tracker", "version": "1.0", "date": "2026-10-13",
+          "owner_role": "Revenue operations analyst", "sources": ["Synthetic example: no real claims, team members or patients"]},
+ "lists": {
+  "Status": [
+   {"value": "Not Started", "definition": "Assigned, no work done yet."},
+   {"value": "In Progress", "definition": "Work has started; the owner role updates the due date if it slips."},
+   {"value": "Done", "definition": "Finished and checked; keep the row for the record."}
+  ]
+ },
+ "columns": [
+  {"name": "ID", "definition": "Row number, never reused."},
+  {"name": "Action", "definition": "What needs to happen, starting with a verb."},
+  {"name": "Owner Role", "definition": "The role that does the work (roles, not names)."},
+  {"name": "Due Date", "type": "date", "definition": "Date the action is due (YYYY-MM-DD)."},
+  {"name": "Status", "list": "Status", "definition": "Where the action stands; choose from the dropdown."},
+  {"name": "Notes", "definition": "Short context or the next step."}
+ ],
+ "rows": [
+  {"ID": "T-01", "Action": "Confirm the synthetic payer contact list", "Owner Role": "Billing specialist", "Due Date": "2026-10-20", "Status": "Done", "Notes": "Checked against the synthetic sample."},
+  {"ID": "T-02", "Action": "Review aged claims over 90 days", "Owner Role": "Revenue operations analyst", "Due Date": "2026-10-22", "Status": "In Progress", "Notes": "Half the queue reviewed."},
+  {"ID": "T-03", "Action": "Draft the follow-up call script", "Owner Role": "Team lead", "Due Date": "2026-10-24", "Status": "Not Started", "Notes": ""},
+  {"ID": "T-04", "Action": "Update the denial reason lookup", "Owner Role": "Data analyst", "Due Date": "2026-10-27", "Status": "In Progress", "Notes": "Two codes left."},
+  {"ID": "T-05", "Action": "Share the weekly status summary", "Owner Role": "Manager", "Due Date": "2026-10-30", "Status": "Not Started", "Notes": ""}
+ ]
+}

@@ -11,3 +11,8 @@ desktop.ini
 
 # Logs and Scratch Files
 *.log
+
+# Python caches (the skills' self-tests create them)
+__pycache__/
+*.pyc
+
