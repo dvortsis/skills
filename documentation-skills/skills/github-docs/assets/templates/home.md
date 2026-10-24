@@ -16,6 +16,8 @@ WRITE: one or two sentences: read the chapters in order the first time; come bac
 |---|---|
 {{TASKS}}
 
+**Reading paths.** WRITE: which chapters first-time readers read in order, and which chapters returning readers jump to by task.
+
 ## Contents
 
 <!-- contents:start -->

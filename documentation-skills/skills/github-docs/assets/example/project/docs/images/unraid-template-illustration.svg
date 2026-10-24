@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="378" viewBox="0 0 720 378" role="img" aria-label="Beacon container template (Unraid) — Illustration, not a live screenshot">
+  <title>Beacon container template (Unraid) (Illustration, not a live screenshot)</title>
+  <rect x="1" y="1" width="718" height="376" rx="8" fill="#FFFFFF" stroke="#DFDFDF" stroke-width="1.5"/>
+  <path d="M1 9 Q1 1 9 1 L711 1 Q719 1 719 9 L719 46 L1 46 Z" fill="#1D2A3F"/>
+  <text x="18" y="29" fill="#FFFFFF" font-family="&#x27;Inter&#x27;, -apple-system, BlinkMacSystemFont, &#x27;Segoe UI&#x27;, sans-serif" font-size="14" font-weight="700">Beacon container template (Unraid)</text>
+  <rect x="492" y="11" width="214" height="24" rx="12" fill="#FFFFFF" fill-opacity="0.16" stroke="#FFFFFF" stroke-opacity="0.45"/>
+  <text x="599" y="27" text-anchor="middle" fill="#FFFFFF" font-family="&#x27;Inter&#x27;, -apple-system, BlinkMacSystemFont, &#x27;Segoe UI&#x27;, sans-serif" font-size="11" font-weight="600">Illustration, not a live screenshot</text>
+  <text x="20" y="69" fill="#3D3D3D" font-family="&#x27;Inter&#x27;, -apple-system, BlinkMacSystemFont, &#x27;Segoe UI&#x27;, sans-serif" font-size="13" font-weight="600">Network Type</text>
+  <text x="20" y="87" fill="#6B6B6B" font-family="&#x27;Inter&#x27;, -apple-system, BlinkMacSystemFont, &#x27;Segoe UI&#x27;, sans-serif" font-size="11">Only mapped ports are reachable (recommended)</text>
+  <rect x="310" y="57" width="392" height="32" rx="5" fill="#CEE3F6" stroke="#DFDFDF" stroke-width="1"/>
+  <text x="322" y="78" fill="#3D3D3D" font-family="&#x27;JetBrains Mono&#x27;, Consolas, monospace" font-size="12">bridge</text>
+  <line x1="16" y1="100" x2="704" y2="100" stroke="#DFDFDF" stroke-width="1"/>
+  <text x="20" y="123" fill="#3D3D3D" font-family="&#x27;Inter&#x27;, -apple-system, BlinkMacSystemFont, &#x27;Segoe UI&#x27;, sans-serif" font-size="13" font-weight="600">Web UI port</text>
+  <text x="20" y="141" fill="#6B6B6B" font-family="&#x27;Inter&#x27;, -apple-system, BlinkMacSystemFont, &#x27;Segoe UI&#x27;, sans-serif" font-size="11">Port for the web interface (TCP)</text>
+  <rect x="310" y="111" width="392" height="32" rx="5" fill="#CEE3F6" stroke="#DFDFDF" stroke-width="1"/>
+  <text x="322" y="132" fill="#3D3D3D" font-family="&#x27;JetBrains Mono&#x27;, Consolas, monospace" font-size="12">8484</text>
+  <line x1="16" y1="154" x2="704" y2="154" stroke="#DFDFDF" stroke-width="1"/>
+  <text x="20" y="177" fill="#3D3D3D" font-family="&#x27;Inter&#x27;, -apple-system, BlinkMacSystemFont, &#x27;Segoe UI&#x27;, sans-serif" font-size="13" font-weight="600">Peer port</text>
+  <text x="20" y="195" fill="#6B6B6B" font-family="&#x27;Inter&#x27;, -apple-system, BlinkMacSystemFont, &#x27;Segoe UI&#x27;, sans-serif" font-size="11">Port other Beacon devices use to reach this one (UDP)</text>
+  <rect x="310" y="165" width="392" height="32" rx="5" fill="#CEE3F6" stroke="#DFDFDF" stroke-width="1"/>
+  <text x="322" y="186" fill="#3D3D3D" font-family="&#x27;JetBrains Mono&#x27;, Consolas, monospace" font-size="12">6990</text>
+  <line x1="16" y1="208" x2="704" y2="208" stroke="#DFDFDF" stroke-width="1"/>
+  <text x="20" y="231" fill="#3D3D3D" font-family="&#x27;Inter&#x27;, -apple-system, BlinkMacSystemFont, &#x27;Segoe UI&#x27;, sans-serif" font-size="13" font-weight="600">Appdata path</text>
+  <text x="20" y="249" fill="#6B6B6B" font-family="&#x27;Inter&#x27;, -apple-system, BlinkMacSystemFont, &#x27;Segoe UI&#x27;, sans-serif" font-size="11">Settings and database (rw)</text>
+  <rect x="310" y="219" width="392" height="32" rx="5" fill="#CEE3F6" stroke="#DFDFDF" stroke-width="1"/>
+  <text x="322" y="240" fill="#3D3D3D" font-family="&#x27;JetBrains Mono&#x27;, Consolas, monospace" font-size="12">/mnt/user/appdata/beacon</text>
+  <line x1="16" y1="262" x2="704" y2="262" stroke="#DFDFDF" stroke-width="1"/>
+  <text x="20" y="285" fill="#3D3D3D" font-family="&#x27;Inter&#x27;, -apple-system, BlinkMacSystemFont, &#x27;Segoe UI&#x27;, sans-serif" font-size="13" font-weight="600">Shared files</text>
+  <text x="20" y="303" fill="#6B6B6B" font-family="&#x27;Inter&#x27;, -apple-system, BlinkMacSystemFont, &#x27;Segoe UI&#x27;, sans-serif" font-size="11">Files Beacon shares (rw)</text>
+  <rect x="310" y="273" width="392" height="32" rx="5" fill="#CEE3F6" stroke="#DFDFDF" stroke-width="1"/>
+  <text x="322" y="294" fill="#3D3D3D" font-family="&#x27;JetBrains Mono&#x27;, Consolas, monospace" font-size="12">/mnt/user/beacon</text>
+  <path d="M1 316 L719 316 L719 369 Q719 377 711 377 L9 377 Q1 377 1 369 Z" fill="#CEE3F6"/>
+  <line x1="1" y1="316" x2="719" y2="316" stroke="#DFDFDF" stroke-width="1"/>
+  <text x="18" y="347" fill="#6B6B6B" font-family="&#x27;Inter&#x27;, -apple-system, BlinkMacSystemFont, &#x27;Segoe UI&#x27;, sans-serif" font-size="11">Illustration, not a live screenshot · Source: unraid/beacon.xml:11-17</text>
+  <rect x="614" y="328" width="88" height="28" rx="5" fill="#1F5FAD"/>
+  <text x="658" y="347" text-anchor="middle" fill="#FFFFFF" font-family="&#x27;Inter&#x27;, -apple-system, BlinkMacSystemFont, &#x27;Segoe UI&#x27;, sans-serif" font-size="12" font-weight="600">Apply</text>
+</svg>

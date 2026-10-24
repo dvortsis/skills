@@ -7,7 +7,7 @@ SKILL = "material-composer"
 VERSION = "2.0.0"
 FILES = {
 "CHECKS.md": (8679, "345c5f2ce39f"),
-"SKILL.md": (8671, "b90f75847e86"),
+"SKILL.md": (8723, "8a6aa3ea61fb"),
 "assets/catalog/overlay.json": (39350, "a5f9fafab8ca"),
 "assets/examples/manifest.json": (277, "7bc3993b160a"),
 "assets/examples/synthetic_access_request.form.json": (1941, "49649aa6da4a"),

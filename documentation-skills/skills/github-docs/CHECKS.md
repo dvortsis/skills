@@ -15,24 +15,29 @@ example guide once per FAIL code below and checks the code fires.
 | CHECKS | WARN | At least one chapter has Check your understanding |
 | HOME_SECTIONS | FAIL | The home page has Who this guide is for, How to use this guide, Contents (with markers), What you need, About this guide |
 | TASK_FINDER | FAIL | An If you want to · Go to table links at least three chapters |
+| READING_PATHS | WARN | The home page has a **Reading paths.** note for first-time and returning readers |
 | REVISIONS | FAIL | revisions.md has a Version · Date · Change table with a row |
 | INDEX | FAIL | index.md has at least three entries |
-| SYNC_STALE | FAIL | `docs_tool.py sync` would change nothing (numbering, contents, navigation, index) |
+| SYNC_STALE | FAIL | `docs_tool.py sync` would change nothing (numbering, figure captions, contents, navigation, index) |
 | ANSWERS | FAIL | Appendix A answers every chapter's questions, same count, under the chapter's title |
 | GLOSSARY_ORDER | FAIL | Glossary terms are A to Z |
 | GLOSSARY_LINK | WARN | A page links a glossary term the first time it uses it |
 | H1_ONE | FAIL | One `#` heading per page |
 | HEADING_LEVEL | FAIL | Heading levels never skip |
 | HEADING_CASE | WARN | Headings in sentence case, not Title Case |
-| NUMBERING | FAIL | Chapter H1 is `Chapter N: Title` and `##` headings are `N.M Title` |
+| NUMBERING | FAIL | Chapter H1 is `Chapter N: Title`, `##` headings are `N.M Title`, and figure captions are `*Figure N.M: ...*` |
 | OBJECTIVES | FAIL | A `[!NOTE]` **What you will learn** box with 2–6 items before the first section (not on Troubleshooting) |
 | OBJECTIVE_VERB | FAIL | Objectives start with an observable verb, not understand or know |
 | TAKEAWAYS | FAIL | A `[!TIP]` **Key takeaways** box with 2–6 items after the last section (not on Troubleshooting) |
-| PLACEHOLDER | FAIL | No WRITE:, TODO, TBD, FIXME or lorem ipsum |
+| PLACEHOLDER | FAIL | No WRITE:, TODO, TBD, FIXME or lorem ipsum (including in `images/SHOTLIST.md`) |
 | NAV | FAIL | The page has navigation markers |
 | LINK_BROKEN | FAIL | Relative links and anchors resolve |
 | IMG_MISSING | FAIL | Images exist |
 | IMG_ALT | FAIL | Alt text has four or more words (a logo's alt names the logo) |
+| FIGURE_NONE | FAIL / WARN | When 3+ procedures quote UI labels (`**bold**`), the guide has figures or `images/SHOTLIST.md` (warns when only `SHOTLIST.md` is present) |
+| FIGURE_CAPTION | FAIL | Every content figure is followed by an italic `*Figure N.M: ...*` caption of three or more words |
+| FIGURE_SOURCE | FAIL | Only user screenshots or source-gated illustrations (`*-illustration.svg`), never stock, clipart or fake images |
+| ILLUSTRATION_LABEL | FAIL | A screen illustration (`*-illustration.svg` or stamped SVG) carries the visible stamp and has `Illustration` in its caption |
 | ALERT_KIND | FAIL | Alerts are NOTE, TIP, IMPORTANT, WARNING or CAUTION |
 | ALERT_SYNTAX | FAIL | `> [!KIND]` stands alone on its line |
 | ALERT_DENSITY | WARN | Two alerts per section at most, besides the two boxes |

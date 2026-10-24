@@ -20,6 +20,8 @@ Read the chapters in order the first time. Later, use the table below to jump to
 | Keep Beacon off the internet and back it up | [Chapter 4](04-keep-beacon-safe.md) |
 | Fix a problem or ask for help | [Chapter 5](05-troubleshooting.md) |
 
+**Reading paths.** First-time installers read Chapters 1 to 4 in order. Returning readers use the table above to jump to a setting, backup or fix.
+
 ## Contents
 
 <!-- contents:start -->
@@ -60,7 +62,7 @@ Read the chapters in order the first time. Later, use the table below to jump to
 
 ## About this guide
 
-This guide covers Beacon 2.4. Last updated 2026-10-22. Facts come from `unraid/beacon.xml`, `docker-compose.yml` and `installer/beacon.iss` in the Beacon repository.
+This guide covers Beacon 2.4. Last updated 2026-10-22. Facts come from `unraid/beacon.xml`, `docker-compose.yml` and `installer/beacon.iss` in the Beacon repository. Figures marked *Illustration, not a live screenshot* are drawn from those files; see [the shot list](images/SHOTLIST.md) for the live captures that replace them.
 
 <!-- nav:start -->
 ---

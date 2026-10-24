@@ -19,6 +19,11 @@ To WRITE: the goal:
 2. WRITE: the next action.
    **Result:** WRITE: what the reader sees when it worked.
 
+<!-- When the reader must find controls on a screen, add a user screenshot or a stamped illustration from `docs_tool.py figure`, followed by its caption:
+![WRITE: four or more words describing the screen](images/WRITE-screen-illustration.svg)
+*Figure {{N}}.1: WRITE: what the screen shows. Illustration, not a live screenshot.*
+-->
+
 ## {{N}}.2 Check your understanding
 
 1. WRITE: a question about a decision the reader makes in this chapter.

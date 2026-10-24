@@ -70,6 +70,10 @@ MUTATIONS = [  # (code, page, old, new)
     ("TASK_FINDER", "README.md", "| If you want to | Go to |", "| Task | Where |"),
     ("IMG_MISSING", "01-before-you-start.md", "Beacon uses two folders:", "![Beacon shows its two folders here](images/missing.png)\n\nBeacon uses two folders:"),
     ("IMG_ALT", "01-before-you-start.md", "Beacon uses two folders:", "![Folders](images/missing.png)\n\nBeacon uses two folders:"),
+    ("FIGURE_CAPTION", "02-install-beacon.md", "*Figure 2.1: Unraid template with the ports and mapped folders filled in. Illustration, not a live screenshot.*\n", ""),
+    ("FIGURE_SOURCE", "02-install-beacon.md", "images/unraid-template-illustration.svg", "images/stock-template.svg"),
+    ("ILLUSTRATION_LABEL", "02-install-beacon.md", "*Figure 2.1: Unraid template with the ports and mapped folders filled in. Illustration, not a live screenshot.*",
+     "*Figure 2.1: Unraid template with the ports and mapped folders filled in.*"),
     ("GLOSSARY_ORDER", "glossary.md", "## Container", "## Zone"),
     ("H1_ONE", "revisions.md", "| Version | Date | Change |", "# Second title\n\n| Version | Date | Change |"),
 ]
@@ -79,6 +83,7 @@ WARN_MUTATIONS = [
     ("SENTENCE_LONG", "01-before-you-start.md", "All three methods run the same Beacon.",
      "All three methods run the same Beacon on every device you can think of, from the smallest home server up to the largest office machine in the building."),
     ("GLOSSARY_LINK", "02-install-beacon.md", "the [container](glossary.md#container) side stays", "the container side stays"),
+    ("READING_PATHS", "README.md", "**Reading paths.** First-time installers read Chapters 1 to 4 in order. Returning readers use the table above to jump to a setting, backup or fix.\n", ""),
 ]
 
 
@@ -104,20 +109,36 @@ def main():
             ok(code in codes(out, "WARN") and code not in codes(out), "%s warns, doesn't fail (%s)" % (code, page), out)
             rc, out = lint(docs, "--strict")
             ok(rc == 1, "%s fails under --strict" % code, out)
-        # 3. sync renumbers and fixes links
+        # 3. sync renumbers and fixes links (and figure captions)
         _proj, docs = copy_example(tmp, "sync")
         edit(docs, "02-install-beacon.md", "## 2.1 Install on Unraid", "## Pick a method\n\nStart with the method from Chapter 1.\n\n## 2.1 Install on Unraid")
+        edit(docs, "02-install-beacon.md", "*Figure 2.1: Unraid template", "*Figure 9.9: Unraid template")
         edit(docs, "03-set-up-beacon.md", "Unraid shows it at the top left", "See [the template fields](02-install-beacon.md#22-template-fields). Unraid shows it at the top left")
         rc, out = run(os.path.join(HERE, "docs_tool.py"), "sync", docs)
         ch3 = open(os.path.join(docs, "03-set-up-beacon.md"), encoding="utf-8").read()
         ch2 = open(os.path.join(docs, "02-install-beacon.md"), encoding="utf-8").read()
-        ok("## 2.1 Pick a method" in ch2 and "## 2.3 Template fields" in ch2 and "02-install-beacon.md#23-template-fields" in ch3,
-           "sync renumbers sections and rewrites links to the renumbered heading", out)
+        ok("## 2.1 Pick a method" in ch2 and "## 2.3 Template fields" in ch2 and "02-install-beacon.md#23-template-fields" in ch3
+           and "*Figure 2.1: Unraid template" in ch2,
+           "sync renumbers sections, figure captions and links to the renumbered heading", out)
         rc, out = lint(docs)
         ok(rc == 0, "the renumbered guide passes the gate", out)
         home = open(os.path.join(docs, "README.md"), encoding="utf-8").read()
         ok("[2.1 Pick a method](02-install-beacon.md#21-pick-a-method)" in home, "sync rewrites the contents", home[:400])
-        # 4. new scaffolds, adds the logo, never overwrites
+        # 3b. FIGURE_NONE gate (warns when only SHOTLIST.md exists, fails when neither figures nor SHOTLIST.md exist)
+        _proj, fdocs = copy_example(tmp, "fignone")
+        for pg in ("02-install-beacon.md", "03-set-up-beacon.md"):
+            p = os.path.join(fdocs, pg)
+            body = re.sub(r"\n!\[[^\]]+\]\(images/[^)]+\)\n\*Figure [^\n]+\*\n", "\n", open(p, encoding="utf-8").read())
+            open(p, "w", encoding="utf-8", newline="\n").write(body)
+        rc, out = lint(fdocs)
+        ok(rc == 0 and "FIGURE_NONE" in codes(out, "WARN"), "FIGURE_NONE warns when procedures quote UI labels and only SHOTLIST.md is present", out)
+        rc_s, out_s = lint(fdocs, "--strict")
+        ok(rc_s == 1 and "FIGURE_NONE" in codes(out_s, "WARN"), "FIGURE_NONE warning fails under --strict", out_s)
+        os.remove(os.path.join(fdocs, "images", "SHOTLIST.md"))
+        edit(fdocs, "README.md", " see [the shot list](images/SHOTLIST.md) for the live captures that replace them.", "")
+        rc, out = lint(fdocs)
+        ok(rc == 1 and "FIGURE_NONE" in codes(out), "FIGURE_NONE fails when procedures quote UI labels and neither figures nor SHOTLIST.md exist", out)
+        # 4. new scaffolds, adds the logo and SHOTLIST.md, never overwrites; figure builds a stamped SVG illustration
         proj = os.path.join(tmp, "newproj"); os.makedirs(os.path.join(proj, "public"))
         open(os.path.join(proj, "package.json"), "w").write('{"name": "harbor-notes"}')
         open(os.path.join(proj, "public", "logo.svg"), "w").write('<svg xmlns="http://www.w3.org/2000/svg" width="200" height="60"><rect width="200" height="60" fill="#0B7A75"/></svg>')
@@ -129,7 +150,14 @@ def main():
                 "appendix-a-answers.md", "appendix-b-settings-reference.md", "glossary.md", "images", "index.md", "revisions.md"]
         ok(rc == 0 and names == want, "new writes the home page, 4 chapters, appendices, glossary, revisions and index", out + str(names))
         home = open(os.path.join(proj, "docs", "README.md"), encoding="utf-8").read() if names else ""
-        ok('<img src="../public/logo.svg" alt="Harbor Notes logo"' in home, "new puts the project logo on the home page", home[:300])
+        ok('<img src="../public/logo.svg" alt="Harbor Notes logo"' in home and os.path.isfile(os.path.join(proj, "docs", "images", "SHOTLIST.md")),
+           "new puts the project logo on the home page and scaffolds images/SHOTLIST.md", home[:300])
+        fig_out = os.path.join(proj, "docs", "images", "settings-illustration.svg")
+        rc_f, out_f = run(os.path.join(HERE, "docs_tool.py"), "figure", fig_out, "--title", "Harbor Notes — Settings", "--source", "package.json:1",
+                          "--field", "Port=8080|Recommended", "--action", "Save", "--project", proj, env=env)
+        svg_body = open(fig_out, encoding="utf-8").read() if os.path.isfile(fig_out) else ""
+        ok(rc_f == 0 and "Illustration, not a live screenshot" in svg_body and "Source: package.json:1" in svg_body,
+           "docs_tool.py figure writes a stamped, source-gated SVG illustration", out_f)
         rc, out = lint(os.path.join(proj, "docs"))
         ok(rc == 1 and "PLACEHOLDER" in codes(out) and "Traceback" not in out, "a fresh scaffold fails PLACEHOLDER until written", out)
         rc, out = run(os.path.join(HERE, "docs_tool.py"), "new", os.path.join(proj, "docs"), "--title", "X", "--app", "X", "--chapters", "A;B", env=env)

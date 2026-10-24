@@ -59,6 +59,12 @@ To back up and update on Unraid:
 
 Read the release notes before a major version, such as 2.x to 3.0.
 
+| Mistake | What to do instead |
+|---|---|
+| Updating without stopping Beacon first | Stop `beacon` on the **Docker** tab before copying appdata |
+| Keeping the only backup on the same server | Keep a second copy on another device or cloud backup |
+| Posting a log with the API key still in it | Replace the key with `<redacted>` before sharing |
+
 ## 4.4 Check your understanding
 
 1. You want Beacon on your phone at a café. What do you set up?

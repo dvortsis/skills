@@ -28,7 +28,7 @@ Run `scripts/preflight.py` from this skill's folder (the folder containing this 
 | deck | deck.json | slide-deck |
 | training-md | training .md (`output: pdf` → `md_to_sheet.py`, then build_doc) | training-material-designer |
 | md | .md with front matter (format, title, audience, sources, subject for emails) | none; send as .email or .message when asked |
-| github-docs | `docs/*.md` pages in the project repository (setup or user guide on GitHub) | github-docs skill (`docs_tool.py`, `lint_docs.py`); hand over when the request is a docs folder or GitHub guide |
+| github-docs | `docs/*.md` pages in the project repository (textbook setup or user guide on GitHub, with screenshots or stamped illustrations) | github-docs skill (`docs_tool.py`, `lint_docs.py`); hand over when the request is a docs folder or GitHub guide |
 | form | form.json | `scripts/build_form.py` (tagged fillable PDF + .xlsx + .msforms.csv; say to paste it into a new Microsoft Form, never that it imports) |
 | module | module.json | `scripts/build_module.py` (HTML + storyboard; `--scorm` adds a SCORM 1.2 zip for your LMS, which resumes on the learner's last screen with their answers; pilot every package in the LMS's test area first) |
 | xlsx | sheet.json (Tracker; the data-dictionary and raci plans add it on an ALSO line) | `scripts/build_sheet.py` (one named table, Status dropdown from the Lists tab, Definitions tab; `--check` reopens it) |

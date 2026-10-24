@@ -20,6 +20,9 @@ To install Beacon from the app catalog:
 3. Check each field against the next section, then select **Apply**.
    **Result:** Unraid downloads Beacon and starts it. **Docker** lists `beacon` as started.
 
+![Unraid container template showing Beacon ports and folder paths](images/unraid-template-illustration.svg)
+*Figure 2.1: Unraid template with the ports and mapped folders filled in. Illustration, not a live screenshot.*
+
 ## 2.2 Template fields
 
 <!-- index: template fields; appdata; port mapping -->
@@ -101,6 +104,9 @@ To install on Windows:
 3. Approve the administrator prompt. The installer needs it to add the service.
 4. When **Windows Defender Firewall** asks, check **Private networks** only and select **Allow access**.
    **Result:** Beacon starts, and `http://localhost:8484` opens its sign-in page.
+
+![Windows Defender Firewall prompt with Private networks checked for Beacon](images/windows-firewall-illustration.svg)
+*Figure 2.2: Windows Defender Firewall prompt with Private networks selected. Illustration, not a live screenshot.*
 
 > [!WARNING]
 > Don't check **Public networks**. Anyone on a café or airport network could reach Beacon. Keep it on **Private networks** only.

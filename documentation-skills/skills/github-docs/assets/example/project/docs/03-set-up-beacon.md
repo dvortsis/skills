@@ -32,6 +32,9 @@ To sign in and replace the starting password:
 
 Open **Settings** > **Network**. Keep the defaults unless a setting below says when to change it.
 
+![Beacon Network settings page showing listen address, DHT and UPnP options](images/network-settings-illustration.svg)
+*Figure 3.1: The Network settings page with its safe defaults. Illustration, not a live screenshot.*
+
 ### Listen address
 
 Which networks on this machine Beacon accepts connections from.

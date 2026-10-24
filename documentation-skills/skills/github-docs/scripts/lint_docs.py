@@ -44,9 +44,11 @@ class Lint:
         order, chapters, appx = M.guide_pages(d)
         self.pages = {n: M.Page(os.path.join(d, n)) for n in order}
         self.order, self.chapters, self.appx = order, chapters, appx
+        self.figs, self.ui_procs = 0, 0
         self.structure()
         for n in order:
             self.page(n, self.pages[n])
+        self.figures_gate()
         for n in chapters:
             self.chapter(n, self.pages[n])
         self.answers()
@@ -90,6 +92,23 @@ class Lint:
         linked = sum(1 for r in finder[0][2] if re.search(r"\]\(\d{2}-[\w-]+\.md", " ".join(r))) if finder else 0
         self.check(linked >= min(3, len(self.chapters)), "TASK_FINDER", "README.md",
                    "the 'Where to find each task' table (If you want to | Go to) needs rows linking at least %d chapters" % min(3, len(self.chapters)))
+        self.check(bool(re.search(r"(?i)\breading paths\b", p.text)), "READING_PATHS", "README.md",
+                   "How to use this guide has no **Reading paths.** note for first-time and returning readers", warn=True)
+
+    def figures_gate(self):
+        shot_path = os.path.join(self.docs, "images", "SHOTLIST.md")
+        shot_ok = False
+        if os.path.isfile(shot_path):
+            sp = M.Page(shot_path)
+            for i, l in enumerate(sp.lines):
+                if PLACEHOLDER.search(l):
+                    self.check(False, "PLACEHOLDER", "images/SHOTLIST.md:%d" % (i + 1), "unfinished text: %r" % l.strip()[:70])
+            shot_ok = any(rows and not any(PLACEHOLDER.search(" ".join(r)) for r in rows) for _i, _h, rows in sp.tables())
+        self.check(self.ui_procs < 3 or self.figs > 0 or shot_ok, "FIGURE_NONE", "docs",
+                   "%d procedures quote UI labels (**bold**) but the guide has no figures and no images/SHOTLIST.md; add screenshots, source-gated illustrations (docs_tool.py figure), or list pending captures in images/SHOTLIST.md" % self.ui_procs)
+        if self.ui_procs >= 3 and self.figs == 0 and shot_ok:
+            self.check(False, "FIGURE_NONE", "images/SHOTLIST.md",
+                       "screenshots pending in images/SHOTLIST.md (%d procedures quote UI labels); add screenshots or source-gated illustrations before release" % self.ui_procs, warn=True)
 
     def sync_state(self):
         try:
@@ -177,12 +196,42 @@ class Lint:
                 self.check(anc in dest.anchors, "LINK_BROKEN", where, "anchor #%s not found in %s" % (anc, os.path.basename(dest_path)))
 
     def images(self, n, p):
+        m_app = re.match(r"appendix-([a-z])-", n)
+        fig_prefix = str(int(n[:2])) if n in self.chapters else (m_app.group(1).upper() if m_app else None)
+        fig_num = 0
         for i, alt, src in p.images():
             where = "%s:%d" % (n, i + 1)
-            if not re.match(r"^[a-z]+:", src):
-                self.check(os.path.exists(os.path.normpath(os.path.join(self.docs, src))), "IMG_MISSING", where, "image %s not found" % src)
+            img_path = None if re.match(r"^[a-z]+:", src) else os.path.normpath(os.path.join(self.docs, src))
+            exists = bool(img_path and os.path.exists(img_path))
+            if img_path is not None:
+                self.check(exists, "IMG_MISSING", where, "image %s not found" % src)
             logo = "logo" in alt.lower()
             self.check(logo or len(alt.split()) >= 4, "IMG_ALT", where, "alt text needs at least four words describing the image: %r" % alt)
+            if logo:
+                continue
+            self.figs += 1
+            self.check(not re.search(r"(?i)(?:^|[/\\_-])(stock|clipart|generated|fake)(?:[/\\._-]|$)", src), "FIGURE_SOURCE", where,
+                       "use only screenshots the user supplied or source-gated illustrations (*-illustration.svg), not %s" % src)
+            fig_num += 1
+            k = i + 1
+            while k < len(p.lines) and not p.lines[k].strip():
+                k += 1
+            cap_line = p.lines[k].strip() if k < len(p.lines) else ""
+            m = re.match(r"^\*Figure\s+([A-Z0-9]+(?:\.\d+)?):\s*(.+?)\*$", cap_line)
+            cap_body = m.group(2).strip() if m else ""
+            self.check(bool(m) and len(cap_body.split()) >= 3, "FIGURE_CAPTION", where,
+                       "follow the figure with an italic caption of 3+ words (*Figure %s.%d: What it shows.*)" % (fig_prefix or "1", fig_num))
+            if m and fig_prefix:
+                self.check(m.group(1) == "%s.%d" % (fig_prefix, fig_num), "NUMBERING", "%s:%d" % (n, k + 1),
+                           "expected '*Figure %s.%d:' before %r; run docs_tool.py sync" % (fig_prefix, fig_num, cap_body))
+            svg_text = M.read_file(img_path) if exists and src.lower().endswith(".svg") else ""
+            is_illus = "illustration" in os.path.basename(src).lower() or "illustration, not a live screenshot" in svg_text.lower()
+            if is_illus:
+                self.check("illustration" in cap_body.lower(), "ILLUSTRATION_LABEL", "%s:%d" % (n, (k if m else i) + 1),
+                           'a screen illustration needs "Illustration" in its caption (for example "Illustration, not a live screenshot.")')
+                if exists and src.lower().endswith(".svg"):
+                    self.check("illustration, not a live screenshot" in svg_text.lower(), "ILLUSTRATION_LABEL", where,
+                               "an SVG screen illustration must carry the visible stamp 'Illustration, not a live screenshot' (build with docs_tool.py figure)")
 
     def alerts(self, n, p):
         per = {}
@@ -296,6 +345,8 @@ class Lint:
                     k += 1; continue
                 break
             where = "%s:%d" % (n, start + 1)
+            if any(re.search(r"\*\*[^*]+\*\*", s) for _ln, s in steps):
+                self.ui_procs += 1
             self.check(2 <= len(steps) <= 12, "PROCEDURE_STEPS", where, "a procedure has 2 to 12 numbered steps (found %d)" % len(steps))
             self.check(results >= 1, "PROCEDURE_RESULT", where, "say what the reader sees: add an indented **Result:** line, at least after the last step")
             for ln, s in steps:
